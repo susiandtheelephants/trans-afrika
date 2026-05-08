@@ -831,7 +831,7 @@
   width: 22px;
   height: 22px;
   position: relative;
-  transition: transform 0.4s cubic-bezier(0.2,0.6,0.2,1);
+  transition: transform 0.4s var(--ease-out);
 }
 .acc-icon::before, .acc-icon::after {
   content: "";
@@ -839,7 +839,7 @@
   inset: 0;
   margin: auto;
   background: var(--ink);
-  transition: transform 0.3s;
+  transition: transform var(--t-base);
 }
 .acc-icon::before { width: 14px; height: 1px; }
 .acc-icon::after  { width: 1px;  height: 14px; }
@@ -947,40 +947,7 @@
 }
 
 /* =============== FINAL CTA =============== */
-.final-cta {
-  position: relative;
-  padding: 0;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-.final-bg { position: absolute; inset: 0; z-index: 0; }
-.final-vignette {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(20,19,15,0.6) 0%, rgba(20,19,15,0.3) 35%, rgba(20,19,15,0.85) 100%);
-}
-.final-content {
-  position: relative;
-  z-index: 2;
-  padding: 140px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  max-width: 1100px;
-}
-.final-content .display { color: var(--night-ink); max-width: 16ch; }
-.btn .dot {
-  display: inline-block;
-  width: 6px; height: 6px;
-  background: #25d366;
-  border-radius: 50%;
-}
-.hero-ctas {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
+.final-content { padding: clamp(80px, 12vw, 160px) 0; gap: 32px; }
 </style>
 
 <!-- ============================== TWEAKS PANEL ============================== -->
