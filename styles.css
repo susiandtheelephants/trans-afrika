@@ -27,18 +27,18 @@
   --sans: "Inter Tight", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
 
-  /* Spacing scale (density tuned) */
-  --space-xs: 8px;
-  --space-s: 16px;
-  --space-m: 32px;
-  --space-l: 64px;
-  --space-xl: 120px;
-  --space-2xl: 200px;
-  --section-pad: clamp(80px, 14vw, 200px);
+  /* Spacing scale — responsive clamps, density-tunable */
+  --space-xs: 6px;
+  --space-s: 12px;
+  --space-m: clamp(18px, 2.5vw, 32px);
+  --space-l: clamp(28px, 4.5vw, 60px);
+  --space-xl: clamp(52px, 7.5vw, 112px);
+  --space-2xl: clamp(88px, 11vw, 172px);
+  --section-pad: clamp(52px, 9.5vw, 156px);
 
   /* Layout */
   --max: 1440px;
-  --gutter: clamp(24px, 5vw, 80px);
+  --gutter: clamp(20px, 5vw, 72px);
 
   /* Transitions */
   --ease-out: cubic-bezier(0.2, 0.6, 0.2, 1);
@@ -49,14 +49,14 @@
 
 /* Density: spacious */
 [data-density="spacious"] {
-  --section-pad: clamp(120px, 18vw, 260px);
-  --space-xl: 160px;
-  --space-2xl: 240px;
+  --section-pad: clamp(92px, 14vw, 220px);
+  --space-xl: clamp(76px, 11vw, 156px);
+  --space-2xl: clamp(124px, 17vw, 240px);
 }
 [data-density="tight"] {
-  --section-pad: clamp(56px, 9vw, 130px);
-  --space-xl: 80px;
-  --space-2xl: 130px;
+  --section-pad: clamp(36px, 7vw, 92px);
+  --space-xl: clamp(36px, 5.5vw, 72px);
+  --space-2xl: clamp(60px, 8vw, 116px);
 }
 
 /* Palette themes */
@@ -116,8 +116,8 @@ body {
   font-family: var(--sans);
   background: var(--bg);
   color: var(--ink);
-  font-size: 17px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-feature-settings: "ss01", "kern";
@@ -155,8 +155,8 @@ p { margin: 0; }
   font-family: var(--serif);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(56px, 11vw, 180px);
-  line-height: 0.92;
+  font-size: clamp(42px, 9.5vw, 160px);
+  line-height: 0.93;
   letter-spacing: -0.02em;
   margin: 0;
   color: var(--ink);
@@ -166,8 +166,8 @@ p { margin: 0; }
 .headline {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(40px, 6.4vw, 96px);
-  line-height: 1.02;
+  font-size: clamp(30px, 5.6vw, 88px);
+  line-height: 1.04;
   letter-spacing: -0.015em;
   margin: 0;
   color: var(--ink);
@@ -177,8 +177,8 @@ p { margin: 0; }
 .subhead {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(28px, 3.6vw, 56px);
-  line-height: 1.12;
+  font-size: clamp(22px, 3.2vw, 52px);
+  line-height: 1.14;
   letter-spacing: -0.01em;
   margin: 0;
   color: var(--ink);
@@ -187,26 +187,26 @@ p { margin: 0; }
 .lede {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(22px, 2.2vw, 32px);
-  line-height: 1.35;
+  font-size: clamp(19px, 1.9vw, 29px);
+  line-height: 1.42;
   letter-spacing: -0.005em;
   color: var(--ink-soft);
-  max-width: 30ch;
+  max-width: 28ch;
 }
 
 .body-l {
   font-family: var(--sans);
-  font-size: clamp(17px, 1.3vw, 20px);
-  line-height: 1.6;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.65;
   color: var(--ink-soft);
-  max-width: 58ch;
+  max-width: 54ch;
   text-wrap: pretty;
 }
 
 .body {
   font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.7;
   color: var(--ink-soft);
   max-width: 60ch;
 }
@@ -331,6 +331,12 @@ p { margin: 0; }
   .nav-menu .nav-link, .nav-left .nav-link { display: none; }
   .nav { grid-template-columns: 1fr auto auto; }
 }
+@media (max-width: 600px) {
+  .nav { padding-top: 16px; padding-bottom: 16px; gap: 12px; }
+  .nav.scrolled { padding-top: 12px; padding-bottom: 12px; }
+  .nav-logo { font-size: 18px; }
+  .nav-cta { padding: 10px 18px; font-size: 11px; margin-left: 0; }
+}
 
 /* ============================================================
    Buttons
@@ -395,7 +401,7 @@ p { margin: 0; }
   transform: rotate(45deg);
   transform-origin: right center;
 }
-.btn:hover .arrow { transform: translateX(5px); }
+.btn:hover .arrow { transform: translateX(3px); }
 
 /* ============================================================
    Image slots
@@ -470,7 +476,7 @@ image-slot {
 .footer {
   background: var(--night);
   color: var(--night-ink);
-  padding: 100px 0 40px;
+  padding: clamp(52px, 8vw, 100px) 0 40px;
 }
 .footer-grid {
   display: grid;
@@ -506,8 +512,12 @@ image-slot {
   margin-bottom: 24px;
 }
 @media (max-width: 800px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px 28px; }
   .footer-bottom { flex-direction: column; gap: 12px; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-mark { font-size: 26px; margin-bottom: 16px; }
 }
 
 /* ============================================================
@@ -537,7 +547,7 @@ image-slot {
   padding: var(--section-pad) 0;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: clamp(20px, 3.5vw, 40px);
   max-width: 1100px;
 }
 .final-content .display { color: var(--night-ink); }
