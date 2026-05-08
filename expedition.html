@@ -1,0 +1,1073 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Die Expedition — SusiandtheElephants</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter+Tight:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="image-slot.js"></script>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body data-palette="sand" data-type="serif-sans" data-density="default">
+
+<!-- ============================== NAV ============================== -->
+<nav class="nav scrolled" id="nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-link">Home</a>
+  </div>
+  <a href="index.html" class="nav-logo">susi <span class="amp">&</span> the elephants</a>
+  <div class="nav-menu">
+    <a href="expedition.html" class="nav-link active">Die Expedition</a>
+    <a href="#" class="nav-link">Über Uns</a>
+    <a href="#cta" class="btn nav-cta">Mitfahren <span class="arrow"></span></a>
+  </div>
+</nav>
+
+<!-- ============================== OPENING ============================== -->
+<section class="exp-opening section">
+  <div class="container exp-opening-inner">
+    <h1 class="display reveal" style="text-align:left; max-width: 14ch;">
+      <span class="roman">Diese Reise</span><br>
+      ist keine Rundreise.<br>
+      <em>Es ist eine Expedition.</em>
+    </h1>
+    <div class="exp-opening-meta reveal">
+      <div><span class="caption">Start</span><span class="meta-val">Europa</span></div>
+      <div><span class="caption">Ziel</span><span class="meta-val">Kapstadt</span></div>
+      <div><span class="caption">Distanz</span><span class="meta-val">~22.000 km</span></div>
+      <div><span class="caption">Dauer</span><span class="meta-val">~125 Tage</span></div>
+    </div>
+  </div>
+  <div class="exp-opening-image image-frame reveal no-grad">
+    <image-slot id="exp-opening" placeholder="Cinematic opening — Konvoi am Horizont, Staub, weite Landschaft"></image-slot>
+  </div>
+</section>
+
+<!-- ============================== ÜBERSICHT — STATS ============================== -->
+<section class="section overview">
+  <div class="container">
+    <span class="eyebrow reveal">Übersicht</span>
+    <h2 class="headline reveal" style="margin-top: 24px; margin-bottom: 100px;">Im Überblick.</h2>
+
+    <div class="stats-grid reveal-stagger">
+      <div class="stat" style="--d:0ms">
+        <svg class="stat-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1"><circle cx="24" cy="24" r="18"/><path d="M24 12 V24 L32 28"/></svg>
+        <span class="stat-num">~125</span>
+        <span class="stat-unit">Tage</span>
+        <span class="stat-label">04. Jan — 09. Mai 2027</span>
+      </div>
+      <div class="stat" style="--d:80ms">
+        <svg class="stat-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1"><path d="M8 36 L20 14 L28 26 L40 12"/><circle cx="8" cy="36" r="1.6" fill="currentColor"/><circle cx="40" cy="12" r="1.6" fill="currentColor"/></svg>
+        <span class="stat-num">~22.000</span>
+        <span class="stat-unit">km</span>
+        <span class="stat-label">vom Start bis ans Kap</span>
+      </div>
+      <div class="stat" style="--d:160ms">
+        <svg class="stat-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1"><circle cx="24" cy="24" r="18"/><path d="M6 24 H42 M24 6 C16 14 16 34 24 42 M24 6 C32 14 32 34 24 42"/></svg>
+        <span class="stat-num">20</span>
+        <span class="stat-unit">Länder</span>
+        <span class="stat-label">Europa bis Südafrika</span>
+      </div>
+      <div class="stat" style="--d:240ms">
+        <svg class="stat-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1"><path d="M8 30 H40 V36 H8 Z M14 30 V22 H34 L38 30 M16 36 V40 M32 36 V40"/><circle cx="16" cy="36" r="3"/><circle cx="32" cy="36" r="3"/></svg>
+        <span class="stat-num">Nur 5–8</span>
+        <span class="stat-unit">Fahrzeuge</span>
+        <span class="stat-label">eine kleine Gruppe</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== DER ALLTAG ============================== -->
+<section class="section daily">
+  <div class="container-wide daily-grid">
+    <div class="daily-text">
+      <span class="eyebrow reveal">Der Alltag</span>
+      <h2 class="headline reveal italic" style="max-width: 14ch;">Fahren. Pausieren.<br>Stehenbleiben, wenn es schön ist.</h2>
+      <div class="reveal-stagger" style="margin-top: 40px; display: flex; flex-direction: column; gap: 20px;">
+        <p class="body-l" style="--d:0ms">Der Alltag ist eine Mischung aus Fahrtagen, Pausen und spontanen Stopps.</p>
+        <p class="body-l" style="--d:120ms">Im Schnitt bist du <em>5–6 Tage pro Woche</em> unterwegs.</p>
+        <p class="body-l" style="--d:240ms">Dazwischen: Visa Besorgungen in den Hauptstädten, Erholung, Erlebnisse und Fahrzeug Wartungen in uns bekannte Werkstätten … und Zeit für dich selbst.</p>
+      </div>
+    </div>
+    <div class="daily-image image-frame reveal">
+      <image-slot id="daily" placeholder="Camp am Abend, Kocher, Stille — Alltagsmoment"></image-slot>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== WAS DICH ERWARTET ============================== -->
+<section class="section expect">
+  <div class="container">
+    <span class="eyebrow reveal">Was dich erwartet</span>
+    <h2 class="headline reveal" style="margin-top: 24px; margin-bottom: 80px; max-width: 18ch;">
+      <em>Sechs Dinge,</em> die diese Reise ausmachen.
+    </h2>
+    <ol class="expect-list reveal-stagger">
+      <li style="--d:0ms"><span class="num">01</span><p>Eine der längsten und anspruchsvollsten Overland-Routen der Welt.</p></li>
+      <li style="--d:80ms"><span class="num">02</span><p>Extreme Vielfalt: Wüste, Regenwald, Savanne, Küste, Hochland, Berge und wilde Tiere.</p></li>
+      <li style="--d:160ms"><span class="num">03</span><p>Begegnungen mit lokalen Menschen — und das Kennenlernen ihrer Lebensweise.</p></li>
+      <li style="--d:240ms"><span class="num">04</span><p>Kaum touristische Infrastruktur in vielen Regionen.</p></li>
+      <li style="--d:320ms"><span class="num">05</span><p>Tägliche Anpassung statt starrer Planung.</p></li>
+      <li style="--d:400ms"><span class="num">06</span><p>Abenteuer garantiert.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================== ROUTE — CHAPTERS ============================== -->
+<section class="section route" id="route">
+  <div class="container">
+    <span class="eyebrow reveal">Die Route in sechs Kapiteln</span>
+    <h2 class="display reveal" style="text-align:left; font-size: clamp(56px, 9vw, 140px); margin-top: 24px; max-width: 14ch;">
+      Sechs Kapitel,<br>
+      <em>ein Kontinent.</em>
+    </h2>
+  </div>
+
+  <!-- CHAPTER 1 -->
+  <article class="chapter">
+    <div class="chapter-image image-frame">
+      <image-slot id="ch1" placeholder="Sahara — endlose Dünen, Land Cruiser im Sand"></image-slot>
+      <span class="image-caption">Marokko · Westsahara · Mauretanien</span>
+    </div>
+    <div class="container chapter-body">
+      <div class="chapter-meta">
+        <span class="chapter-num">01</span>
+        <span class="caption">Kapitel</span>
+      </div>
+      <h3 class="subhead reveal">Nordafrika & die Sahara.</h3>
+      <div class="chapter-text reveal-stagger">
+        <p class="body-l" style="--d:0ms">Marokko ist ein sanfter Einstieg für die weitere Reise. Wir besuchen Souks, das Atlasgebirge und fahren erste Offroad-Passagen durch die Sahara.</p>
+        <p class="body-l" style="--d:120ms">Weiter geht es entlang der Atlantikküste durch die diplomatisch disputed Westsahara, endlose Weite und Wind erwarten uns.</p>
+        <p class="body-l" style="--d:240ms">In Mauretanien wird es ernst: Sand, Hitze und lange, einsame Strecken. Wir schlafen zwischen den Dünen, lernen Sternenbilder zu erkennen und grillen über offenem Feuer.</p>
+      </div>
+      <div class="chapter-gallery">
+        <div class="image-frame"><image-slot id="ch1-a" placeholder="Atlasgebirge"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch1-b" placeholder="Westsahara — Küste"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch1-c" placeholder="Mauretanien — Camp in den Dünen"></image-slot></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- CHAPTER 2 -->
+  <article class="chapter">
+    <div class="chapter-image image-frame">
+      <image-slot id="ch2" placeholder="Westafrika — Markt, Farben, Leben"></image-slot>
+      <span class="image-caption">Senegal · Gambia · Guinea · Elfenbeinküste</span>
+    </div>
+    <div class="container chapter-body">
+      <div class="chapter-meta">
+        <span class="chapter-num">02</span>
+        <span class="caption">Kapitel</span>
+      </div>
+      <h3 class="subhead reveal">Westafrika.</h3>
+      <div class="chapter-text reveal-stagger">
+        <p class="body-l" style="--d:0ms">Mit der Einreise in Senegal verändert sich alles: mehr Leben, mehr Farben, mehr Chaos – Afrika beginnt hier richtig.</p>
+        <p class="body-l" style="--d:80ms">In Gambia fahren wir entlang dem Gambia River, nehmen die einzige Brücke über den Fluss und sehen mit etwas Glück Schimpansen.</p>
+        <p class="body-l" style="--d:160ms">In einigen Ländern – wie z. B. Guinea – kann Treibstoff knapp sein. Deshalb planen wir kritische Abschnitte im Voraus und sichern unsere Versorgung.</p>
+        <p class="body-l" style="--d:240ms">Guinea ist so ursprünglich wie es wird. Schlaglöcher, klischeehafte Lehmhütten Dörfer und unberührte Wasserfälle.</p>
+        <p class="body-l" style="--d:320ms">Die Elfenbeinküste bietet Traumstrände und mit Abidjan eine westlich anmutende Stadt.</p>
+      </div>
+      <div class="chapter-gallery">
+        <div class="image-frame"><image-slot id="ch2-a" placeholder="Senegal — Markt"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch2-b" placeholder="Guinea — Wasserfall"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch2-c" placeholder="Elfenbeinküste — Strand"></image-slot></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- CHAPTER 3 -->
+  <article class="chapter">
+    <div class="chapter-image image-frame">
+      <image-slot id="ch3" placeholder="Nigeria / Westafrika — Stadt, Konvoi"></image-slot>
+      <span class="image-caption">Ghana · Togo · Benin · Nigeria</span>
+    </div>
+    <div class="container chapter-body">
+      <div class="chapter-meta">
+        <span class="chapter-num">03</span>
+        <span class="caption">Kapitel</span>
+      </div>
+      <h3 class="subhead reveal">Nigeria & der Übergang.</h3>
+      <div class="chapter-text reveal-stagger">
+        <p class="body-l" style="--d:0ms">In Ghana, Togo und Benin erleben wir die kulturelle Vielfalt Westafrikas. Wir lernen über die Kolonialzeit, besuchen Sklaven-Schlösser, tauchen in die Voodoo Kultur ein und besuchen lokale Märkte.</p>
+        <p class="body-l" style="--d:120ms">Mit Nigeria erreichen wir einen der intensivsten Abschnitte der Route. Wir durchqueren einen Großteil des Landes sehr schnell. Nehmen uns aber Zeit für Highlights der Reise im Osten!</p>
+        <p class="body-l" style="--d:240ms">In Nigeria gehören Polizeikontrollen zum Alltag.</p>
+        <p class="body-l" style="--d:320ms">Wir bereiten dich darauf vor und zeigen dir, wie du souverän damit umgehst.</p>
+      </div>
+      <div class="chapter-gallery">
+        <div class="image-frame"><image-slot id="ch3-a" placeholder="Ghana — Sklaven-Schloss"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch3-b" placeholder="Benin — Voodoo-Markt"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch3-c" placeholder="Nigeria — Stadtszene"></image-slot></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- CHAPTER 4 -->
+  <article class="chapter">
+    <div class="chapter-image image-frame">
+      <image-slot id="ch4" placeholder="Zentralafrika — Regenwald, Nebel, Tiefe"></image-slot>
+      <span class="image-caption">Kamerun · Republik Kongo · DR Kongo</span>
+    </div>
+    <div class="container chapter-body">
+      <div class="chapter-meta">
+        <span class="chapter-num">04</span>
+        <span class="caption">Kapitel</span>
+      </div>
+      <h3 class="subhead reveal">Zentralafrika: der Regenwald.</h3>
+      <div class="chapter-text reveal-stagger">
+        <p class="body-l" style="--d:0ms">Kamerun erreichen wir nach Tagen von Offroad-tracks in den Bergen an einem winzigen Grenzposten. Dichter Dschungel, herausfordernde Checkpoints und eine aufregende Hauptstadt folgen.</p>
+        <p class="body-l" style="--d:120ms">In der Republik Kongo suchen wir Schimpansen und Gorillas, bevor wir in Brazzaville eine kurze Pause einlegen.</p>
+        <p class="body-l" style="--d:240ms">Die Demokratische Republik Kongo bietet den anspruchsvollsten Offroad Teil der gesamten Reise, aber vielleicht auch den schönsten Abschnitt. Wir besuchen zudem einen kaum besuchten Wasserfall.</p>
+      </div>
+      <div class="chapter-gallery">
+        <div class="image-frame"><image-slot id="ch4-a" placeholder="Kamerun — Regenwald"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch4-b" placeholder="Kongo — Gorilla-Tracking"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch4-c" placeholder="DR Kongo — Offroad"></image-slot></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- CHAPTER 5 -->
+  <article class="chapter">
+    <div class="chapter-image image-frame">
+      <image-slot id="ch5" placeholder="Angola & Namibia — Weite & Wildnis"></image-slot>
+      <span class="image-caption">Angola · Namibia</span>
+    </div>
+    <div class="container chapter-body">
+      <div class="chapter-meta">
+        <span class="chapter-num">05</span>
+        <span class="caption">Kapitel</span>
+      </div>
+      <h3 class="subhead reveal">Angola & Namibia: Weite & Wildnis.</h3>
+      <div class="chapter-text reveal-stagger">
+        <p class="body-l" style="--d:0ms">Mit Angola öffnet sich die Landschaft wieder.</p>
+        <p class="body-l" style="--d:120ms">Weite Savannen, abgelegene Küsten und wunderschöne Horizonte.</p>
+        <p class="body-l" style="--d:240ms">In Namibia beginnt der ruhigere Teil der Reise: Es gibt wieder Campingplätze/ Lodges. Mehr Touristen, bekannte Einkaufsmöglichkeiten, Wildlife und spektakuläre Landschaften.</p>
+      </div>
+      <div class="chapter-gallery">
+        <div class="image-frame"><image-slot id="ch5-a" placeholder="Angola — Küste"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch5-b" placeholder="Namibia — Sossusvlei"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch5-c" placeholder="Namibia — Wildlife"></image-slot></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- CHAPTER 6 -->
+  <article class="chapter">
+    <div class="chapter-image image-frame">
+      <image-slot id="ch6" placeholder="Kapstadt — Tafelberg, das Ziel"></image-slot>
+      <span class="image-caption">Südafrika · Kapstadt</span>
+    </div>
+    <div class="container chapter-body">
+      <div class="chapter-meta">
+        <span class="chapter-num">06</span>
+        <span class="caption">Kapitel</span>
+      </div>
+      <h3 class="subhead reveal">Südafrika: das Ziel.</h3>
+      <div class="chapter-text reveal-stagger">
+        <p class="body-l" style="--d:0ms">Die letzten Kilometer führen uns nach Südafrika.</p>
+        <p class="lede" style="--d:120ms; margin-top: 24px; border-top: 1px solid var(--rule); padding-top: 28px; max-width: 36ch;">Am Ende erreichen wir Kapstadt, den südlichsten Punkt dieser Reise — und den für uns schönsten Ort der Welt.</p>
+      </div>
+      <div class="chapter-gallery">
+        <div class="image-frame"><image-slot id="ch6-a" placeholder="Cape Point"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch6-b" placeholder="Kapstadt — Stadt"></image-slot></div>
+        <div class="image-frame"><image-slot id="ch6-c" placeholder="Letzter Sonnenuntergang"></image-slot></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ============================== LEISTUNGEN ============================== -->
+<section class="section services" id="services">
+  <div class="container services-grid">
+    <div class="services-head">
+      <span class="eyebrow reveal">Leistungen</span>
+      <h2 class="headline reveal italic" style="margin-top: 24px;">Was alles<br>enthalten ist.</h2>
+      <p class="body-l reveal" style="margin-top: 32px;">Vier Bereiche, in denen Johnny die Verantwortung übernimmt — damit du dich auf die Reise konzentrieren kannst.</p>
+    </div>
+
+    <div class="accordion" id="services-accordion">
+      <details class="acc-item" open>
+        <summary>
+          <span class="acc-num">01</span>
+          <span class="acc-title">Organisation & Führung</span>
+          <span class="acc-icon"></span>
+        </summary>
+        <ul class="acc-list">
+          <li>Expeditionsleitung von Johnny im eigenen Fahrzeug über die gesamte Strecke</li>
+          <li>Komplette Organisation und Durchführung der Expedition</li>
+          <li>Inklusive tägliche Routenführung</li>
+          <li>Inklusive Planung & Buchung von Hotels & Campsites</li>
+          <li>Inklusive Organisation von Touren (z. B. Wasserfallexpedition in Guinea, Gorillatracking im Kongo und Himba-Dorf-Besuch in Namibia)</li>
+          <li>Vorbereitung & Briefing vor der Reise</li>
+          <li>Organisation eines Kennenlern-Wochenendes in Deutschland mit allen teilnehmenden Personen</li>
+          <li>Umfangreiche Reiseunterlagen & Packliste</li>
+          <li>Foto-Ordner von der Reise in der Cloud & Reise-Video</li>
+        </ul>
+      </details>
+
+      <details class="acc-item">
+        <summary>
+          <span class="acc-num">02</span>
+          <span class="acc-title">Navigation & Kommunikation</span>
+          <span class="acc-icon"></span>
+        </summary>
+        <ul class="acc-list">
+          <li>Roadbook, GPS-Daten & Navigationssupport</li>
+          <li>Leihweise Funkgeräte für die Kommunikation innerhalb der Gruppe</li>
+          <li>Satelliteninternet (Starlink), wo verfügbar</li>
+          <li>Satellitenkommunikation für Notfälle</li>
+          <li>GPS-Tracking & optionale Standortfreigabe für Familie/Freunde</li>
+        </ul>
+      </details>
+
+      <details class="acc-item">
+        <summary>
+          <span class="acc-num">03</span>
+          <span class="acc-title">Unterkünfte</span>
+          <span class="acc-icon"></span>
+        </summary>
+        <ul class="acc-list">
+          <li>ca. 15 Hotelübernachtungen entlang der Route</li>
+          <li>Diverse Nächte auf Campingplätzen</li>
+          <li>Gemeinsame Abendessen, inklusive luxuriösem Abschlussessen im Kloof Street House in Kapstadt</li>
+        </ul>
+      </details>
+
+      <details class="acc-item">
+        <summary>
+          <span class="acc-num">04</span>
+          <span class="acc-title">Support & Sicherheit</span>
+          <span class="acc-icon"></span>
+        </summary>
+        <ul class="acc-list">
+          <li>Unterstützung bei Visa, Grenzübertritten, Kommunikation mit lokalen Behörden & Dokumenten</li>
+          <li>Hilfe bei Fahrzeugpapieren & Versicherungen</li>
+          <li>Backup-Support im Hintergrund (Logistik, Ersatzteile, Notfälle)</li>
+          <li>Satelliteninternet (Starlink), wo verfügbar</li>
+          <li>Umfangreiche Reiseapotheke und Erste-Hilfe Ausbildung/Zertifizierung von Johnny</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+
+  <!-- NICHT ENTHALTEN -->
+  <div class="container not-included reveal" style="margin-top: 140px;">
+    <div class="not-included-head">
+      <span class="eyebrow">Nicht enthalten</span>
+      <h3 class="subhead">Was du selbst trägst.</h3>
+    </div>
+    <ul class="not-included-list">
+      <li>Fähre Algeciras – Ceuta</li>
+      <li>Kraftstoff & fahrzeugbezogene Kosten</li>
+      <li>Visa-Gebühren</li>
+      <li>Mahlzeiten & Getränke</li>
+      <li>Persönliche Ausgaben & Trinkgelder</li>
+      <li>Persönliche SIM-Karten</li>
+      <li>Flüge vom Zielort zurück in die Heimat</li>
+      <li>Rückverschiffung des Fahrzeugs nach Europa</li>
+      <li>Reise- und Krankenversicherung (verpflichtend)</li>
+      <li>Reiserücktrittsversicherung (empfohlen)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================== FAQ ============================== -->
+<section class="section faq" id="faq">
+  <div class="container faq-grid">
+    <div class="faq-head">
+      <span class="eyebrow reveal">FAQ</span>
+      <h2 class="headline reveal italic" style="margin-top: 24px;">Häufige Fragen.</h2>
+      <p class="body-l reveal" style="margin-top: 28px;">Was wir am häufigsten gefragt werden — ehrlich beantwortet.</p>
+    </div>
+
+    <div class="accordion faq-accordion">
+      <!-- Each FAQ -->
+      <details class="acc-item">
+        <summary><span class="acc-title">Warum Afrika?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Afrika ist riesig, vielfältig und ursprünglich wie kein zweiter Kontinent. Es sind die Menschen, ihre Lebensweisen, Traditionen und ihre Energie, die Landschaften und Tiere, die diesen Kontinent einmalig machen.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Warum Westroute?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Dies ist aktuell die einzige Option komplett von Norden nach Süden zu fahren. Alle Länder auf dieser Route sind passierbar. Zudem ist dies die aufregendste Strecke mit den meisten Ländern und Kulturen.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Wie gefährlich ist die Reise?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Diese Reise führt durch viele wenig bis gar nicht touristische erschlossene Gebiete, auch wenn hierin der Reiz liegt, kann das im Notfall problematisch werden. Wir bereiten uns bestmöglich vor, Planen sehr sorgfältig, sprechen mit Menschen vor Ort und anderen Reisenden, um eine Einschätzung der aktuellen Lage zu bekommen. Zeitgleich sind wir mit Internet, GPS, einer umfangreichen Apotheke und Werkzeug für die Autos ausgestattet. Wir kennen Krankenhäuser und private Kliniken. Die Reisewarnungen des Auswärtigen Amtes sind zu generisch und nach eigenen Erfahrungen und Gesprächen vor Ort aber nicht realistisch. Kurz, die Reise birgt Gefahren was die Versorgung vor Ort angeht, wir sind aber bestmöglich ausgestattet.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Wie hoch sind die Kosten für Kraftstoff?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Dies hängt natürlich von der tatsächlichen gefahrenen Strecke ab, der weltpolitischen Lage und deinem Auto. Vorteilhaft ist hier, dass Diesel und Benzin in allen Ländern günstiger als Europa ist und teilweise nur ein Bruchteil von dessem kostet. Grob kannst du mit 3.000–4.000 € rechnen.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Wie hoch sind die Kosten für Verpflegung?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Dies ist sehr abhängig von deinen Vorlieben. Einkäufe auf lokalen Markten können sehr günstig sein, hier bekommt man meist lokales Obst und Gemüse, frisches Brot und Streetfood. Internationale Supermärkt in den Hauptstädten kosten meist mehr als in Europa.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Wie verschiffe ich das Auto zurück von Kapstadt nach Europa?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Wir haben einen Kontakt in Kapstadt, der Autos bündelt und per Container zu sehr kompetitiven Preisen und mit langjährigen Erfahrung vorzugsweise nach Rotterdam verschifft.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Mit wem reise ich zusammen?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Johnny wird dein Reiseführer sein. Wir werden eine kleine Gruppe mit maximal 8 Autos zusammenstellen. Das gewählte Abenteuer, Trans-Afrika zu fahren, ist eine große Schnittmenge. Zudem organisieren wir ein Kennenlern-Wochenende zwischen allen Reisenden.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Was muss ich mitnehmen?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Wir werden eine detaillierte Packliste bereitstellen. Diese wird beinhalten: Ausstattung des Autos, Werkzeug, Proviant, persönliche Reiseapotheke und nützliche Gadgets.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Welche Impfungen benötige ich?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Für individuelle und aktuelle Empfehlungen empfiehlt sich ein Termin beim Tropeninstitut, z. B. beim Bernhard-Nocht-Institut oder dem Tropeninstitut Hamburg. In vielen westafrikanischen Ländern ist die Gelbfieberimpfung verpflichtend und Voraussetzung für die Einreise. Darüber hinaus sollten die Standardimpfungen wie Tetanus, Diphtherie und Polio (Kinderlähmung), gegebenenfalls auch Pertussis, auf dem aktuellen Stand sein. Als besonders empfohlene Reiseimpfungen gelten Hepatitis A und B sowie Typhus. Je nach individuellem Risiko können zusätzlich Impfungen gegen Tollwut, Meningokokken oder in bestimmten Fällen auch Cholera und Tuberkulose sinnvoll sein.</p>
+          <p>Gegen Malaria gibt es keine Impfung. Der Schutz erfolgt stattdessen über Medikamente zur Prophylaxe oder als Notfalltherapie, häufig beispielsweise Malarone, sowie durch konsequenten Mückenschutz.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Welche Anforderungen muss mein Auto erfüllen?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Ein Großteil der Strecke ist Asphalt, viele Strecken auf losen Straßen, einige Abschnitte sind aber herausfordernd: Wüste, Berge, ausgewaschene Straßen, Furtdurchfahrten etc. Wir stellen ein Allrad-Fahrzeug als Voraussetzung. Die Trans-Afrika Strecke kann auch ohne 4x4 gefahren werden, die aus unserer Sicht schönsten und spannendsten Abschnitte werden dabei aber ausgelassen. Als Bereifung empfehlen wir All-Terrain-Reifen.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Kann ich die Reise unterwegs abbrechen?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Dies ist auf keinen Fall das Ziel. Sollte im absoluten Worst-Case der Wunsch oder die Notwendigkeit bestehen zurück in die Heimat zu reisen, ist das möglich. Es gibt internationale Flughäfen in den Großstädten, meist zumindest mit Flügen nach Paris, Brüssel, London oder Frankfurt. Das Auto kann bei ausgewählten Partnern sicher gelagert und teilweise auch verschifft werden.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Ich bin Anfänger, ist die Reise für mich geeignet?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Ja, absolut. Du wirst schnell lernen. Zudem sind wir ein Team und bewältigen Herausforderungen gemeinsam.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Was passiert, wenn mein Auto ausfällt?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Wir werden dein Auto regelmäßig angucken und checken und nach Möglichkeit vorausschauende Maßnahmen ergreifen und Reparaturen durchführen, damit das Auto nicht ausfällt. Bei einer Panne / Unfall etc. werden wir das Auto zur nächsten Werkstatt transportieren und dort reparieren (lassen).</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Wie anstrengend ist die Reise wirklich?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Wir denken von Tag zu Tag und das Ziel ist es Spaß und Freude zu haben. Dennoch ist die Reise auch anstrengend: neue Umgebung, neue und viele Eindrücke, unterschiedliche Temperaturen, fehlende Rückzugsorte, neugierige Menschen, Grenzübertritte und Polizeikontrollen. Es ist kein einfaches Leben „on the road“ — aber es wird sich lohnen.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Wie viel Zeit verbringe ich im Auto?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Im Schnitt bist du 5–6 Tage pro Woche unterwegs. Wir brechen nach dem Frühstück auf und planen eine Ankunft am Nachmittag, um noch genügend Zeit zu haben, Abendessen vorzubereiten, ein Lagerfeuer anzuzünden und die Landschaft zu erkunden / genießen.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Wie läuft ein Grenzübertritt konkret ab?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Jede Grenze ist anders, meistens muss man aus einem Land „auschecken“ und in das neue Land „einchecken“. Dabei ist das getrennt in unterschiedliche Gebäude, die teilweise kilometerlang auseinanderliegen. Grundsätzlich werden Personen im Reisepass „ein- und ausgecheckt“ und das Auto mit dem „Carnet de Passage“.</p>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary><span class="acc-title">Was sind die Stornierungsbedingungen?</span><span class="acc-icon"></span></summary>
+        <div class="acc-body">
+          <p>Die Teilnahme wird mit einer Anzahlung von 30 % des Reisepreises verbindlich reserviert. Die Anzahlung ist nicht erstattungsfähig. Die Restzahlung erfolgt spätestens 90 Tage vor Reisebeginn.</p>
+          <p>Bei einer Stornierung bis 90 Tage vor Abreise verfällt die Anzahlung. Zwischen 89 und 60 Tagen vor Abreise werden 50 % des Gesamtpreises fällig, zwischen 59 und 14 Tagen vor Abreise 80 %. Ab 13 Tagen vor Reisebeginn oder bei Nichtantritt wird der gesamte Reisepreis fällig.</p>
+          <p>Da wir die Expedition langfristig planen, Unterkünfte organisieren und die Gruppengröße bewusst klein halten, bitten wir um Verständnis für diese Regelung. Wir empfehlen ausdrücklich den Abschluss einer Reiserücktrittsversicherung.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FINAL CTA ============================== -->
+<section class="section dark final-cta" id="cta">
+  <div class="final-bg image-frame no-grad">
+    <image-slot id="exp-cta" placeholder="Cinematic — Sonnenuntergang am Kap" src="images/namibia-rocks.jpg"></image-slot>
+    <div class="final-vignette"></div>
+  </div>
+  <div class="container final-content">
+    <span class="eyebrow no-rule reveal">Bereit?</span>
+    <h2 class="display reveal" style="font-size: clamp(48px, 8vw, 130px);">
+      Sprich direkt<br>mit <em>Johnny.</em>
+    </h2>
+    <p class="body-l reveal">Bewirb dich für die Expedition. Wir nehmen uns Zeit für dich.</p>
+    <div class="hero-ctas reveal">
+      <a href="https://wa.me/" class="btn light"><span class="dot"></span> WhatsApp <span class="arrow"></span></a>
+      <a href="tel:+49" class="btn ghost">Anrufen <span class="arrow"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-mark">susi <span style="font-style:normal;opacity:.5">&</span> the elephants</div>
+        <p style="max-width: 38ch; opacity: 0.7;">Trans-Afrika ist eine Expedition für Menschen, die mehr suchen als nur Urlaub. Geführt von Johnny, im eigenen Fahrzeug, in einer kleinen Gruppe.</p>
+      </div>
+      <div>
+        <h4>Expedition</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="expedition.html">Die Expedition</a></li>
+          <li><a href="#">Über Uns</a></li>
+          <li><a href="#">Mitfahren</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="https://wa.me/">WhatsApp</a></li>
+          <li><a href="tel:+49">Anrufen</a></li>
+          <li><a href="#">@susiandtheelephants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reise</h4>
+        <ul>
+          <li>04. Januar 2027 — Hamburg</li>
+          <li>09. Mai 2027 — Kapstadt</li>
+          <li>~ 22.000 km · 20 Länder</li>
+          <li>5–8 Fahrzeuge</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2027 SusiandtheElephants. Hamburg.</span>
+      <span>Impressum · Datenschutz · AGB</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+/* =============== OPENING =============== */
+.exp-opening { padding-top: 180px; padding-bottom: 0; }
+.exp-opening-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 100px;
+}
+.exp-opening-meta {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 64px;
+  border-top: 1px solid var(--rule);
+  padding-top: 32px;
+  flex-wrap: wrap;
+}
+.exp-opening-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.meta-val {
+  font-family: var(--serif);
+  font-size: clamp(22px, 1.8vw, 28px);
+  color: var(--ink);
+  font-style: italic;
+}
+.exp-opening-image {
+  width: 100%;
+  height: 70vh;
+  min-height: 540px;
+}
+@media (max-width: 800px) {
+  .exp-opening-meta { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+/* =============== OVERVIEW STATS =============== */
+.overview { background: var(--bg-soft); }
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+.stat {
+  padding: 48px 32px;
+  border-right: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.stat-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--muted);
+  margin-bottom: 24px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.stat:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--serif);
+  font-size: clamp(56px, 7vw, 110px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.stat-unit {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(20px, 1.6vw, 26px);
+  color: var(--muted);
+  margin-top: 4px;
+}
+.stat-label {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 16px;
+}
+.route-line {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 80px;
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--serif);
+  flex-wrap: wrap;
+}
+.route-line-text {
+  font-size: clamp(22px, 2.2vw, 32px);
+  font-style: italic;
+  color: var(--ink);
+}
+.route-arrow {
+  font-family: var(--mono);
+  color: var(--rule);
+  letter-spacing: -0.1em;
+  flex: 1;
+  font-size: 18px;
+}
+@media (max-width: 800px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(2) { border-right: none; }
+  .stat { border-bottom: 1px solid var(--rule); }
+}
+
+/* =============== DAILY =============== */
+.daily-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 7vw, 100px);
+  align-items: center;
+}
+.daily-image { aspect-ratio: 4/5; }
+@media (max-width: 900px) {
+  .daily-grid { grid-template-columns: 1fr; }
+}
+
+/* =============== EXPECT =============== */
+.expect { background: var(--paper); }
+.expect-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--rule);
+}
+.expect-list li {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+.expect-list .num {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.expect-list p {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.4vw, 36px);
+  line-height: 1.25;
+  margin: 0;
+  color: var(--ink);
+}
+
+/* =============== ROUTE / CHAPTERS =============== */
+.route { padding-bottom: 0; }
+.chapter { margin-top: clamp(80px, 12vw, 160px); }
+.chapter-image {
+  width: 100%;
+  height: 75vh;
+  min-height: 560px;
+  position: relative;
+}
+.chapter-body {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: clamp(40px, 7vw, 100px);
+  align-items: start;
+}
+.chapter-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+}
+.chapter-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(64px, 7vw, 110px);
+  line-height: 1;
+  color: var(--ink);
+}
+.chapter-text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.chapter-text .subhead { margin-bottom: 16px; }
+.chapter-gallery {
+  grid-column: 1 / -1;
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.chapter-gallery .image-frame { aspect-ratio: 3/4; }
+.chapter > .container > .subhead {
+  font-family: var(--serif);
+  font-style: italic;
+}
+@media (max-width: 900px) {
+  .chapter-body { grid-template-columns: 1fr; }
+  .chapter-gallery { grid-template-columns: 1fr; }
+}
+
+/* =============== SERVICES =============== */
+.services { background: var(--bg); padding-top: clamp(140px, 18vw, 220px); }
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(40px, 7vw, 120px);
+  align-items: start;
+}
+.services-head {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.accordion {
+  border-top: 1px solid var(--rule);
+}
+.acc-item {
+  border-bottom: 1px solid var(--rule);
+}
+.acc-item summary {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  padding: 32px 0;
+  cursor: pointer;
+  list-style: none;
+  align-items: center;
+}
+.acc-item summary::-webkit-details-marker { display: none; }
+.acc-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  min-width: 40px;
+}
+.acc-title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2vw, 30px);
+  color: var(--ink);
+  font-style: italic;
+}
+.acc-icon {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.2,0.6,0.2,1);
+}
+.acc-icon::before, .acc-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  background: var(--ink);
+  transition: transform 0.3s;
+}
+.acc-icon::before { width: 14px; height: 1px; }
+.acc-icon::after  { width: 1px;  height: 14px; }
+.acc-item[open] .acc-icon::after { transform: scaleY(0); }
+.acc-list, .acc-body {
+  padding: 0 0 36px 64px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+.acc-list li {
+  position: relative;
+  padding-left: 20px;
+}
+.acc-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+.acc-body p { margin-bottom: 8px; }
+
+/* NICHT ENTHALTEN */
+.not-included {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(40px, 7vw, 120px);
+  align-items: start;
+  padding-top: 80px;
+  border-top: 1px solid var(--rule);
+}
+.not-included-head {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.not-included-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 32px;
+}
+.not-included-list li {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--ink-soft);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+  padding-left: 24px;
+}
+.not-included-list li::before {
+  content: "×";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+  font-family: var(--mono);
+}
+@media (max-width: 900px) {
+  .services-grid, .not-included { grid-template-columns: 1fr; }
+  .services-head { position: static; }
+  .not-included-list { grid-template-columns: 1fr; }
+}
+
+/* =============== FAQ =============== */
+.faq { background: var(--paper); }
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: clamp(40px, 7vw, 120px);
+  align-items: start;
+}
+.faq-head {
+  position: sticky;
+  top: 100px;
+}
+.faq-accordion .acc-item summary {
+  grid-template-columns: 1fr auto;
+}
+.faq-accordion .acc-body {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.faq-accordion .acc-body p {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .faq-grid { grid-template-columns: 1fr; }
+  .faq-head { position: static; }
+}
+
+/* =============== FINAL CTA =============== */
+.final-cta {
+  position: relative;
+  padding: 0;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.final-bg { position: absolute; inset: 0; z-index: 0; }
+.final-vignette {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(20,19,15,0.6) 0%, rgba(20,19,15,0.3) 35%, rgba(20,19,15,0.85) 100%);
+}
+.final-content {
+  position: relative;
+  z-index: 2;
+  padding: 140px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1100px;
+}
+.final-content .display { color: var(--night-ink); max-width: 16ch; }
+.btn .dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: #25d366;
+  border-radius: 50%;
+}
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+</style>
+
+<!-- ============================== TWEAKS PANEL ============================== -->
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+const DEFAULTS = /*EDITMODE-BEGIN*/{
+  "palette": "sand",
+  "type": "serif-sans",
+  "density": "default"
+}/*EDITMODE-END*/;
+
+function applyTweaks(t) {
+  document.body.dataset.palette = t.palette;
+  document.body.dataset.type = t.type;
+  document.body.dataset.density = t.density;
+}
+
+function App() {
+  const [t, setT] = useTweaks(DEFAULTS);
+  useEffect(() => { applyTweaks(t); }, [t]);
+
+  return (
+    <TweaksPanel title="Tweaks">
+      <TweakSection title="Palette">
+        <TweakRadio
+          value={t.palette}
+          onChange={v => setT('palette', v)}
+          options={[
+            { value: 'sand', label: 'Sand' },
+            { value: 'olive', label: 'Olive' },
+            { value: 'dark', label: 'Nacht' },
+          ]}
+        />
+      </TweakSection>
+      <TweakSection title="Typografie">
+        <TweakRadio
+          value={t.type}
+          onChange={v => setT('type', v)}
+          options={[
+            { value: 'serif-sans', label: 'Serif + Sans' },
+            { value: 'all-serif', label: 'All-Serif' },
+            { value: 'modern', label: 'Modern' },
+          ]}
+        />
+      </TweakSection>
+      <TweakSection title="Dichte">
+        <TweakRadio
+          value={t.density}
+          onChange={v => setT('density', v)}
+          options={[
+            { value: 'spacious', label: 'Weit' },
+            { value: 'default', label: 'Standard' },
+            { value: 'tight', label: 'Eng' },
+          ]}
+        />
+      </TweakSection>
+    </TweaksPanel>
+  );
+}
+
+const root = document.createElement('div');
+document.body.appendChild(root);
+ReactDOM.createRoot(root).render(<App />);
+</script>
+
+<!-- ============================== SCROLL BEHAVIOR ============================== -->
+<script>
+const nav = document.getElementById('nav');
+function updateNav() {
+  if (window.scrollY > 80) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+updateNav();
+
+const io = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  }
+}, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

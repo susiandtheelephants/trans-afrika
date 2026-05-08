@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SusiandtheElephants — Trans-Afrika</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter+Tight:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="image-slot.js"></script>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body data-palette="sand" data-type="serif-sans" data-density="default">
+
+<!-- ============================== NAV ============================== -->
+<nav class="nav" id="nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-link active">Home</a>
+  </div>
+  <a href="index.html" class="nav-logo">susi <span class="amp">&</span> the elephants</a>
+  <div class="nav-menu">
+    <a href="expedition.html" class="nav-link">Die Expedition</a>
+    <a href="#" class="nav-link">Über Uns</a>
+    <a href="#cta" class="btn nav-cta light">Mitfahren <span class="arrow"></span></a>
+  </div>
+</nav>
+
+<!-- ============================== HERO ============================== -->
+<header class="hero" id="hero">
+  <div class="hero-image hero-slideshow">
+    <div class="hero-slide active" style="background-image: url('images/hero-1.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('images/hero-2.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('images/hero-3.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content hero-content-centered">
+    <h1 class="display">
+      <span class="roman">Trans-Afrika.</span><br>
+      Die Expedition<br>deines Lebens.
+    </h1>
+
+    <p class="hero-subline">
+      125 Tage Abenteuer. 20 Länder. Von Europa bis ans Kap der Guten Hoffnung,<br>
+      in deinem eigenen Fahrzeug. Sei Teil einer kleinen, ausgewählten Gruppe,<br>
+      die dieselbe Idee nicht mehr loslässt.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#cta" class="btn solid">Mitfahren <span class="arrow"></span></a>
+      <a href="expedition.html" class="btn ghost">Expedition entdecken <span class="arrow"></span></a>
+    </div>
+  </div>
+
+  <div class="hero-slide-indicators">
+    <button class="hero-dot active" data-slide="0"></button>
+    <button class="hero-dot" data-slide="1"></button>
+    <button class="hero-dot" data-slide="2"></button>
+  </div>
+
+  <div class="hero-scroll">
+    <span class="caption">Scroll</span>
+    <span class="hero-scroll-line"></span>
+  </div>
+
+  <div class="hero-corner">
+    <span class="caption">33.9221° S · 18.4231° E</span>
+  </div>
+</header>
+
+<!-- ============================== REALITY CHECK ============================== -->
+<section class="section reality" id="reality">
+  <div class="container-wide reality-grid">
+    <div class="reality-image image-frame reveal">
+      <image-slot id="reality" placeholder="Fahrzeug auf rauer Piste — staubige, ehrliche Szene"></image-slot>
+      <span class="image-caption">— irgendwo zwischen den welten</span>
+    </div>
+
+    <div class="reality-text">
+      <h2 class="headline reveal">Keine Reise.<br><em>Eine Expedition.</em></h2>
+
+      <div class="reveal-stagger">
+        <p class="body-l" style="--d:0ms">
+          Du entscheidest dich nicht für eine klassische Reise. Diese Expedition führt dich durch einige der ursprünglichsten und abgelegensten Regionen der Welt. Es gibt keinen festen Ablauf, keine garantierten Etappen und keine Infrastruktur wie du sie aus Europa kennst.
+        </p>
+        <p class="body-l" style="--d:120ms">
+          Pläne können sich jederzeit ändern, Grenzen erfordern Geduld und Straßen werden zur Herausforderung.
+        </p>
+        <p class="body-l accent" style="--d:240ms">
+          Genau das ist Teil dieses Abenteuers. Und genau dafür brauchst du jemanden, der weiß, wie es geht.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== EMOTION / WHY ============================== -->
+<section class="section emotion" id="emotion">
+  <div class="container">
+    <div class="emotion-intro reveal">
+      <span class="eyebrow">Warum</span>
+      <h2 class="headline italic">Unsere Trans-Afrika Reise<br>hat unser Leben verändert.</h2>
+    </div>
+  </div>
+
+  <div class="container emotion-block">
+    <p class="body-l reveal">
+      Wir haben die wilde Schönheit Afrikas erlebt und Menschen kennengelernt, die uns mit ihrer Neugier und Gastfreundschaft beeindruckt haben.
+    </p>
+  </div>
+
+  <div class="emotion-image-full image-frame reveal">
+    <image-slot id="emotion-1" placeholder="Weite Landschaft — Konvoi vor Horizont, kleine Fahrzeuge in Skala"></image-slot>
+  </div>
+
+  <div class="container emotion-block">
+    <p class="body-l reveal">
+      Auf der Reise verschwindet irgendwann alles Vertraute: es gibt kein festes Zuhause, keinen gewohnten Alltag und keine Routine. Aber genau dort beginnt etwas Neues.
+    </p>
+  </div>
+
+  <div class="container emotion-pair">
+    <div class="image-frame reveal" style="aspect-ratio: 4/5;">
+      <image-slot id="emotion-2" placeholder="Lagerfeuer am Abend, Menschen in Silhouette"></image-slot>
+    </div>
+    <div class="image-frame reveal" style="aspect-ratio: 4/5;">
+      <image-slot id="emotion-3" placeholder="Sternenhimmel über dem Camp — Milchstraße"></image-slot>
+    </div>
+  </div>
+
+  <div class="container emotion-block">
+    <p class="body-l reveal">
+      Tage am Steuer durch endlose Landschaften, anspruchsvolle Offroad-Tracks, Abende am Lagerfeuer, der Sternenhimmel über uns.
+    </p>
+    <p class="body-l reveal">
+      Du wächst mit jeder Herausforderung, lernst dich selbst besser kennen und merkst, wie viel eigentlich möglich ist.
+    </p>
+    <p class="lede reveal" style="margin-top: 64px;">
+      „Es sind die kleinen und großen Momente, die diese Reise ausmachen — und das Gefühl, es am Ende geschafft zu haben.“
+    </p>
+  </div>
+
+  <div class="container emotion-block">
+    <p class="body-l reveal">
+      Genau das ermöglicht dir diese Expedition.
+    </p>
+    <p class="body-l reveal">
+      Von Johnny geführt, der die Logistik im Hintergrund übernimmt, damit du dich auf das konzentrieren kannst, worum es wirklich geht: <em>das Erlebnis, die Menschen und die Reise selbst.</em>
+    </p>
+  </div>
+</section>
+
+<!-- ============================== JOHNNY ============================== -->
+<section class="section johnny" id="johnny">
+  <div class="container-wide johnny-grid">
+    <div class="johnny-portrait image-frame reveal">
+      <image-slot id="johnny" placeholder="Portrait Johnny, ehrlich, ungestellt — am Fahrzeug oder in der Wüste"></image-slot>
+      <span class="image-caption">— johnny, expeditionsleitung</span>
+    </div>
+
+    <div class="johnny-text">
+      <h2 class="headline reveal">Warum mit <em>Johnny</em>.</h2>
+      <p class="lede reveal">Erfahrung. Ruhe. Verantwortung — und gleichzeitig Teil der Gruppe.</p>
+
+      <ol class="johnny-list reveal-stagger">
+        <li style="--d:0ms"><p>In Südafrika gelebt und zahlreiche Reisen in Afrika unternommen.</p></li>
+        <li style="--d:80ms"><p>5 Monate selbst von Europa nach Südafrika gefahren.</p></li>
+        <li style="--d:160ms"><p>Grenzübertritte, Pannen und kritische Situationen selbst gelöst.</p></li>
+        <li style="--d:240ms"><p>Andere Reisende haben uns aktiv um Hilfe gebeten.</p></li>
+        <li style="--d:320ms"><p>Ich kenne die Strecke — nicht nur aus der Theorie, sondern aus Erfahrung.</p></li>
+        <li style="--d:400ms"><p>Ich übernehme Verantwortung, wenn es darauf ankommt.</p></li>
+        <li style="--d:480ms"><p>Gleichzeitig bin ich Teil der Gruppe.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ROUTE TEASER ============================== -->
+<section class="section route-teaser" id="route">
+  <div class="container">
+    <div class="route-intro reveal">
+      <h2 class="headline italic" style="max-width: 28ch;">
+        Von Europa durch die Sahara, entlang der Westküste, durch den Regenwald bis nach Kapstadt.
+      </h2>
+      <p class="body-l reveal" style="margin-top: 40px; max-width: 60ch;">
+        Eine der längsten und intensivsten Overland-Routen der Welt.
+      </p>
+    </div>
+  </div>
+
+  <div class="route-strip">
+    <div class="route-card reveal">
+      <div class="image-frame" style="aspect-ratio: 3/4;">
+        <image-slot id="route-1" placeholder="Sahara Dünen"></image-slot>
+      </div>
+      <div class="route-card-meta">
+        <span class="caption">01</span>
+        <span class="caption">Sahara</span>
+      </div>
+    </div>
+    <div class="route-card reveal">
+      <div class="image-frame" style="aspect-ratio: 3/4;">
+        <image-slot id="route-2" placeholder="Regenwald — Zentralafrika"></image-slot>
+      </div>
+      <div class="route-card-meta">
+        <span class="caption">02</span>
+        <span class="caption">Regenwald</span>
+      </div>
+    </div>
+    <div class="route-card reveal">
+      <div class="image-frame" style="aspect-ratio: 3/4;">
+        <image-slot id="route-3" placeholder="Atlantische Westküste, Brandung"></image-slot>
+      </div>
+      <div class="route-card-meta">
+        <span class="caption">03</span>
+        <span class="caption">Westküste</span>
+      </div>
+    </div>
+    <div class="route-card reveal">
+      <div class="image-frame" style="aspect-ratio: 3/4;">
+        <image-slot id="route-4" placeholder="Namibia — Salzpfanne, Wildlife"></image-slot>
+      </div>
+      <div class="route-card-meta">
+        <span class="caption">04</span>
+        <span class="caption">Namibia</span>
+      </div>
+    </div>
+    <div class="route-card reveal">
+      <div class="image-frame" style="aspect-ratio: 3/4;">
+        <image-slot id="route-5" placeholder="Kapstadt, Tafelberg"></image-slot>
+      </div>
+      <div class="route-card-meta">
+        <span class="caption">05</span>
+        <span class="caption">Kapstadt</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="text-align: center; margin-top: 80px;">
+    <a href="expedition.html" class="btn">Die ganze Route entdecken <span class="arrow"></span></a>
+  </div>
+</section>
+
+<!-- ============================== FINAL CTA ============================== -->
+<section class="section dark final-cta" id="cta">
+  <div class="final-bg image-frame no-grad">
+    <image-slot id="cta-bg" placeholder="Cinematic — Fahrzeug bei Sonnenuntergang, Staub, Stille" src="images/morocco-dusk.jpg"></image-slot>
+    <div class="final-vignette"></div>
+  </div>
+  <div class="container final-content">
+    <span class="eyebrow no-rule reveal">Jetzt</span>
+    <h2 class="display reveal" style="font-size: clamp(48px, 8vw, 130px);">
+      Wenn nicht jetzt,<br><em>wann dann?</em>
+    </h2>
+    <div class="final-text reveal">
+      <p class="body-l">
+        Diese Route ist anders als alles, was aktuell angeboten wird. Wir haben sie so gestaltet, dass du Afrika auf eine wirklich einzigartige Weise erleben kannst.
+      </p>
+      <p class="body-l">
+        Wenn du dir diese Reise schon lange vorgenommen hast: Jetzt ist der Moment. Bewirb dich für die Expedition und sprich direkt mit mir.
+      </p>
+    </div>
+    <div class="hero-ctas reveal">
+      <a href="https://wa.me/" class="btn light"><span class="dot"></span> WhatsApp <span class="arrow"></span></a>
+      <a href="tel:+49" class="btn ghost">Anrufen <span class="arrow"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-mark">susi <span style="font-style:normal;opacity:.5">&</span> the elephants</div>
+        <p style="max-width: 38ch; opacity: 0.7;">Trans-Afrika ist eine Expedition für Menschen, die mehr suchen als nur Urlaub. Geführt von Johnny, im eigenen Fahrzeug, in einer kleinen Gruppe.</p>
+      </div>
+      <div>
+        <h4>Expedition</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="expedition.html">Die Expedition</a></li>
+          <li><a href="#">Über Uns</a></li>
+          <li><a href="#">Mitfahren</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="https://wa.me/">WhatsApp</a></li>
+          <li><a href="tel:+49">Anrufen</a></li>
+          <li><a href="#">@susiandtheelephants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reise</h4>
+        <ul>
+          <li>04. Januar 2027 — Hamburg</li>
+          <li>09. Mai 2027 — Kapstadt</li>
+          <li>~ 22.000 km · 20 Länder</li>
+          <li>5–8 Fahrzeuge</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2027 SusiandtheElephants. Hamburg.</span>
+      <span>Impressum · Datenschutz · AGB</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+/* =============== HERO =============== */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 720px;
+  overflow: hidden;
+  color: #f3eee5;
+}
+.hero-image {
+  position: absolute;
+  inset: -8% 0 0 0;
+  height: 116%;
+  z-index: 1;
+}
+.hero-image image-slot { width: 100%; height: 100%; }
+.hero-slideshow .hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
+.hero-slideshow .hero-slide.active { opacity: 1; }
+.hero-slide-indicators {
+  position: absolute;
+  bottom: 32px;
+  left: var(--gutter);
+  z-index: 4;
+  display: flex;
+  gap: 10px;
+}
+.hero-dot {
+  width: 28px;
+  height: 2px;
+  background: rgba(243,238,229,0.35);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.4s;
+}
+.hero-dot.active { background: rgba(243,238,229,0.95); }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(20,19,15,0.55) 0%, rgba(20,19,15,0.15) 30%, rgba(20,19,15,0.15) 60%, rgba(20,19,15,0.85) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto auto auto auto;
+  align-items: end;
+  padding: 130px var(--gutter) 80px;
+  gap: 32px;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.hero-content-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px var(--gutter);
+  gap: 36px;
+}
+.hero-content-centered .display { max-width: 18ch; }
+.hero-content-centered .hero-subline { margin: 0 auto; }
+.hero-content-centered .hero-ctas { justify-content: center; }
+.hero-meta {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  align-self: start;
+  margin-top: 12px;
+  color: rgba(243,238,229,0.75);
+}
+.hero-meta .caption::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  margin-right: 12px;
+  vertical-align: middle;
+  opacity: 0.6;
+}
+.hero .display { color: #f6f1e6; max-width: 18ch; }
+.hero-subline {
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.6;
+  color: rgba(243,238,229,0.82);
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: rgba(243,238,229,0.7);
+}
+.hero-scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(180deg, rgba(243,238,229,0.7), rgba(243,238,229,0));
+  animation: scrolltick 2.4s ease-in-out infinite;
+}
+@keyframes scrolltick {
+  0%, 100% { transform: scaleY(0.4); transform-origin: top; opacity: 0.4; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+.hero-corner {
+  position: absolute;
+  bottom: 32px;
+  right: var(--gutter);
+  z-index: 4;
+  color: rgba(243,238,229,0.6);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+/* =============== REALITY =============== */
+.reality-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(40px, 8vw, 120px);
+  align-items: center;
+}
+.reality-image { aspect-ratio: 4/5; }
+.reality-text { display: flex; flex-direction: column; gap: 32px; max-width: 56ch; }
+.body-l.accent {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(22px, 1.8vw, 26px);
+  color: var(--ink);
+  border-top: 1px solid var(--rule);
+  padding-top: 28px;
+  max-width: 32ch;
+  margin-top: 12px;
+}
+@media (max-width: 900px) {
+  .reality-grid { grid-template-columns: 1fr; }
+}
+
+/* =============== EMOTION =============== */
+.emotion { background: var(--bg-soft); }
+.emotion-intro { max-width: 30ch; margin-bottom: 100px; display: flex; flex-direction: column; gap: 28px; }
+.emotion-block {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 720px;
+}
+.emotion-block .body-l { max-width: 56ch; }
+.emotion-image-full {
+  width: 100%;
+  height: 80vh;
+  min-height: 520px;
+  margin: 100px 0;
+}
+.emotion-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 100px auto;
+}
+@media (max-width: 800px) {
+  .emotion-pair { grid-template-columns: 1fr; }
+}
+
+/* =============== JOHNNY =============== */
+.johnny { background: var(--paper); }
+.johnny-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(40px, 7vw, 100px);
+  align-items: start;
+}
+.johnny-portrait { aspect-ratio: 4/5; position: sticky; top: 100px; }
+.johnny-text { display: flex; flex-direction: column; gap: 24px; padding-top: 20px; }
+.johnny-text .lede { margin-bottom: 32px; }
+.johnny-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.johnny-list li {
+  display: block;
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+}
+.johnny-list li:last-child { border-bottom: 1px solid var(--rule); }
+.johnny-list .num {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.johnny-list p {
+  font-family: var(--serif);
+  font-size: clamp(20px, 1.7vw, 26px);
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0;
+  font-weight: 400;
+}
+@media (max-width: 900px) {
+  .johnny-grid { grid-template-columns: 1fr; }
+  .johnny-portrait { position: static; }
+}
+
+/* =============== ROUTE TEASER =============== */
+.route-teaser { background: var(--bg); }
+.route-intro { max-width: 22ch; margin-bottom: 80px; display: flex; flex-direction: column; gap: 24px; }
+.route-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 0 var(--gutter);
+  max-width: 1640px;
+  margin: 0 auto;
+}
+.route-card { display: flex; flex-direction: column; gap: 16px; transition: transform 0.5s ease; }
+.route-card:hover { transform: translateY(-6px); }
+.route-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+@media (max-width: 1100px) {
+  .route-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* =============== FINAL CTA =============== */
+.final-cta {
+  position: relative;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.final-bg { position: absolute; inset: 0; z-index: 0; }
+.final-vignette {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(20,19,15,0.6) 0%, rgba(20,19,15,0.3) 35%, rgba(20,19,15,0.85) 100%);
+}
+.final-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--section-pad) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1100px;
+}
+.final-content .display { color: var(--night-ink); max-width: 14ch; }
+.final-text { display: flex; flex-direction: column; gap: 20px; max-width: 60ch; }
+.btn .dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: #25d366;
+  border-radius: 50%;
+}
+</style>
+
+<!-- ============================== TWEAKS PANEL ============================== -->
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+const DEFAULTS = /*EDITMODE-BEGIN*/{
+  "palette": "olive",
+  "type": "serif-sans",
+  "density": "default"
+}/*EDITMODE-END*/;
+
+function applyTweaks(t) {
+  document.body.dataset.palette = t.palette;
+  document.body.dataset.type = t.type;
+  document.body.dataset.density = t.density;
+}
+
+function App() {
+  const [t, setT] = useTweaks(DEFAULTS);
+  useEffect(() => { applyTweaks(t); }, [t]);
+
+  return (
+    <TweaksPanel title="Tweaks">
+      <TweakSection title="Palette">
+        <TweakRadio
+          value={t.palette}
+          onChange={v => setT('palette', v)}
+          options={[
+            { value: 'sand', label: 'Sand' },
+            { value: 'olive', label: 'Olive' },
+            { value: 'dark', label: 'Nacht' },
+          ]}
+        />
+      </TweakSection>
+      <TweakSection title="Typografie">
+        <TweakRadio
+          value={t.type}
+          onChange={v => setT('type', v)}
+          options={[
+            { value: 'serif-sans', label: 'Serif + Sans' },
+            { value: 'all-serif', label: 'All-Serif' },
+            { value: 'modern', label: 'Modern' },
+          ]}
+        />
+      </TweakSection>
+      <TweakSection title="Dichte">
+        <TweakRadio
+          value={t.density}
+          onChange={v => setT('density', v)}
+          options={[
+            { value: 'spacious', label: 'Weit' },
+            { value: 'default', label: 'Standard' },
+            { value: 'tight', label: 'Eng' },
+          ]}
+        />
+      </TweakSection>
+    </TweaksPanel>
+  );
+}
+
+const root = document.createElement('div');
+document.body.appendChild(root);
+ReactDOM.createRoot(root).render(<App />);
+</script>
+
+<!-- ============================== SCROLL BEHAVIOR ============================== -->
+<script>
+// Nav scroll state
+const nav = document.getElementById('nav');
+function updateNav() {
+  if (window.scrollY > 80) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+updateNav();
+
+// Hero slideshow
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.hero-dot');
+let slideIdx = 0;
+function showSlide(i) {
+  slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+  dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+  slideIdx = i;
+}
+setInterval(() => showSlide((slideIdx + 1) % slides.length), 5500);
+dots.forEach((d, idx) => d.addEventListener('click', () => showSlide(idx)));
+
+// Reveal-on-scroll
+const io = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  }
+}, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+// Hero parallax
+const heroImage = document.querySelector('.hero-image');
+if (heroImage) {
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y < 800) {
+      heroImage.style.transform = `translateY(${y * 0.25}px)`;
+    }
+  }, { passive: true });
+}
+</script>
+
+</body>
+</html>
