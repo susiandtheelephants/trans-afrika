@@ -139,8 +139,8 @@
     <p class="body-l reveal">
       Du wächst mit jeder Herausforderung, lernst dich selbst besser kennen und merkst, wie viel eigentlich möglich ist.
     </p>
-    <p class="lede reveal" style="margin-top: 64px;">
-      „Es sind die kleinen und großen Momente, die diese Reise ausmachen — und das Gefühl, es am Ende geschafft zu haben.“
+    <p class=”lede reveal” style=”margin-top: var(--space-l);”>
+      „Es sind die kleinen und großen Momente, die diese Reise ausmachen — und das Gefühl, es am Ende geschafft zu haben.”
     </p>
   </div>
 
@@ -186,7 +186,7 @@
       <h2 class="headline italic" style="max-width: 28ch;">
         Von Europa durch die Sahara, entlang der Westküste, durch den Regenwald bis nach Kapstadt.
       </h2>
-      <p class="body-l reveal" style="margin-top: 40px; max-width: 60ch;">
+      <p class="body-l reveal" style="margin-top: var(--space-m); max-width: 56ch;">
         Eine der längsten und intensivsten Overland-Routen der Welt.
       </p>
     </div>
@@ -194,53 +194,53 @@
 
   <div class="route-strip">
     <div class="route-card reveal">
-      <div class="image-frame" style="aspect-ratio: 3/4;">
+      <div class="route-image image-frame" style="aspect-ratio: 3/4;">
         <image-slot id="route-1" placeholder="Sahara Dünen"></image-slot>
-      </div>
-      <div class="route-card-meta">
-        <span class="caption">01</span>
-        <span class="caption">Sahara</span>
+        <div class="route-card-meta">
+          <span class="caption">01</span>
+          <span class="caption">Sahara</span>
+        </div>
       </div>
     </div>
     <div class="route-card reveal">
-      <div class="image-frame" style="aspect-ratio: 3/4;">
+      <div class="route-image image-frame" style="aspect-ratio: 3/4;">
         <image-slot id="route-2" placeholder="Regenwald — Zentralafrika"></image-slot>
-      </div>
-      <div class="route-card-meta">
-        <span class="caption">02</span>
-        <span class="caption">Regenwald</span>
+        <div class="route-card-meta">
+          <span class="caption">02</span>
+          <span class="caption">Regenwald</span>
+        </div>
       </div>
     </div>
     <div class="route-card reveal">
-      <div class="image-frame" style="aspect-ratio: 3/4;">
+      <div class="route-image image-frame" style="aspect-ratio: 3/4;">
         <image-slot id="route-3" placeholder="Atlantische Westküste, Brandung"></image-slot>
-      </div>
-      <div class="route-card-meta">
-        <span class="caption">03</span>
-        <span class="caption">Westküste</span>
+        <div class="route-card-meta">
+          <span class="caption">03</span>
+          <span class="caption">Westküste</span>
+        </div>
       </div>
     </div>
     <div class="route-card reveal">
-      <div class="image-frame" style="aspect-ratio: 3/4;">
+      <div class="route-image image-frame" style="aspect-ratio: 3/4;">
         <image-slot id="route-4" placeholder="Namibia — Salzpfanne, Wildlife"></image-slot>
-      </div>
-      <div class="route-card-meta">
-        <span class="caption">04</span>
-        <span class="caption">Namibia</span>
+        <div class="route-card-meta">
+          <span class="caption">04</span>
+          <span class="caption">Namibia</span>
+        </div>
       </div>
     </div>
     <div class="route-card reveal">
-      <div class="image-frame" style="aspect-ratio: 3/4;">
+      <div class="route-image image-frame" style="aspect-ratio: 3/4;">
         <image-slot id="route-5" placeholder="Kapstadt, Tafelberg"></image-slot>
-      </div>
-      <div class="route-card-meta">
-        <span class="caption">05</span>
-        <span class="caption">Kapstadt</span>
+        <div class="route-card-meta">
+          <span class="caption">05</span>
+          <span class="caption">Kapstadt</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="container" style="text-align: center; margin-top: 80px;">
+  <div class="container" style="text-align: center; margin-top: var(--space-l);">
     <a href="expedition.html" class="btn">Die ganze Route entdecken <span class="arrow"></span></a>
   </div>
 </section>
@@ -408,16 +408,11 @@
 .hero .display { color: #f6f1e6; max-width: 18ch; }
 .hero-subline {
   font-family: var(--sans);
-  font-size: clamp(15px, 1.2vw, 18px);
-  line-height: 1.6;
-  color: rgba(243,238,229,0.82);
-  max-width: 60ch;
+  font-size: clamp(14px, 1.15vw, 17px);
+  line-height: 1.65;
+  color: rgba(243,238,229,0.8);
+  max-width: 52ch;
   text-wrap: pretty;
-}
-.hero-ctas {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
 }
 .hero-scroll {
   position: absolute;
@@ -451,6 +446,13 @@
   font-size: 11px;
   letter-spacing: 0.1em;
 }
+@media (max-width: 600px) {
+  .hero { min-height: 620px; }
+  .hero-corner { display: none; }
+  .hero-scroll { display: none; }
+  .hero-slide-indicators { bottom: 24px; }
+  .hero-content-centered { gap: 24px; }
+}
 
 /* =============== REALITY =============== */
 .reality-grid {
@@ -473,13 +475,15 @@
 }
 @media (max-width: 900px) {
   .reality-grid { grid-template-columns: 1fr; }
+  .reality-image { aspect-ratio: 3/2; }
+  .reality-text { gap: 24px; }
 }
 
 /* =============== EMOTION =============== */
 .emotion { background: var(--bg-soft); }
-.emotion-intro { max-width: 30ch; margin-bottom: 100px; display: flex; flex-direction: column; gap: 28px; }
+.emotion-intro { max-width: 30ch; margin-bottom: var(--space-xl); display: flex; flex-direction: column; gap: 28px; }
 .emotion-block {
-  margin: 100px auto;
+  margin: var(--space-xl) auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -488,18 +492,19 @@
 .emotion-block .body-l { max-width: 56ch; }
 .emotion-image-full {
   width: 100%;
-  height: 80vh;
-  min-height: 520px;
-  margin: 100px 0;
+  height: clamp(280px, 55vw, 80vh);
+  margin: var(--space-xl) 0;
 }
 .emotion-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin: 100px auto;
+  gap: 12px;
+  margin: var(--space-xl) auto;
 }
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .emotion-pair { grid-template-columns: 1fr; }
+  .emotion-pair > *:last-child { display: none; }
+  .emotion-block { gap: 18px; }
 }
 
 /* =============== JOHNNY =============== */
@@ -534,70 +539,73 @@
 }
 .johnny-list p {
   font-family: var(--serif);
-  font-size: clamp(20px, 1.7vw, 26px);
-  line-height: 1.35;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.38;
   color: var(--ink);
   margin: 0;
   font-weight: 400;
 }
 @media (max-width: 900px) {
   .johnny-grid { grid-template-columns: 1fr; }
-  .johnny-portrait { position: static; }
+  .johnny-portrait { position: static; aspect-ratio: 4/3; }
+  .johnny-list li { padding: 20px 0; }
 }
 
 /* =============== ROUTE TEASER =============== */
 .route-teaser { background: var(--bg); }
-.route-intro { max-width: 22ch; margin-bottom: 80px; display: flex; flex-direction: column; gap: 24px; }
+.route-intro { max-width: 22ch; margin-bottom: var(--space-l); display: flex; flex-direction: column; gap: 20px; }
 .route-strip {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
+  gap: 12px;
   padding: 0 var(--gutter);
   max-width: 1640px;
   margin: 0 auto;
 }
-.route-card { display: flex; flex-direction: column; gap: 16px; transition: transform 0.5s ease; }
-.route-card:hover { transform: translateY(-6px); }
+.route-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.5s var(--ease-out);
+}
+.route-card:hover { transform: translateY(-4px); }
+.route-image::after {
+  background: linear-gradient(180deg, transparent 40%, rgba(14,12,10,0.82) 100%);
+}
 .route-card-meta {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 2;
+  padding: 0 14px 14px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
 }
+.route-card-meta .caption { color: rgba(243,238,229,0.85); letter-spacing: 0.12em; }
+
+/* Horizontal scroll on tablet/mobile — cinematic journey feel */
 @media (max-width: 1100px) {
-  .route-strip { grid-template-columns: repeat(2, 1fr); }
+  .route-strip {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    max-width: 100%;
+    gap: 10px;
+  }
+  .route-strip::-webkit-scrollbar { display: none; }
+  .route-card {
+    flex: 0 0 clamp(240px, 52vw, 360px);
+    scroll-snap-align: start;
+    transition: none;
+  }
+  .route-card:hover { transform: none; }
 }
 
 /* =============== FINAL CTA =============== */
-.final-cta {
-  position: relative;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-.final-bg { position: absolute; inset: 0; z-index: 0; }
-.final-vignette {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(20,19,15,0.6) 0%, rgba(20,19,15,0.3) 35%, rgba(20,19,15,0.85) 100%);
-}
-.final-content {
-  position: relative;
-  z-index: 2;
-  padding: var(--section-pad) 0;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 1100px;
-}
-.final-content .display { color: var(--night-ink); max-width: 14ch; }
-.final-text { display: flex; flex-direction: column; gap: 20px; max-width: 60ch; }
-.btn .dot {
-  display: inline-block;
-  width: 6px; height: 6px;
-  background: #25d366;
-  border-radius: 50%;
-}
+.final-cta { min-height: 100vh; }
+.final-content { gap: 40px; }
 </style>
 
 <!-- ============================== TWEAKS PANEL ============================== -->
