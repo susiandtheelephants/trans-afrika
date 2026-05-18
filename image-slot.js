@@ -224,7 +224,7 @@
 
   class ImageSlot extends HTMLElement {
     static get observedAttributes() {
-      return ['shape', 'radius', 'mask', 'fit', 'position', 'placeholder', 'src', 'id'];
+      return ['shape', 'radius', 'mask', 'fit', 'position', 'placeholder', 'src', 'id', 'align'];
     }
 
     constructor() {
@@ -545,6 +545,17 @@
         this._img.style.objectPosition = this.getAttribute('position') || '50% 50%';
         return;
       }
+      // align="N%" mode: snap view to fraction of the current clamp range so
+      // the focal point survives slot resizes. Only when the user hasn't
+      // committed a manual crop on that axis.
+      if (this._alignAutoY && this._alignFy != null) {
+        const my = Math.max(0, (g.ih * g.base * this._view.s / g.fh - 1) * 50);
+        this._view.y = this._alignFy * my;
+      }
+      if (this._alignAutoX && this._alignFx != null) {
+        const mx = Math.max(0, (g.iw * g.base * this._view.s / g.fw - 1) * 50);
+        this._view.x = this._alignFx * mx;
+      }
       // Cover baseline: img fills the frame on its tighter axis at s=1, so
       // pan works immediately on the overflowing axis without zooming first.
       // Width/height and left/top are all frame-% — depends only on the
@@ -606,10 +617,44 @@
       const url = this._userUrl || srcAttr;
       // Don't clobber an in-flight reframe with a store-triggered re-render.
       if (!this.hasAttribute('data-reframe')) {
+        // align="top"|"bottom"|"left"|"right" (or combinations like
+        // "top left") sets initial pan defaults that _clampView() pulls to
+        // the limits — useful for author-supplied src= images where you want
+        // a deterministic edge crop without an interactive reframe step.
+        //
+        // align also accepts CSS object-position-style percentages:
+        //   align="70%"          → vertical focal at 70% down
+        //   align="center 70%"   → same as above
+        //   align="30% 70%"      → horizontal 30%, vertical 70%
+        // Percentage mode stores a ratio (-1…1) that _applyView() then
+        // multiplies by the live overflow each layout pass, so the focal
+        // point stays put as the slot resizes.
+        const align = (this.getAttribute('align') || '').toLowerCase();
+        let dy = 0, dx = 0;
+        let alignFy = null, alignFx = null;
+        const pcts = align.match(/(\d+(?:\.\d+)?)\s*%/g);
+        if (pcts && pcts.length) {
+          const nums = pcts.map((p) => parseFloat(p));
+          const px = nums.length > 1 ? nums[0] : 50;
+          const py = nums.length > 1 ? nums[1] : nums[0];
+          alignFx = (50 - px) / 50;
+          alignFy = (50 - py) / 50;
+          dx = alignFx * 50;
+          dy = alignFy * 50;
+        } else {
+          if (align.indexOf('top') !== -1) dy = 50;
+          else if (align.indexOf('bottom') !== -1) dy = -50;
+          if (align.indexOf('left') !== -1) dx = 50;
+          else if (align.indexOf('right') !== -1) dx = -50;
+        }
+        this._alignFy = alignFy;
+        this._alignFx = alignFx;
+        this._alignAutoY = !(stored && Number.isFinite(stored.y));
+        this._alignAutoX = !(stored && Number.isFinite(stored.x));
         this._view = {
           s: stored && Number.isFinite(stored.s) ? clampS(stored.s) : 1,
-          x: stored && Number.isFinite(stored.x) ? stored.x : 0,
-          y: stored && Number.isFinite(stored.y) ? stored.y : 0,
+          x: stored && Number.isFinite(stored.x) ? stored.x : dx,
+          y: stored && Number.isFinite(stored.y) ? stored.y : dy,
         };
       }
       this._cap.textContent = this.getAttribute('placeholder') || 'Drop an image';
