@@ -930,18 +930,23 @@ Bei Stornierung bis 90 Tage vor Abreise verfällt die Anzahlung, zwischen 89 und
   .hero {
     min-height: 100vh;
     height: 100vh;
-    padding-top: 11vh;
-    padding-bottom: 12vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
   }
 
   .hero-copy {
-    justify-content: space-between;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
+
+  /* Oberer Textblock */
 
   .hero-display,
   .hero-sub {
     margin-top: 0;
+    text-align: center;
   }
 
   .hero-display {
@@ -949,18 +954,26 @@ Bei Stornierung bis 90 Tage vor Abreise verfällt die Anzahlung, zwischen 89 und
   }
 
   .hero-sub {
-    margin-bottom: 8vh;
+    margin-bottom: 0;
   }
+
+  /* Unterer Textblock */
 
   .hero-lede,
   .hero-cta {
-    margin-top: auto;
+    text-align: center;
   }
 
   .hero-lede {
+    margin-top: auto;
     margin-bottom: 3vh;
   }
 
+  .hero-cta {
+    margin-top: 0;
+  }
+
+}
 }
 }
 }
