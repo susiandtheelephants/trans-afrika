@@ -1990,6 +1990,14 @@ Bei Stornierung bis 90 Tage vor Abreise verfällt die Anzahlung, zwischen 89 und
 
 /* ============================ REVEAL stagger helper ============================ */
 .reveal { transition-delay: var(--d, 0ms); }
+
+@media (max-width: 768px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
 </style>
 
 <!-- ============================== SCRIPTS ============================== -->
