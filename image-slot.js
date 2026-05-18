@@ -661,10 +661,35 @@
       // Toggle via style.display — the [hidden] attribute alone loses to
       // the display:flex / display:block rules in the stylesheet above.
       if (url) {
-        if (this._img.getAttribute('src') !== url) {
-          this._img.src = url;
-          this._ghost.src = url;
-        }
+  const shouldLoadImmediately =
+    this.id === 'hero-1';
+
+  const loadImage = () => {
+    if (this._img.getAttribute('src') !== url) {
+      this._img.src = url;
+      this._ghost.src = url;
+    }
+  };
+
+  if (shouldLoadImmediately) {
+    loadImage();
+  } else {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            loadImage();
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        rootMargin: '300px'
+      }
+    );
+
+    observer.observe(this);
+  }
         this._img.style.display = 'block';
         this._empty.style.display = 'none';
         this.setAttribute('data-filled', '');
