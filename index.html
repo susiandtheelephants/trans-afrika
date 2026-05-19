@@ -604,15 +604,22 @@ Bei Stornierung bis 90 Tage vor Abreise verfällt die Anzahlung, zwischen 89 und
         <input type="tel" name="telefon" placeholder="Telefonnummer">
         <span class="cfl-label">Telefonnummer</span>
       </label>
-      <label class="cfl-field cfl-select">
-        <span class="cfl-label caption">Wie willst du kontaktiert werden?</span>
-        <select name="kontaktart" required>
-          <option value="" disabled selected>Bitte wählen</option>
-          <option value="whatsapp">WhatsApp</option>
-          <option value="email">E-Mail</option>
-          <option value="anruf">Anruf</option>
-        </select>
-      </label>
+      <div class="cfl-field cfl-select-custom">
+  <span class="cfl-label caption">Wie willst du kontaktiert werden?</span>
+  <div class="cfl-dropdown" id="kontaktDropdown">
+    <button type="button" class="cfl-dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">
+      <span class="cfl-dropdown-val">Bitte wählen</span>
+      <svg class="cfl-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <ul class="cfl-dropdown-list" role="listbox">
+      <li class="cfl-dropdown-item" data-value="whatsapp" role="option">WhatsApp</li>
+      <li class="cfl-dropdown-item" data-value="email" role="option">E-Mail</li>
+      <li class="cfl-dropdown-item" data-value="anruf" role="option">Anruf</li>
+    </ul>
+  </div>
+  <!-- hidden input damit Formspree den Wert bekommt -->
+  <input type="hidden" name="kontaktart" id="kontaktartInput" required>
+</div>
 
       <button type="submit" class="btn solid cfl-submit">Absenden <span class="arrow"></span></button>
       <p class="caption cfl-foot">Wir melden uns so schnell wie möglich, meistens noch am selben Tag.</p>
