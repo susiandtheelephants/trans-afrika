@@ -2291,6 +2291,36 @@ function updateActiveNav() {
 }
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 updateActiveNav();
+// Custom Dropdown
+const dropdown = document.getElementById('kontaktDropdown');
+if (dropdown) {
+  const toggle = dropdown.querySelector('.cfl-dropdown-toggle');
+  const valSpan = dropdown.querySelector('.cfl-dropdown-val');
+  const items = dropdown.querySelectorAll('.cfl-dropdown-item');
+  const hiddenInput = document.getElementById('kontaktartInput');
+
+  toggle.addEventListener('click', () => {
+    const open = dropdown.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      valSpan.textContent = item.textContent;
+      hiddenInput.value = item.dataset.value;
+      toggle.classList.add('has-value');
+      items.forEach(i => i.classList.remove('selected'));
+      item.classList.add('selected');
+      dropdown.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+
+  // Schließen bei Klick außerhalb
+  document.addEventListener('click', e => {
+    if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+  });
+}
 </script>
 
 </body>
