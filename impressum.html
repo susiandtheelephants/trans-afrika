@@ -8,13 +8,58 @@
 <link rel="icon" href="images/icons/Logo_Susiandtheelephants.JPEG" type="image/jpeg">
 <link rel="stylesheet" href="styles.css">
 <style>
+.legal-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(243, 238, 229, 0.97);
+  backdrop-filter: saturate(120%) blur(12px);
+  -webkit-backdrop-filter: saturate(120%) blur(12px);
+  border-bottom: 1px solid rgba(31, 29, 26, 0.06);
+}
+.legal-nav-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 14px var(--gutter);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 28px;
+}
+.legal-nav-links {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  grid-column: 2;
+  justify-self: center;
+}
+.legal-nav-link {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ink);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.legal-nav-link:hover { opacity: 1; }
+.legal-nav-cta { grid-column: 3; justify-self: end; }
+@media (max-width: 760px) {
+  .legal-nav-inner { grid-template-columns: 1fr auto; }
+  .legal-nav-links { display: none; }
+  .legal-nav-cta { grid-column: 2; }
+}
+
 .legal-page {
   min-height: 100vh;
-  padding-top: 120px;
+  padding-top: clamp(100px, 14vw, 140px);
   padding-bottom: var(--section-pad);
 }
 .legal-inner {
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -23,12 +68,12 @@
   align-items: center;
   gap: 8px;
   font-family: var(--sans);
-  font-size: 12px;
-  letter-spacing: 0.12em;
+  font-size: 11px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 500;
   color: var(--muted);
-  margin-bottom: 56px;
+  margin-bottom: 64px;
   transition: color 0.2s;
 }
 .legal-back:hover { color: var(--ink); }
@@ -36,89 +81,110 @@
 .legal-title {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(36px, 5vw, 56px);
+  font-size: clamp(48px, 6vw, 80px);
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
   color: var(--ink);
-  margin: 0 0 48px;
+  margin: 0 0 32px;
 }
 .legal-rule {
   width: 40px;
   height: 1px;
   background: var(--rule);
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
-.legal-section {
+.legal-block {
   margin-bottom: 40px;
 }
-.legal-section h2 {
+.legal-block h2 {
   font-family: var(--sans);
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
-  margin: 0 0 16px;
+  margin: 0 0 14px;
 }
-.legal-section p {
+.legal-block p {
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
-  color: var(--ink-soft, var(--ink));
-  margin: 0 0 8px;
+  color: var(--ink-soft);
+  margin: 0 0 4px;
 }
-.legal-section a {
+.legal-block a {
   color: var(--ink);
   border-bottom: 1px solid var(--rule);
   transition: border-color 0.2s;
 }
-.legal-section a:hover { border-color: var(--ink); }
+.legal-block a:hover { border-color: var(--ink); }
 .legal-divider {
   border: none;
   border-top: 1px solid var(--rule);
-  margin: 40px 0;
+  margin: 48px 0;
 }
-.legal-body-section {
-  margin-bottom: 32px;
-}
-.legal-body-section h3 {
+.legal-prose h3 {
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--ink);
   margin: 0 0 10px;
 }
-.legal-body-section p {
+.legal-prose p {
   font-family: var(--sans);
   font-size: 14px;
-  line-height: 1.75;
-  color: var(--ink-soft, var(--ink));
-  margin: 0 0 8px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  margin: 0 0 32px;
 }
+.legal-prose p:last-child { margin-bottom: 0; }
+.legal-footer {
+  border-top: 1px solid var(--rule);
+  padding: 28px 0;
+}
+.legal-footer-row {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.legal-footer-logo img {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.legal-footer-links {
+  display: flex;
+  gap: 24px;
+}
+.legal-footer-links a {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.legal-footer-links a:hover,
+.legal-footer-links a[aria-current] { color: var(--ink); }
 </style>
 </head>
 <body data-palette="sand" data-type="serif-sans" data-density="default">
 
-<!-- NAV -->
-<nav class="nav nav-onepage scrolled" id="nav">
-  <div class="nav-inner">
-    <ul class="nav-links">
-      <li><a href="index.html#top" class="nav-link">Home</a></li>
-      <li><a href="index.html#route" class="nav-link">Die Route</a></li>
+<nav class="legal-nav">
+  <div class="legal-nav-inner">
+    <ul class="legal-nav-links">
+      <li><a href="index.html" class="legal-nav-link">Home</a></li>
+      <li><a href="index.html#route" class="legal-nav-link">Die Route</a></li>
     </ul>
-    <a href="index.html#mitfahren" class="btn nav-btn">Mitfahren <span class="arrow"></span></a>
-    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
-    <a href="index.html#top" class="nav-drawer-link">Home</a>
-    <a href="index.html#route" class="nav-drawer-link">Die Route</a>
-    <a href="index.html#mitfahren" class="nav-drawer-link">Mitfahren</a>
+    <a href="index.html#mitfahren" class="btn legal-nav-cta">Mitfahren <span class="arrow"></span></a>
   </div>
 </nav>
 
-<!-- CONTENT -->
 <main class="legal-page">
   <div class="legal-inner">
 
@@ -130,48 +196,42 @@
     <h1 class="legal-title">Impressum</h1>
     <div class="legal-rule"></div>
 
-    <div class="legal-section">
+    <div class="legal-block">
       <h2>Angaben gemäß § 5 DDG</h2>
       <p>Johan Schröder</p>
       <p>Bartelstrasse 15<br>25469 Halstenbek<br>Deutschland</p>
     </div>
 
-    <div class="legal-section">
+    <div class="legal-block">
       <h2>Kontakt</h2>
       <p>Telefon: <a href="tel:+491629813596">+49 162 9813596</a></p>
       <p>E-Mail: <a href="mailto:susiandtheelephants@gmail.com">susiandtheelephants@gmail.com</a></p>
     </div>
 
-    <div class="legal-section">
+    <div class="legal-block">
       <h2>Umsatzsteuer-ID</h2>
       <p>Wird nach Anmeldung beim Finanzamt ergänzt.</p>
     </div>
 
-    <div class="legal-section">
+    <div class="legal-block">
       <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
       <p>Johan Schröder<br>Bartelstrasse 15, 25469 Halstenbek</p>
     </div>
 
     <hr class="legal-divider">
 
-    <div class="legal-section">
+    <div class="legal-block">
       <h2>Streitbeilegung</h2>
       <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: <a href="https://consumer-redress.ec.europa.eu" target="_blank" rel="noopener">consumer-redress.ec.europa.eu</a>. Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
     </div>
 
     <hr class="legal-divider">
 
-    <div class="legal-body-section">
+    <div class="legal-prose">
       <h3>Haftung für Inhalte</h3>
       <p>Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann keine Gewähr übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen. Eine Haftung ist erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entsprechender Rechtsverletzungen werden diese Inhalte umgehend entfernt.</p>
-    </div>
-
-    <div class="legal-body-section">
       <h3>Haftung für Links</h3>
       <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte kein Einfluss besteht. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden derartige Links umgehend entfernt.</p>
-    </div>
-
-    <div class="legal-body-section">
       <h3>Urheberrecht</h3>
       <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Erstellers.</p>
     </div>
@@ -179,35 +239,17 @@
   </div>
 </main>
 
-<!-- FOOTER -->
-<footer class="footer-min">
-  <div class="container footer-row">
-    <a href="index.html#top" class="footer-logo" aria-label="Susi and the Elephants">
-      <img class="footer-logo-img" src="images/icons/Logo_Susiandtheelephants.JPEG" alt="" width="32" height="32">
+<footer class="legal-footer">
+  <div class="legal-footer-row">
+    <a href="index.html" aria-label="Susi and the Elephants">
+      <img src="images/icons/Logo_Susiandtheelephants.JPEG" alt="" class="legal-footer-logo" style="width:28px;height:28px;border-radius:50%;object-fit:cover;">
     </a>
-    <a href="https://instagram.com/susiandtheelephants" class="footer-mid" aria-label="Instagram">
-      <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
-      <span>susiandtheelephants</span>
-    </a>
-    <div class="footer-legal">
-      <a href="impressum.html">Impressum</a>
+    <div class="legal-footer-links">
+      <a href="impressum.html" aria-current="page">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
     </div>
   </div>
 </footer>
 
-<script>
-// Nav burger
-const nav = document.getElementById('nav');
-const burger = document.getElementById('navBurger');
-const drawer = document.getElementById('navDrawer');
-if (burger) {
-  burger.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    burger.setAttribute('aria-expanded', open);
-    drawer.setAttribute('aria-hidden', !open);
-  });
-}
-</script>
 </body>
 </html>
