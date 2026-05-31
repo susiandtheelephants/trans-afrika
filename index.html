@@ -619,9 +619,22 @@ Du fährst mit.</h2>
   <!-- hidden input damit Formspree den Wert bekommt -->
   <input type="hidden" name="kontaktart" id="kontaktartInput" required>
 </div>
-
-      <button type="submit" class="btn solid cfl-submit">Absenden <span class="arrow"></span></button>
-      <p class="caption cfl-foot">Wir melden uns so schnell wie möglich, meistens noch am selben Tag.</p>
+      </div>
+<!-- Nachrichtenfeld -->
+<label class="cfl-field cfl-float" style="margin-top: 8px;">
+  <textarea name="nachricht" placeholder="Deine Nachricht" rows="4" 
+    style="width:100%;background:none;border:none;border-bottom:1px solid rgba(31,29,26,0.25);padding:10px 0;font-family:var(--sans);font-size:15px;resize:none;outline:none;color:var(--ink);"></textarea>
+  <span class="cfl-label">Nachricht</span>
+</label>
+<button type="submit" class="btn solid cfl-submit">Absenden <span class="arrow"></span></button>
+  <a href="https://wa.me/491629813596" 
+   class="btn whatsapp-btn" 
+   target="_blank" 
+   rel="noopener"
+   style="margin-top: 12px;">
+  WhatsApp schreiben <span class="arrow"></span>
+</a>    
+  <p class="caption cfl-foot">Wir melden uns so schnell wie möglich, meistens noch am selben Tag.</p>
     </form>
 
     <div class="contact-thanks" id="contactThanks" hidden>
