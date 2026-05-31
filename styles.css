@@ -697,7 +697,7 @@ image-slot {
 .cfl-textarea .cfl-label {
   position: absolute;
   left: 0;
-  top: 28px;
+  top: 26px;
 
   pointer-events: none;
 
@@ -711,8 +711,7 @@ image-slot {
 }
 
 /* Label hochschieben */
-.cfl-textarea textarea:focus + .cfl-label,
-.cfl-textarea textarea:not(:placeholder-shown) + .cfl-label
+top: 6px;
   top: 0;
   font-size: 12px;
   text-transform: uppercase;
