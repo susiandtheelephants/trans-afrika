@@ -786,10 +786,6 @@ image-slot {
 }
 
 .footer-mid + .footer-mid {
-  margin-left: 10px;
-}
-
-.footer-mid + .footer-mid {
   margin-left: 8px;
 }
 
@@ -806,6 +802,11 @@ image-slot {
 /* Mobile behaviour */
 @media (max-width: 768px) {
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .footer-wa {
     display: inline-flex;
   }
@@ -815,6 +816,18 @@ image-slot {
     justify-content: center;
     gap: 14px;
   }
+
+  .footer-logo,
+  .footer-legal {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer-legal {
+    width: 100%;
+    justify-content: center;
+  }
+}
 
   .footer-legal {
     width: 100%;
