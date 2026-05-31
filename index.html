@@ -1893,7 +1893,9 @@ Du fährst mit.</h2>
 }
 .cfl-float > input::placeholder { color: transparent; }
 .cfl-float > input:focus + .cfl-label,
-.cfl-float > input:not(:placeholder-shown) + .cfl-label {
+.cfl-float > input:not(:placeholder-shown) + .cfl-label,
+.cfl-float > textarea:focus + .cfl-label,
+.cfl-float > textarea:not(:placeholder-shown) + .cfl-label {
   transform: translateY(-22px);
   font-size: 11px;
   text-transform: uppercase;
@@ -1901,7 +1903,6 @@ Du fährst mit.</h2>
   opacity: 1;
   color: var(--muted);
 }
-
 .cfl-field input,
 .cfl-field select {
   background: transparent;
