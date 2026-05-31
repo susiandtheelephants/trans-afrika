@@ -779,10 +779,10 @@ image-slot {
   transform: translateY(-2px);
 }
 
-.desktop-whatsapp img {
-  width: 22px;
-  height: 22px;
-  opacity: .92;
+.desktop-whatsapp .wa-icon {
+  width: 24px;
+  height: 24px;
+  color: rgba(243,238,229,.95);
 }
 
 /* Mobile aus */
