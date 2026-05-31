@@ -694,16 +694,6 @@ image-slot {
   border-bottom-color: var(--ink);
 }
 
-  resize: vertical;
-  outline: none;
-}
-
-.cfl-textarea textarea:focus {
-  border-bottom-color: var(--ink);
-}
-
-  pointer-events: none;
-
   transition:
     transform .22s ease,
     top .22s ease,
