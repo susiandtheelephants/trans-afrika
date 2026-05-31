@@ -837,9 +837,3 @@ image-slot {
     justify-content: center;
   }
 }
-/* Desktop WhatsApp */
-.desktop-whatsapp .wa-icon {
-  width: 26px;
-  height: 26px;
-  color: rgba(243,238,229,.95);
-}
