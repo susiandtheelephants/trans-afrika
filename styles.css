@@ -694,19 +694,6 @@ image-slot {
   border-bottom-color: var(--ink);
 }
 
-  transition:
-    transform .22s ease,
-    top .22s ease,
-    font-size .22s ease,
-    opacity .22s ease;
-
-  opacity: .55;
-}
-
-/* Label hochschieben */
-
-}
-
 /* Submit zentrieren */
 .cfl-submit-wrap {
   width: 100%;
