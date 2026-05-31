@@ -704,12 +704,7 @@ image-slot {
 }
 
 /* Label hochschieben */
-top: 6px;
-  top: 0;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  opacity: .7;
+
 }
 
 /* Submit zentrieren */
