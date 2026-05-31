@@ -748,3 +748,46 @@ image-slot {
   object-fit: contain;
   opacity: .9;
 }
+/* ==========================
+   Sticky WhatsApp Desktop
+========================== */
+
+.desktop-whatsapp {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(24,21,18,.92);
+  border-radius: 999px;
+
+  z-index: 200;
+  text-decoration: none;
+
+  transition:
+    transform .2s ease,
+    opacity .2s ease;
+}
+
+.desktop-whatsapp:hover {
+  transform: translateY(-2px);
+}
+
+.desktop-whatsapp img {
+  width: 22px;
+  height: 22px;
+  opacity: .92;
+}
+
+/* Mobile aus */
+@media (max-width: 768px) {
+  .desktop-whatsapp {
+    display: none;
+  }
+}
