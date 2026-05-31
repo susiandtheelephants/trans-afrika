@@ -645,3 +645,5 @@ image-slot {
   width: 100%;
   height: 100%;
 }
+.whatsapp-btn { display: none; }
+@media (max-width: 768px) { .whatsapp-btn { display: inline-flex; } }
