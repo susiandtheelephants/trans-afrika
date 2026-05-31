@@ -776,7 +776,17 @@ image-slot {
 .footer-row {
   display: flex;
   align-items: center;
-  gap: 0;
+  justify-content: space-between;
+}
+
+.footer-mid {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-mid + .footer-mid {
+  margin-left: 10px;
 }
 
 .footer-mid + .footer-mid {
