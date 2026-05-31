@@ -725,7 +725,13 @@ image-slot {
 
 /* Submit zentrieren */
 .cfl-submit-wrap {
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 36px;
+}
+
+.cfl-submit {
+  margin: 0 auto;
 }
