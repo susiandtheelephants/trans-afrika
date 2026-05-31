@@ -703,13 +703,6 @@ image-slot {
   margin-top: 36px;
 }
 
-.cfl-submit-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 36px;
-}
-
 .cfl-submit-btn {
   margin: 0;
 }
