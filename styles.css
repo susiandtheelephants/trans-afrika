@@ -731,6 +731,13 @@ top: 6px;
   margin-top: 36px;
 }
 
-.cfl-submit {
-  margin: 0 auto;
+.cfl-submit-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.cfl-submit-btn {
+  margin: 0;
 }
