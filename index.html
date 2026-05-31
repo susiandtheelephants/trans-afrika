@@ -604,12 +604,14 @@ Du fährst mit.</h2>
         <span class="cfl-label">Telefonnummer</span>
       </label>
     <!-- Nachrichtenfeld -->
-<label class="cfl-field cfl-float cfl-textarea">
+<label class="cfl-field cfl-textarea">
   <textarea
+    id="nachricht"
     name="nachricht"
-    placeholder=" "
     rows="4"
+    required
   ></textarea>
+
   <span class="cfl-label">Deine Nachricht</span>
 </label>
       <div class="cfl-field cfl-select-custom">
@@ -629,7 +631,7 @@ Du fährst mit.</h2>
   <input type="hidden" name="kontaktart" id="kontaktartInput" required>
 </div>
       </div>
-<<div class="cfl-submit-wrap">
+<div class="cfl-submit-wrap">
   <button type="submit" class="btn solid cfl-submit">
     Absenden
     <span class="arrow"></span>
