@@ -609,7 +609,6 @@ image-slot {
   flex: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
 }
 .footer-mid + .footer-mid { margin-left: 8px; }
 .footer-legal {
