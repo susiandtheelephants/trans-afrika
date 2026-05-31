@@ -669,7 +669,7 @@ image-slot {
 
 .cfl-textarea textarea {
   width: 100%;
-  min-height: 110px;
+  min-height: 58px;
 
   background: transparent;
   border: none;
