@@ -602,7 +602,7 @@ image-slot {
 .footer-row {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 18px;
 }
 .footer-logo { margin-right: auto; }
 .footer-mid {
