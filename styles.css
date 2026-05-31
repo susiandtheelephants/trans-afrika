@@ -638,12 +638,6 @@ image-slot {
   display: none;
 }
 
-.footer-mid {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .ig-icon {
   width: 16px;
   height: 16px;
