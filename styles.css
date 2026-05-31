@@ -368,12 +368,6 @@ p { margin: 0; }
   color: var(--bg);
   border-color: var(--ink);
 }
-  font-weight: 500;
-  position: relative;
-  padding: 4px 0;
-  opacity: 0.85;
-  transition: opacity 0.2s;
-}
 .nav-menu a:hover, .nav-menu a.active { opacity: 1; }
 .nav-menu a.active::after {
   content: "";
