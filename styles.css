@@ -791,3 +791,49 @@ image-slot {
     display: none;
   }
 }
+/* ============================================================
+   Footer minimal additions (test)
+============================================================ */
+
+/* Mobile WhatsApp neben Instagram */
+.footer-wa {
+  display: none;
+}
+
+.footer-mid {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ig-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Footer links sauber ausrichten */
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Mobile behaviour */
+@media (max-width: 768px) {
+
+  .footer-wa {
+    display: inline-flex;
+  }
+
+  .footer-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .footer-legal {
+    width: 100%;
+    justify-content: center;
+  }
+}
