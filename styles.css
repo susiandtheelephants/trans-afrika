@@ -403,21 +403,6 @@ image-slot {
 /* ============================================================
    Footer
    ============================================================ */
-.footer {
-  background: var(--night);
-  color: var(--night-ink);
-  padding: 100px 0 40px;
-}
-.footer-mark {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 32px;
-  margin-bottom: 24px;
-}
-@media (max-width: 800px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-  .footer-bottom { flex-direction: column; gap: 12px; }
-}
 /* Custom Dropdown */
 .cfl-select-custom { position: relative; }
 
@@ -667,12 +652,6 @@ image-slot {
     margin-left: 0;
     margin-right: 0;
   }
-
-  .footer-legal {
-    width: 100%;
-    justify-content: center;
-  }
-}
 
   .footer-legal {
     width: 100%;
