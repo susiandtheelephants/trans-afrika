@@ -658,9 +658,6 @@ image-slot {
     display: inline-flex;
   }
 }
-@media (max-width: 768px) { 
-  .whatsapp-btn { display: inline-flex; } 
-}
 /* ==========================
    Contact textarea
 ========================== */
