@@ -2279,7 +2279,7 @@ if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
-    const submitBtn = form.querySelector('.cfl-submit');
+const submitBtn = form.querySelector('.cfl-submit-btn');
     if (submitBtn) { submitBtn.disabled = true; submitBtn.style.opacity = '0.6'; }
     try {
       const res = await fetch(form.action, {
