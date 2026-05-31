@@ -707,12 +707,6 @@ image-slot {
   margin: 0;
 }
 
-.footer-whatsapp img {
-  width: 14px;
-  height: 14px;
-  object-fit: contain;
-  opacity: .9;
-}
 /* ==========================
    Sticky WhatsApp Desktop
 ========================== */
@@ -729,7 +723,8 @@ image-slot {
   align-items: center;
   justify-content: center;
 
-  background: rgba(24,21,18,.92);
+   background: rgba(31,29,26,.88);
+   backdrop-filter: blur(10px);
   border-radius: 999px;
 
   z-index: 200;
@@ -785,7 +780,7 @@ image-slot {
 }
 
 .footer-mid + .footer-mid {
-  margin-left: 18px;
+  margin-left: 8px;
 }
 
 .footer-logo {
