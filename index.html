@@ -2649,6 +2649,25 @@ if (dropdown) {
     if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
   });
 }
+// ---------- YouTube: erst bei Klick laden ----------
+(() => {
+  const frame = document.getElementById('videoFrame');
+  if (!frame) return;
+  const load = () => {
+    const id = frame.dataset.yt;
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    iframe.title = 'Johan Schröder — Trans-Afrika Expeditionsleiter';
+    frame.innerHTML = '';
+    frame.appendChild(iframe);
+  };
+  frame.addEventListener('click', load);
+  frame.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(); }
+  });
+})();
 </script>
 
 </body>
