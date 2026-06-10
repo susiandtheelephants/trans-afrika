@@ -50,9 +50,14 @@
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Startseite">Susi <span class="amp">&amp;</span> The Elephants</a>
     <ul class="nav-links">
+      <li><a href="/" class="nav-link active">Home</a></li>
       <li><a href="/expedition" class="nav-link">Expedition</a></li>
+      <!-- TODO: /#reisefuehrer → /reisefuehrer sobald Seite live -->
+      <li><a href="/#reisefuehrer" class="nav-link">Reiseführer</a></li>
+      <!-- TODO: /#journal → /journal sobald Seite live -->
+      <li><a href="/#journal" class="nav-link">Journal</a></li>
     </ul>
-    <a href="/expedition" class="btn nav-btn">Mitfahren <span class="arrow"></span></a>
+    <a href="/expedition#mitfahren" class="btn nav-btn">Mitfahren <span class="arrow"></span></a>
     <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -60,6 +65,10 @@
   <div class="nav-drawer" id="navDrawer" aria-hidden="true">
     <a href="/" class="nav-drawer-link">Home</a>
     <a href="/expedition" class="nav-drawer-link">Expedition</a>
+    <!-- TODO: /#reisefuehrer → /reisefuehrer sobald Seite live -->
+    <a href="/#reisefuehrer" class="nav-drawer-link">Reiseführer</a>
+    <!-- TODO: /#journal → /journal sobald Seite live -->
+    <a href="/#journal" class="nav-drawer-link">Journal</a>
   </div>
 </nav>
 
@@ -73,12 +82,12 @@
       height="1920"
       fetchpriority="high"
       decoding="async"
-      style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;"
+      style="width:100%;height:100%;object-fit:cover;object-position:center 72%;display:block;"
     >
   </div>
   <div class="home-hero-veil"></div>
   <div class="home-hero-copy reveal">
-    <h1 class="display home-display">Susi <span class="roman">&amp;</span> The&nbsp;Elephants</h1>
+    <h1 class="display home-display">Die Expedition deines Lebens.</h1>
     <p class="lede home-lede">Trans-Afrika mit uns. Mitfahren, selber fahren, oder erstmal eintauchen.</p>
   </div>
 </header>
@@ -86,6 +95,12 @@
 <!-- ============================== KARTEN-REIHE ============================== -->
 <section class="section home-cards-section">
   <div class="container">
+
+    <div class="home-cards-head reveal">
+      <span class="eyebrow no-rule">Drei Wege</span>
+      <h2 class="headline italic home-cards-headline">Wie willst du nach Afrika?</h2>
+    </div>
+
     <div class="home-cards reveal-stagger" id="cardsGrid">
 
       <!-- Karte 1: Expedition -->
@@ -103,7 +118,8 @@
       </a>
 
       <!-- Karte 2: Reiseführer -->
-      <div class="home-card home-card-soon" style="--d:80ms">
+      <!-- TODO: <div> → <a href="/reisefuehrer"> sobald Seite live -->
+      <div class="home-card home-card-soon" id="reisefuehrer" style="--d:80ms">
         <div class="home-card-image image-frame no-grad">
           <image-slot shape="rect" id="card-reisefuehrer" src="images/HOME/Karte1.webp" placeholder="Der Reiseführer"></image-slot>
         </div>
@@ -116,9 +132,9 @@
         </div>
       </div>
 
-      <!--
-      BERATUNG: aktivieren, wenn /beratung live ist
-      <a href="/beratung" class="home-card" style="--d:160ms">
+      <!-- Karte 3: Beratung -->
+      <!-- TODO: <div> → <a href="/beratung"> sobald Seite live -->
+      <div class="home-card home-card-soon" style="--d:160ms">
         <div class="home-card-image image-frame no-grad">
           <image-slot shape="rect" id="card-beratung" src="images/HOME/16_Sandmine_Typ_Boot.webp" placeholder="Beratung"></image-slot>
         </div>
@@ -127,13 +143,13 @@
           <span class="eyebrow no-rule home-card-eyebrow">Selber fahren</span>
           <h2 class="home-card-title">Beratung</h2>
           <p class="home-card-text">Videogespräche und ein WhatsApp-Backoffice für deine eigene Expedition. Du fährst, wir denken mit.</p>
-          <span class="btn ghost home-card-btn">Zur Beratung <span class="arrow"></span></span>
+          <span class="home-card-soon-label caption">Bald verfügbar</span>
         </div>
-      </a>
-      -->
+      </div>
 
-      <!-- Karte 3 (von 3): Journal -->
-      <div class="home-card home-card-soon" style="--d:160ms">
+      <!-- Karte 4: Journal -->
+      <!-- TODO: <div> → <a href="/journal"> sobald Seite live -->
+      <div class="home-card home-card-soon" id="journal" style="--d:240ms">
         <div class="home-card-image image-frame no-grad">
           <image-slot shape="rect" id="card-journal" src="images/HOME/07_Bunter_Fluss_Menschen.jpg" placeholder="Das Journal"></image-slot>
         </div>
@@ -460,8 +476,16 @@ a.home-card:hover {
   flex-direction: column;
   gap: 10px;
 }
+.home-cards-head {
+  text-align: center;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+.home-cards-headline {
+  margin-top: 16px;
+}
+
 .home-card-eyebrow {
-  color: rgba(232,223,206,0.65);
+  color: rgba(232,223,206,0.9);
   font-size: 10px;
   letter-spacing: 0.22em;
 }
@@ -542,6 +566,101 @@ a.home-card:hover {
     width: 100%;
   }
 }
+
+/* ============================ FOOTER ============================ */
+.footer-min {
+  background: var(--night);
+  color: rgba(232,223,206,0.85);
+  padding: 24px 0;
+  border-top: 1px solid rgba(232,223,206,0.08);
+}
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  gap: 16px;
+}
+.footer-spacer { flex: 1; }
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  color: rgba(232,223,206,0.75);
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.footer-logo:hover { opacity: 1; }
+.footer-logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+.footer-mid {
+  font-family: var(--sans);
+  letter-spacing: 0.02em;
+  flex: 1;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.footer-mid .ig-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.footer-mid:hover { opacity: 0.7; }
+.footer-legal {
+  display: flex;
+  gap: 18px;
+  font-size: 12px;
+  opacity: 0.5;
+  flex: 1;
+  justify-content: flex-end;
+}
+.footer-legal a:hover { opacity: 1; }
+@media (max-width: 700px) {
+  .footer-row { flex-direction: column; gap: 16px; }
+  .footer-spacer { display: none; }
+  .footer-mid, .footer-legal, .footer-logo { flex: none; text-align: center; justify-content: center; }
+}
+
+/* ============================ DESKTOP WHATSAPP ============================ */
+.desktop-whatsapp {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .desktop-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 150;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--bg);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 0.88;
+  }
+  .desktop-whatsapp:hover { transform: scale(1.08); opacity: 1; }
+  .desktop-whatsapp .wa-icon { width: 22px; height: 22px; }
+}
+
+/* ============================ SCROLL OFFSET ============================ */
+html { scroll-padding-top: 72px; }
 
 /* ============================ REVEAL MOBILE ============================ */
 @media (max-width: 768px) {
