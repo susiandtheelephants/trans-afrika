@@ -110,6 +110,7 @@ These are switchable via `data-palette` on `<html>` or a root container:
 | Class | Family | Size | Weight | Line Height | Letter Spacing | Style | Use |
 |---|---|---|---|---|---|---|---|
 | `.display` | serif | `clamp(48px, 8.5vw, 132px)` | 400 | 0.92 | -0.02em | italic | Hero headlines — the largest text in the system. Use `.roman` span for non-italic words within. |
+| `.hero-sub` (expedition) | serif | `clamp(22px, 2.4vw, 32px)` | 400 | 1.12 | -0.01em | normal | Large hero sub-headline on expedition page. max-width 18ch. |
 | `.headline` | serif | `clamp(40px, 6.4vw, 96px)` | 400 | 1.02 | -0.015em | normal | Section headlines. Add `.italic` class when needed. |
 | `.subhead` | serif | `clamp(28px, 3.6vw, 56px)` | 400 | 1.12 | -0.01em | normal | Sub-section titles, pull quotes |
 | `.lede` | serif | `clamp(22px, 2.2vw, 32px)` | 400 | 1.35 | -0.005em | italic | Opening paragraph / deck text. Max-width 30ch. Color: `--ink-soft` |
