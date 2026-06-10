@@ -12,7 +12,7 @@ Typografie, Komponenten und Animationen. Lies sie vor jeder gestalterischen Arbe
 Die Website von **Susi & The Elephants** — eine geführte Trans-Afrika-Expedition
 (Europa bis Kapstadt, Westroute) sowie perspektivisch weitere Angebote (Reiseführer,
 Reiseberatung, Vorträge, Blog). Inhaber: Johan Schröder (Marke "Johnny" auf Instagram,
-"Johan" auf der Website), gemeinsam mit Marie.
+"Johnny" auf der Website), gemeinsam mit Marie.
 
 Aktueller Stand: Die Website besteht aus einer Seite (Expedition). Sie wird schrittweise
 zu einer Mehr-Bereiche-Website ausgebaut. Siehe Abschnitt 5 für die geplante Struktur.
