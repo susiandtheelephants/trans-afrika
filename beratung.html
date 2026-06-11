@@ -53,6 +53,7 @@
       <span class="eyebrow no-rule brt-eyebrow">Selber fahren</span>
       <h1 class="display brt-display">Beratung.</h1>
       <p class="brt-sub">Du fährst deine eigene Trans-Afrika-Reise. Wir geben dir alles mit, was wir unterwegs gelernt haben.</p>
+      <a href="#pakete" class="brt-pakete-link">Zu den Paketen →</a>
     </div>
     <div class="brt-hero-img-wrap image-frame reveal">
       <img
@@ -430,18 +431,19 @@
 /* ============================ HERO ============================ */
 .brt-hero {
   background: var(--bg-soft);
-  padding-top: clamp(96px, 14vw, 160px);
-  padding-bottom: clamp(56px, 8vw, 100px);
+  padding-top: clamp(80px, 10vw, 120px);
+  padding-bottom: var(--section-pad);
 }
 .brt-hero-inner {
   display: grid;
   grid-template-columns: 1fr minmax(0, 480px);
   gap: clamp(40px, 6vw, 96px);
-  align-items: center;
+  align-items: start;
 }
 .brt-hero-copy {
   display: flex;
   flex-direction: column;
+  padding-top: clamp(8px, 1.5vw, 16px);
 }
 .brt-eyebrow { }
 .brt-display { margin-top: 20px; }
@@ -454,6 +456,18 @@
   max-width: 36ch;
   margin-top: 20px;
 }
+.brt-pakete-link {
+  display: inline-block;
+  margin-top: 28px;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+.brt-pakete-link:hover { text-decoration-color: var(--ink-soft); }
 .brt-hero-img-wrap {
   aspect-ratio: 3 / 4;
   border-radius: 4px;
