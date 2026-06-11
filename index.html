@@ -54,6 +54,7 @@
       <li><a href="/expedition" class="nav-link">Expedition</a></li>
       <!-- TODO: /#reisefuehrer → /reisefuehrer sobald Seite live -->
       <li><a href="/#reisefuehrer" class="nav-link">Reiseführer</a></li>
+      <li><a href="/beratung" class="nav-link">Beratung</a></li>
       <!-- TODO: /#journal → /journal sobald Seite live -->
       <li><a href="/#journal" class="nav-link">Journal</a></li>
     </ul>
@@ -67,6 +68,7 @@
     <a href="/expedition" class="nav-drawer-link">Expedition</a>
     <!-- TODO: /#reisefuehrer → /reisefuehrer sobald Seite live -->
     <a href="/#reisefuehrer" class="nav-drawer-link">Reiseführer</a>
+    <a href="/beratung" class="nav-drawer-link">Beratung</a>
     <!-- TODO: /#journal → /journal sobald Seite live -->
     <a href="/#journal" class="nav-drawer-link">Journal</a>
   </div>
@@ -133,8 +135,7 @@
       </div>
 
       <!-- Karte 3: Beratung -->
-      <!-- TODO: <div> → <a href="/beratung"> sobald Seite live -->
-      <div class="home-card home-card-soon" style="--d:160ms">
+      <a href="/beratung" class="home-card" style="--d:160ms">
         <div class="home-card-image image-frame no-grad">
           <image-slot shape="rect" id="card-beratung" src="images/HOME/16_Sandmine_Typ_Boot.webp" placeholder="Beratung"></image-slot>
         </div>
@@ -143,9 +144,9 @@
           <span class="eyebrow no-rule home-card-eyebrow">Selber fahren</span>
           <h2 class="home-card-title">Beratung</h2>
           <p class="home-card-text">Videogespräche und ein WhatsApp-Backoffice für deine eigene Expedition. Du fährst, wir denken mit.</p>
-          <span class="home-card-soon-label caption">Bald verfügbar</span>
+          <span class="btn ghost home-card-btn">Zur Beratung <span class="arrow"></span></span>
         </div>
-      </div>
+      </a>
 
       <!-- Karte 4: Journal -->
       <!-- TODO: <div> → <a href="/journal"> sobald Seite live -->
@@ -202,7 +203,7 @@
       </a>
 
       <a href="https://www.instagram.com/susiandtheelephants" class="home-ig-tile" target="_blank" rel="noopener" style="--d:80ms">
-        <img src="images/HOME/insta_2_spontan.jpeg" alt="Spontan von Hamburg nach Kapstadt gefahren" loading="lazy" width="800" height="800">
+        <img src="images/HOME/insta_2_spontan.jpeg" alt="Spontan von Hamburg nach Kapstadt gefahren" loading="lazy" width="800" height="800" style="object-position:center top;">
         <span class="home-ig-badge" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
         </span>
@@ -210,7 +211,7 @@
       </a>
 
       <a href="https://www.instagram.com/susiandtheelephants" class="home-ig-tile" target="_blank" rel="noopener" style="--d:160ms">
-        <img src="images/HOME/insta_3_autos.jpg" alt="Photodump of our favorite cars in Africa" loading="lazy" width="800" height="800">
+        <img src="images/HOME/insta_3_autos.jpg" alt="Photodump of our favorite cars in Africa" loading="lazy" width="800" height="800" style="object-position:center top;">
         <span class="home-ig-badge" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
         </span>
@@ -218,7 +219,7 @@
       </a>
 
       <a href="https://www.instagram.com/susiandtheelephants" class="home-ig-tile" target="_blank" rel="noopener" style="--d:240ms">
-        <img src="images/HOME/insta_4_streetfood.jpg" alt="Streetfood Tasting in Accra" loading="lazy" width="800" height="800">
+        <img src="images/HOME/insta_4_streetfood.jpg" alt="Streetfood Tasting in Accra" loading="lazy" width="800" height="800" style="object-position:center top;">
         <span class="home-ig-badge" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
         </span>
@@ -420,7 +421,7 @@
   font-weight: 500;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .nav-home .nav-inner { grid-template-columns: 1fr auto; padding: 14px var(--gutter); }
   .nav-home .nav-links { display: none; }
   .nav-home .nav-btn { display: none; }
@@ -431,12 +432,13 @@
 /* Bildausschnitt hier justieren: höherer Wert = mehr Himmel, niedrigerer Wert = mehr Fahrzeug */
 .home-hero {
   position: relative;
-  min-height: clamp(560px, 90vh, 920px);
+  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
   color: #f3eee5;
-  padding: 12vh var(--gutter) 10vh;
+  padding: 120px var(--gutter) 12vh;
 }
 .home-hero-bg {
   position: absolute;
@@ -485,8 +487,9 @@
 
 @media (max-width: 760px) {
   .home-hero {
-    min-height: 92svh;
-    padding-top: 18vh;
+    min-height: 100vh;
+    height: 100vh;
+    padding-top: 10vh;
     padding-bottom: 10vh;
   }
 }
