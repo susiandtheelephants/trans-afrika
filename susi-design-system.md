@@ -238,7 +238,7 @@ Custom element for user-fillable image placeholders. Key attributes:
 - Triggered (`.in`): `opacity: 1; translateY(0)` over 1s ease / 1.2s cubic-bezier(0.2, 0.6, 0.2, 1)
 
 **Staggered group (`.reveal-stagger`):**
-- Container: flex column, 24px gap
+- Container: flex column, 16px gap
 - Children: same as `.reveal` but with individual `--d` delay variable
 - Triggered (`.in` on container): all children animate in sequence
 

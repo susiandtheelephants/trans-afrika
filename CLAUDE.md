@@ -12,7 +12,7 @@ Typografie, Komponenten und Animationen. Lies sie vor jeder gestalterischen Arbe
 Die Website von **Susi & The Elephants** — eine geführte Trans-Afrika-Expedition
 (Europa bis Kapstadt, Westroute) sowie perspektivisch weitere Angebote (Reiseführer,
 Reiseberatung, Vorträge, Blog). Inhaber: Johan Schröder (Marke "Johnny" auf Instagram,
-"Johan" auf der Website), gemeinsam mit Marie.
+"Johnny" auf der Website), gemeinsam mit Marie.
 
 Aktueller Stand: Die Website besteht aus einer Seite (Expedition). Sie wird schrittweise
 zu einer Mehr-Bereiche-Website ausgebaut. Siehe Abschnitt 5 für die geplante Struktur.
@@ -70,13 +70,13 @@ bestehenden Stil einfügen, als wäre sie schon immer Teil der Site gewesen.
 - **Keine Gedankenstriche (em-dash).** Stattdessen Komma oder Doppelpunkt. Gilt
   ausnahmslos in allen Texten.
 - **Sprache:** durchgehend Deutsch, "du"-Ansprache (informell, nahbar).
-- **Marke:** Auf der Website "Johan", auf Instagram "Johnny". Firmenname
+- **Marke:** Auf der Website "Johnny", auf Instagram "Johnny". Firmenname
   "Susi & The Elephants".
 - **Ton:** ehrlich, geerdet, Expeditions-Charakter. Kein Marketing-Sprech, keine
   Superlative. Es ist "kein einfacher Urlaub, sondern eine echte Expedition".
 - **Eckdaten konsistent halten:** 22.000 km, 21 Länder, ~125 Tage, ab 14.990€ p.P.
   (Einzelfahrerzuschlag 7.990€), 5 bis 8 Fahrzeuge, Start Anfang 2027.
-  (Hinweis: Johans *eigene* frühere Reise war 140 Tage — die *angebotene* Expedition
+  (Hinweis: Johnnys *eigene* frühere Reise war 140 Tage — die *angebotene* Expedition
   ist 125 Tage. Auf der Website durchgehend 125.)
 
 ---
@@ -91,8 +91,8 @@ Home              Verzweigung: mit uns fahren / selbst fahren / eintauchen
 ├── Expedition    bestehende Seite — vorerst NICHT umbauen (Partnerfrage offen)
 ├── Reiseführer   digitales Buch, Kauf
 ├── Beratung      Video-Pakete 30/60/90 Min + "WhatsApp-Backoffice"
-├── Journal/Blog  SEO-Motor, Artikel aus dem 120-Seiten-Reiseführer destilliert
-└── Über uns      Johan & Marie, Geschichte, Kontakt
+├── Journal       SEO-Motor, Artikel aus dem 120-Seiten-Reiseführer destilliert
+└── Über uns      Marie, Johnny & Susi, Geschichte, Kontakt
 ```
 
 Empfohlene Baureihenfolge: Home-Gerüst + Navigation → Journal → Reiseführer →

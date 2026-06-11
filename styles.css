@@ -387,7 +387,7 @@ image-slot {
 .reveal-stagger {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 .reveal-stagger > * {
   opacity: 0;
