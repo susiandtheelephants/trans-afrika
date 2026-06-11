@@ -187,6 +187,15 @@ Container classes:
 - **CTA button:** Solid ink background, bg-colored text, pill-shaped (see Buttons)
 - **Mobile (< 900px):** Nav links hide, grid collapses to logo + CTA
 
+#### Nav variants
+
+| Variant | When to use | Initial text color |
+|---|---|---|
+| (default, no extra class) | Pages with a dark photo hero (Home, Expedition) | `#f3eee5` (light) |
+| `.nav--on-light` | Pages where the hero or top section has a light/sand background (Beratung, Reiseführer, Journal) | `--ink` (dark) |
+
+The scrolled state (solid sand background, ink text) is identical for both variants — only the initial transparent state differs. The CTA button is unaffected in both cases.
+
 ### 5.2 Buttons (`btn`)
 
 | Variant | Background | Text | Border | Radius | Padding | Hover |

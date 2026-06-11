@@ -545,6 +545,21 @@ image-slot {
 }
 
 /* ==========================
+   Nav variant: light-background pages
+   Use on pages where the hero has no dark photo (e.g. Beratung, Reiseführer, Journal).
+   The scrolled state is identical for all variants.
+========================== */
+.nav--on-light {
+  color: var(--ink);
+}
+.nav--on-light .nav-link {
+  color: var(--ink);
+}
+.nav--on-light .nav-link.active {
+  text-decoration-color: var(--ink);
+}
+
+/* ==========================
    Sticky WhatsApp Desktop
 ========================== */
 

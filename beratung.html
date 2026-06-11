@@ -20,7 +20,7 @@
 <body data-palette="sand" data-type="serif-sans" data-density="default">
 
 <!-- ============================== NAVIGATION ============================== -->
-<nav class="nav brt-nav" id="nav">
+<nav class="nav brt-nav nav--on-light" id="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Startseite">Susi <span class="amp">&amp;</span> The Elephants</a>
     <ul class="nav-links">
@@ -134,10 +134,23 @@
 <section class="section dark brt-backoffice-section">
   <div class="container">
 
-    <div class="brt-bo-head reveal">
-      <span class="eyebrow no-rule">WhatsApp-Backoffice</span>
-      <h2 class="headline italic" style="margin-top: 18px;">Wir bleiben erreichbar, während du fährst.</h2>
-      <p class="brt-bo-text">Du bist unterwegs, wir sind dein Backoffice: Visa-Anträge, Grenzen, Routen-Infos, Empfehlungen für Camping-Spots. Per WhatsApp, als Text oder Call. Antwort innerhalb von 24 Stunden, meistens deutlich schneller. In jedem Paket enthalten: ein 60-Minuten-Vorbereitungsgespräch vor der Abreise.</p>
+    <div class="brt-bo-top">
+      <div class="brt-bo-head reveal">
+        <span class="eyebrow no-rule">WhatsApp-Backoffice</span>
+        <h2 class="headline italic" style="margin-top: 18px;">Wir bleiben erreichbar, während du fährst.</h2>
+        <p class="brt-bo-text">Du bist unterwegs, wir sind dein Backoffice: Visa-Anträge, Grenzen, Routen-Infos, Empfehlungen für Camping-Spots. Per WhatsApp, als Text oder Call. Antwort innerhalb von 24 Stunden, meistens deutlich schneller. In jedem Paket enthalten: ein 60-Minuten-Vorbereitungsgespräch vor der Abreise.</p>
+      </div>
+      <!-- TODO: Platzhalterbild, später gegen Motiv "Handy in Reisekontext" tauschen -->
+      <div class="brt-bo-img-wrap image-frame no-grad reveal">
+        <img
+          src="images/BERATUNG/Marie_Wein.webp"
+          alt="Marie unterwegs in Stellenbosch, Kapstadt"
+          loading="lazy"
+          width="480"
+          height="480"
+          style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"
+        >
+      </div>
     </div>
 
     <div class="brt-bo-tiers reveal-stagger">
@@ -432,7 +445,7 @@
 .brt-hero {
   background: var(--bg-soft);
   padding-top: clamp(80px, 10vw, 120px);
-  padding-bottom: var(--section-pad);
+  padding-bottom: clamp(48px, 6vw, 72px);
 }
 .brt-hero-inner {
   display: grid;
@@ -485,7 +498,7 @@
 }
 
 /* ============================ EINORDNUNG ============================ */
-.brt-intro-section { padding-top: var(--section-pad); padding-bottom: var(--section-pad); }
+.brt-intro-section { padding-top: clamp(40px, 5vw, 48px); padding-bottom: clamp(56px, 7vw, 96px); }
 .brt-intro { max-width: 800px; display: flex; flex-direction: column; gap: 32px; }
 .brt-lede { max-width: 60ch; }
 .brt-redirect {
@@ -505,8 +518,8 @@
 
 /* ============================ VIDEO-PAKETE ============================ */
 .brt-pakete-section {
-  padding-top: var(--section-pad);
-  padding-bottom: var(--section-pad);
+  padding-top: clamp(56px, 7vw, 96px);
+  padding-bottom: clamp(56px, 7vw, 96px);
   background: var(--bg-soft);
 }
 .brt-section-head {
@@ -581,11 +594,15 @@
 
 /* ============================ BACKOFFICE ============================ */
 /* .brt-backoffice-section erbt Padding vollständig von .section */
-.brt-bo-head {
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto;
+.brt-bo-top {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 420px);
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
   margin-bottom: clamp(40px, 5vw, 64px);
+}
+.brt-bo-head {
+  max-width: 580px;
 }
 .brt-bo-text {
   font-family: var(--sans);
@@ -593,6 +610,11 @@
   line-height: 1.7;
   color: rgba(232,223,206,0.78);
   margin-top: 24px;
+}
+.brt-bo-img-wrap {
+  aspect-ratio: 3 / 4;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .brt-bo-tiers {
   display: grid;
@@ -639,6 +661,15 @@
   color: rgba(232,223,206,0.45);
 }
 
+@media (max-width: 760px) {
+  .brt-bo-top {
+    grid-template-columns: 1fr;
+  }
+  .brt-bo-img-wrap {
+    aspect-ratio: 4 / 3;
+    max-width: 100%;
+  }
+}
 @media (max-width: 680px) {
   .brt-bo-tiers {
     grid-template-columns: 1fr;
@@ -647,7 +678,7 @@
 }
 
 /* ============================ ABLAUF ============================ */
-.brt-ablauf-section { padding-top: var(--section-pad); padding-bottom: var(--section-pad); }
+.brt-ablauf-section { padding-top: clamp(56px, 7vw, 96px); padding-bottom: clamp(56px, 7vw, 96px); }
 .brt-steps {
   display: flex;
   flex-direction: column;
@@ -679,7 +710,7 @@
 }
 
 /* ============================ FAQ ============================ */
-.faq-section { padding-top: var(--section-pad); padding-bottom: var(--section-pad); }
+.faq-section { padding-top: clamp(56px, 7vw, 96px); padding-bottom: clamp(56px, 7vw, 96px); }
 .faq-section .faq-head { text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; }
 .faq-accordion { max-width: 880px; margin: 0 auto; border-top: 1px solid var(--rule); }
 .faq-accordion .acc-item { border-bottom: 1px solid var(--rule); }
@@ -711,7 +742,7 @@
 }
 
 /* ============================ CTA-BAND ============================ */
-.brt-cta-section { padding-top: var(--section-pad); padding-bottom: var(--section-pad); }
+.brt-cta-section { padding-top: clamp(56px, 7vw, 96px); padding-bottom: clamp(56px, 7vw, 96px); }
 .brt-cta-inner {
   display: flex; flex-direction: column;
   align-items: center; text-align: center;
