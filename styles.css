@@ -558,6 +558,15 @@ image-slot {
 .nav--on-light .nav-link.active {
   text-decoration-color: var(--ink);
 }
+.nav--on-light .nav-btn {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.nav--on-light .nav-btn:hover {
+  background: transparent;
+  color: var(--ink);
+}
 
 /* ==========================
    Sticky WhatsApp Desktop

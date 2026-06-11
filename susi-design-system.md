@@ -194,7 +194,7 @@ Container classes:
 | (default, no extra class) | Pages with a dark photo hero (Home, Expedition) | `#f3eee5` (light) |
 | `.nav--on-light` | Pages where the hero or top section has a light/sand background (Beratung, Reiseführer, Journal) | `--ink` (dark) |
 
-The scrolled state (solid sand background, ink text) is identical for both variants — only the initial transparent state differs. The CTA button is unaffected in both cases.
+The scrolled state (solid sand background, ink text) is identical for both variants — only the initial transparent state differs. With `.nav--on-light`, the CTA button is a solid dark pill from the start (`--ink` background, `--bg` text); on scroll both variants show the same scrolled button style.
 
 ### 5.2 Buttons (`btn`)
 

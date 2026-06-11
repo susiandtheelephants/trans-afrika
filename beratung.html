@@ -159,6 +159,7 @@
         <div class="brt-bo-tier-inner">
           <span class="brt-bo-label">Bis 3 Monate</span>
           <span class="brt-bo-price">399€</span>
+          <p class="brt-bo-tier-text">Für Teilstrecken oder eine zügige Reise.</p>
         </div>
         <!-- TODO: Payhip-Link Backoffice bis 3 Monate einsetzen -->
         <a href="https://payhip.com/order?link=Myoji&pricing_plan=ZwzKa73wG9" class="btn ghost brt-bo-btn" target="_blank" rel="noopener">Buchen <span class="arrow"></span></a>
@@ -168,6 +169,7 @@
         <div class="brt-bo-tier-inner">
           <span class="brt-bo-label">3 bis 6 Monate</span>
           <span class="brt-bo-price">599€</span>
+          <p class="brt-bo-tier-text">Der Klassiker: die komplette Westroute im realistischen Tempo.</p>
         </div>
         <!-- TODO: Payhip-Link Backoffice 3 bis 6 Monate einsetzen -->
         <a href="https://payhip.com/order?link=BR49I&pricing_plan=YLBN5aVvzK" class="btn ghost brt-bo-btn" target="_blank" rel="noopener">Buchen <span class="arrow"></span></a>
@@ -177,6 +179,7 @@
         <div class="brt-bo-tier-inner">
           <span class="brt-bo-label">6 bis 12 Monate</span>
           <span class="brt-bo-price">799€</span>
+          <p class="brt-bo-tier-text">Mit Zeit für Abstecher, Pausen und Planänderungen.</p>
         </div>
         <!-- TODO: Payhip-Link Backoffice 6 bis 12 Monate einsetzen -->
         <a href="https://payhip.com/order?link=s3whg&pricing_plan=bxGaMp8YGD" class="btn ghost brt-bo-btn" target="_blank" rel="noopener">Buchen <span class="arrow"></span></a>
@@ -380,7 +383,6 @@
   justify-self: end;
   padding: 10px 22px;
   font-size: 11px;
-  border-color: currentColor;
 }
 .brt-nav .nav-link {
   font-family: var(--sans);
@@ -558,8 +560,11 @@
   border-color: transparent;
 }
 .brt-card-featured .btn.solid:hover { background: var(--bg); }
-.brt-card-inner { flex: 1; display: flex; flex-direction: column; gap: 16px; justify-content: flex-start; }
+.brt-card-inner { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+/* Reserve same vertical space as the "Beliebt" badge in non-featured cards so titles align */
+.brt-card:not(.brt-card-featured) .brt-card-inner { padding-top: 26px; }
 .brt-featured-badge { display: block; margin-bottom: 4px; }
+.brt-card-text { margin-top: auto; }
 .brt-card-top { display: flex; flex-direction: column; gap: 8px; }
 .brt-card-duration {
   font-family: var(--serif);
@@ -634,6 +639,13 @@
 }
 .brt-bo-tier:hover { border-color: rgba(232,223,206,0.35); }
 .brt-bo-tier-inner { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.brt-bo-tier-text {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(232,223,206,0.55);
+  margin-top: 4px;
+}
 .brt-bo-label {
   font-family: var(--sans);
   font-size: 11px;
@@ -649,7 +661,7 @@
   line-height: 1;
   color: var(--night-ink);
 }
-.brt-bo-btn { align-self: flex-start; }
+.brt-bo-btn { align-self: flex-start; margin-top: auto; }
 .brt-bo-note {
   text-align: center;
   margin-top: clamp(32px, 4vw, 48px);
