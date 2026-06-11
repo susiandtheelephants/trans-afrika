@@ -48,15 +48,22 @@
 
 <!-- ============================== HERO ============================== -->
 <header class="brt-hero">
-  <div class="brt-hero-bg image-frame no-grad">
-    <!-- Empfehlung: Motiv "Mensch über Karte / Planung unterwegs" -->
-    <image-slot shape="rect" id="brt-hero-img" placeholder="Planung unterwegs: Mensch über Karte"></image-slot>
-  </div>
-  <div class="brt-hero-veil"></div>
-  <div class="brt-hero-copy reveal">
-    <span class="eyebrow no-rule brt-eyebrow">Selber fahren</span>
-    <h1 class="display brt-display">Beratung.</h1>
-    <p class="brt-sub">Du fährst deine eigene Trans-Afrika-Reise. Wir geben dir alles mit, was wir unterwegs gelernt haben.</p>
+  <div class="container brt-hero-inner">
+    <div class="brt-hero-copy reveal">
+      <span class="eyebrow no-rule brt-eyebrow">Selber fahren</span>
+      <h1 class="display brt-display">Beratung.</h1>
+      <p class="brt-sub">Du fährst deine eigene Trans-Afrika-Reise. Wir geben dir alles mit, was wir unterwegs gelernt haben.</p>
+    </div>
+    <div class="brt-hero-img-wrap image-frame reveal">
+      <img
+        src="images/BERATUNG/Karte3.jpeg"
+        alt="Johnny plant eine Route über einer Afrika-Karte"
+        loading="eager"
+        width="560"
+        height="840"
+        style="width:100%;height:100%;object-fit:cover;display:block;"
+      >
+    </div>
   </div>
 </header>
 
@@ -65,7 +72,7 @@
   <div class="container brt-intro">
     <div class="reveal">
       <p class="lede brt-lede">Wir sind die Westroute selbst gefahren: 22.000 Kilometer, 21 Länder, von Hamburg bis Kapstadt. Unterwegs haben wir gelernt, was in keinem Forum steht: wie Grenzen wirklich laufen, welche Visa-Anträge Nerven kosten und wo man nachts gut steht. Genau dieses Wissen bekommst du, zugeschnitten auf deine Reise.</p>
-      <p class="body-l brt-redirect">Du willst lieber im Konvoi mit uns fahren? Dann ist die <a href="/expedition" class="brt-link">Expedition</a> dein Weg.</p>
+      <p class="brt-redirect">Du willst lieber im Konvoi mit uns fahren? Dann ist die <a href="/expedition" class="brt-link">Expedition</a> dein Weg.</p>
     </div>
   </div>
 </section>
@@ -85,7 +92,7 @@
         <div class="brt-card-inner">
           <div class="brt-card-top">
             <span class="brt-card-duration">30 Minuten</span>
-            <span class="brt-card-price">59&thinsp;€</span>
+            <span class="brt-card-price">59€</span>
           </div>
           <p class="brt-card-text">Für konkrete Einzelfragen: ein Visum, eine Grenze, eine Entscheidung. Du fragst, wir antworten.</p>
         </div>
@@ -98,7 +105,7 @@
           <span class="caption brt-featured-badge">Beliebt</span>
           <div class="brt-card-top">
             <span class="brt-card-duration">60 Minuten</span>
-            <span class="brt-card-price">99&thinsp;€</span>
+            <span class="brt-card-price">99€</span>
           </div>
           <p class="brt-card-text">Für den Routen- und Fahrzeugcheck: Wir gehen deine Planung gemeinsam durch und zeigen dir, wo es hakt.</p>
         </div>
@@ -110,7 +117,7 @@
         <div class="brt-card-inner">
           <div class="brt-card-top">
             <span class="brt-card-duration">90 Minuten</span>
-            <span class="brt-card-price">149&thinsp;€</span>
+            <span class="brt-card-price">149€</span>
           </div>
           <p class="brt-card-text">Für die komplette Reiseplanung: Route, Fahrzeug, Papiere, Budget, Zeitplan. Einmal alles auf den Tisch.</p>
         </div>
@@ -137,7 +144,7 @@
       <div class="brt-bo-tier" style="--d:0ms">
         <div class="brt-bo-tier-inner">
           <span class="brt-bo-label">Bis 3 Monate</span>
-          <span class="brt-bo-price">399&thinsp;€</span>
+          <span class="brt-bo-price">399€</span>
         </div>
         <!-- TODO: Payhip-Link Backoffice bis 3 Monate einsetzen -->
         <a href="https://payhip.com/order?link=Myoji&pricing_plan=ZwzKa73wG9" class="btn ghost brt-bo-btn" target="_blank" rel="noopener">Buchen <span class="arrow"></span></a>
@@ -146,7 +153,7 @@
       <div class="brt-bo-tier" style="--d:80ms">
         <div class="brt-bo-tier-inner">
           <span class="brt-bo-label">3 bis 6 Monate</span>
-          <span class="brt-bo-price">599&thinsp;€</span>
+          <span class="brt-bo-price">599€</span>
         </div>
         <!-- TODO: Payhip-Link Backoffice 3 bis 6 Monate einsetzen -->
         <a href="https://payhip.com/order?link=BR49I&pricing_plan=YLBN5aVvzK" class="btn ghost brt-bo-btn" target="_blank" rel="noopener">Buchen <span class="arrow"></span></a>
@@ -155,7 +162,7 @@
       <div class="brt-bo-tier" style="--d:160ms">
         <div class="brt-bo-tier-inner">
           <span class="brt-bo-label">6 bis 12 Monate</span>
-          <span class="brt-bo-price">799&thinsp;€</span>
+          <span class="brt-bo-price">799€</span>
         </div>
         <!-- TODO: Payhip-Link Backoffice 6 bis 12 Monate einsetzen -->
         <a href="https://payhip.com/order?link=s3whg&pricing_plan=bxGaMp8YGD" class="btn ghost brt-bo-btn" target="_blank" rel="noopener">Buchen <span class="arrow"></span></a>
@@ -422,53 +429,57 @@
 
 /* ============================ HERO ============================ */
 .brt-hero {
-  position: relative;
-  min-height: 55vh;
-  height: 55vh;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  color: #f3eee5;
-  padding: 0 0 10vh;
+  background: var(--bg-soft);
+  padding-top: clamp(96px, 14vw, 160px);
+  padding-bottom: clamp(56px, 8vw, 100px);
 }
-.brt-hero-bg {
-  position: absolute; inset: 0; z-index: 0;
-  background: var(--bg-deep);
-}
-.brt-hero-bg image-slot { width: 100%; height: 100%; display: block; }
-.brt-hero-veil {
-  position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(180deg,
-    rgba(20,19,15,0.30) 0%,
-    rgba(20,19,15,0.10) 40%,
-    rgba(20,19,15,0.50) 100%);
-  pointer-events: none;
+.brt-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 480px);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: center;
 }
 .brt-hero-copy {
-  position: relative; z-index: 2;
-  max-width: var(--max); margin: 0 auto;
-  padding: 0 var(--gutter); width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.brt-eyebrow { color: rgba(232,223,206,0.85); }
-.brt-display { color: #f6f1e6; margin-top: 16px; }
+.brt-eyebrow { }
+.brt-display { margin-top: 20px; }
 .brt-sub {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(20px, 2.2vw, 30px);
-  line-height: 1.3;
-  color: rgba(243,238,229,0.88);
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.35;
+  color: var(--ink-soft);
   max-width: 36ch;
   margin-top: 20px;
 }
+.brt-hero-img-wrap {
+  aspect-ratio: 3 / 4;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 480px;
+}
 @media (max-width: 760px) {
-  .brt-hero { min-height: 60vh; height: 60vh; padding-bottom: 8vh; }
+  .brt-hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .brt-hero-img-wrap {
+    aspect-ratio: 4 / 5;
+    max-width: 100%;
+  }
 }
 
 /* ============================ EINORDNUNG ============================ */
 .brt-intro-section { padding-top: var(--section-pad); padding-bottom: var(--section-pad); }
 .brt-intro { max-width: 800px; display: flex; flex-direction: column; gap: 32px; }
 .brt-lede { max-width: 60ch; }
-.brt-redirect { color: var(--ink-soft); }
+.brt-redirect {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 36px;
+}
 .brt-link {
   color: var(--ink);
   text-decoration: underline;
@@ -491,6 +502,7 @@
 .brt-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
   gap: clamp(16px, 2vw, 28px);
   max-width: 960px;
   margin: 0 auto;
@@ -519,7 +531,7 @@
   border-color: transparent;
 }
 .brt-card-featured .btn.solid:hover { background: var(--bg); }
-.brt-card-inner { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+.brt-card-inner { flex: 1; display: flex; flex-direction: column; gap: 16px; justify-content: flex-start; }
 .brt-featured-badge { display: block; margin-bottom: 4px; }
 .brt-card-top { display: flex; flex-direction: column; gap: 8px; }
 .brt-card-duration {
@@ -554,7 +566,7 @@
 }
 
 /* ============================ BACKOFFICE ============================ */
-.brt-backoffice-section { padding-top: var(--section-pad); padding-bottom: var(--section-pad); }
+/* .brt-backoffice-section erbt Padding vollständig von .section */
 .brt-bo-head {
   text-align: center;
   max-width: 680px;
