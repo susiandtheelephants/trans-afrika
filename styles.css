@@ -552,6 +552,9 @@ image-slot {
 .nav--on-light {
   color: var(--ink);
 }
+.nav--on-light .nav-logo {
+  color: var(--ink);
+}
 .nav--on-light .nav-link {
   color: var(--ink);
 }
