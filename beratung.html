@@ -562,7 +562,8 @@
 .brt-card-featured .btn.solid:hover { background: var(--bg); }
 .brt-card-inner { flex: 1; display: flex; flex-direction: column; gap: 16px; }
 /* Reserve same vertical space as the "Beliebt" badge in non-featured cards so titles align */
-.brt-card:not(.brt-card-featured) .brt-card-inner { padding-top: 26px; }
+/* Matches height of "Beliebt" caption (12px * 1.55 lh ≈ 18.6px) + margin-bottom 4px + flex gap 16px = ~38px */
+.brt-card:not(.brt-card-featured) .brt-card-inner { padding-top: 38px; }
 .brt-featured-badge { display: block; margin-bottom: 4px; }
 .brt-card-text { margin-top: auto; }
 .brt-card-top { display: flex; flex-direction: column; gap: 8px; }
