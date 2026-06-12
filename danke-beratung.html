@@ -44,7 +44,7 @@
     <div class="dk-content reveal">
       <span class="eyebrow no-rule">Video-Beratung</span>
       <h1 class="headline italic dk-headline">Danke, lass uns deinen Termin finden.</h1>
-      <p class="dk-intro">Deine Buchung ist da, die Bestätigung von Stripe ist unterwegs in dein Postfach. So geht es jetzt weiter:</p>
+      <p class="dk-intro">Deine Buchung ist da, die Bestätigung von Stripe ist unterwegs in dein Postfach. Falls sie nicht in den nächsten Minuten ankommt, lohnt ein Blick in den Spam-Ordner. Ab hier ist es einfach, drei Schritte bis zum Gespräch:</p>
 
       <div class="dk-steps">
 
@@ -73,6 +73,8 @@
         </div>
 
       </div>
+
+      <p class="dk-bridge">Der schnellste Weg zu uns ist WhatsApp. Der Button öffnet den Chat, deine Nachricht ist schon vorbereitet.</p>
 
       <a href="https://wa.me/491629813596?text=Hallo%2C%20ich%20habe%20gerade%20eine%20Video-Beratung%20gebucht.%20Hier%20meine%20Terminvorschl%C3%A4ge%3A" class="btn solid dk-wa-btn" target="_blank" rel="noopener">Per WhatsApp schreiben <span class="arrow"></span></a>
 
@@ -215,7 +217,14 @@
   padding-top: clamp(100px, 14vw, 160px);
   padding-bottom: clamp(72px, 10vw, 140px);
 }
-.dk-content { max-width: 680px; }
+.dk-content { max-width: 760px; }
+.dk-bridge {
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.65;
+  color: var(--muted);
+  margin-top: clamp(32px, 4vw, 48px);
+}
 .dk-headline { margin-top: 20px; }
 .dk-intro {
   font-family: var(--sans);

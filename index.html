@@ -106,60 +106,68 @@
     <div class="home-cards reveal-stagger" id="cardsGrid">
 
       <!-- Karte 1: Expedition -->
-      <a href="/expedition" class="home-card" style="--d:0ms">
-        <div class="home-card-image image-frame no-grad">
-          <image-slot shape="rect" id="card-expedition" src="images/HOME/03_Johnny_dreckiges_Auto.webp" placeholder="Johnny und sein Auto"></image-slot>
-        </div>
-        <div class="home-card-grad"></div>
-        <div class="home-card-body">
-          <span class="eyebrow no-rule home-card-eyebrow">Mitfahren</span>
-          <h2 class="home-card-title">Trans-Afrika 2027</h2>
-          <p class="home-card-text">Geführt von Europa bis Kapstadt. 22.000 km, 21 Länder, rund 125 Tage, im eigenen Fahrzeug.</p>
-          <span class="btn ghost home-card-btn">Zur Expedition <span class="arrow"></span></span>
-        </div>
-      </a>
+      <div class="home-card-wrap" style="--d:0ms">
+        <span class="eyebrow no-rule home-card-label">Mitfahren</span>
+        <a href="/expedition" class="home-card">
+          <div class="home-card-image image-frame no-grad">
+            <image-slot shape="rect" id="card-expedition" src="images/HOME/03_Johnny_dreckiges_Auto.webp" placeholder="Johnny und sein Auto"></image-slot>
+          </div>
+          <div class="home-card-grad"></div>
+          <div class="home-card-body">
+            <h2 class="home-card-title">Trans-Afrika 2027</h2>
+            <p class="home-card-text">Geführt von Europa bis Kapstadt. 22.000 km, 21 Länder, rund 125 Tage, im eigenen Fahrzeug.</p>
+            <span class="btn ghost home-card-btn">Zur Expedition <span class="arrow"></span></span>
+          </div>
+        </a>
+      </div>
 
       <!-- Karte 2: Reiseführer -->
-      <!-- TODO: <div> → <a href="/reisefuehrer"> sobald Seite live -->
-      <div class="home-card home-card-soon" id="reisefuehrer" style="--d:80ms">
-        <div class="home-card-image image-frame no-grad">
-          <image-slot shape="rect" id="card-reisefuehrer" src="images/HOME/Karte1.webp" placeholder="Der Reiseführer"></image-slot>
-        </div>
-        <div class="home-card-grad"></div>
-        <div class="home-card-body">
-          <span class="eyebrow no-rule home-card-eyebrow">Selber fahren</span>
-          <h2 class="home-card-title">Der Reiseführer</h2>
-          <p class="home-card-text">120 Seiten Westroute: Grenzen, Visa, Pisten, Plätze für die Nacht. Alles, was wir unterwegs gern früher gewusst hätten.</p>
-          <span class="home-card-soon-label caption">Bald verfügbar</span>
+      <!-- TODO: inner div → <a href="/reisefuehrer"> sobald Seite live -->
+      <div class="home-card-wrap" id="reisefuehrer" style="--d:80ms">
+        <span class="eyebrow no-rule home-card-label">Selber fahren</span>
+        <div class="home-card home-card-soon">
+          <div class="home-card-image image-frame no-grad">
+            <image-slot shape="rect" id="card-reisefuehrer" src="images/HOME/Karte1.webp" placeholder="Der Reiseführer"></image-slot>
+          </div>
+          <div class="home-card-grad"></div>
+          <div class="home-card-body">
+            <h2 class="home-card-title">Der Reiseführer</h2>
+            <p class="home-card-text">Der radikal ehrliche Guide zur Westroute: 16 Länderkapitel, echte Kosten, Visa, Grenzen, die besten Stellplätze. Alles, was wir gern früher gewusst hätten.</p>
+            <span class="home-card-soon-label caption">Bald verfügbar</span>
+          </div>
         </div>
       </div>
 
       <!-- Karte 3: Beratung -->
-      <a href="/beratung" class="home-card" style="--d:160ms">
-        <div class="home-card-image image-frame no-grad">
-          <image-slot shape="rect" id="card-beratung" src="images/HOME/16_Sandmine_Typ_Boot.webp" placeholder="Beratung"></image-slot>
-        </div>
-        <div class="home-card-grad"></div>
-        <div class="home-card-body">
-          <span class="eyebrow no-rule home-card-eyebrow">Selber fahren</span>
-          <h2 class="home-card-title">Beratung</h2>
-          <p class="home-card-text">Videogespräche und ein WhatsApp-Backoffice für deine eigene Expedition. Du fährst, wir denken mit.</p>
-          <span class="btn ghost home-card-btn">Zur Beratung <span class="arrow"></span></span>
-        </div>
-      </a>
+      <div class="home-card-wrap" style="--d:160ms">
+        <span class="eyebrow no-rule home-card-label">Selber fahren</span>
+        <a href="/beratung" class="home-card">
+          <div class="home-card-image image-frame no-grad">
+            <image-slot shape="rect" id="card-beratung" src="images/HOME/16_Sandmine_Typ_Boot.webp" placeholder="Beratung"></image-slot>
+          </div>
+          <div class="home-card-grad"></div>
+          <div class="home-card-body">
+            <h2 class="home-card-title">Beratung</h2>
+            <p class="home-card-text">Videogespräche und ein WhatsApp-Backoffice für deine eigene Expedition. Du fährst, wir denken mit.</p>
+            <span class="btn ghost home-card-btn">Zur Beratung <span class="arrow"></span></span>
+          </div>
+        </a>
+      </div>
 
       <!-- Karte 4: Journal -->
-      <!-- TODO: <div> → <a href="/journal"> sobald Seite live -->
-      <div class="home-card home-card-soon" id="journal" style="--d:240ms">
-        <div class="home-card-image image-frame no-grad">
-          <image-slot shape="rect" id="card-journal" src="images/HOME/07_Bunter_Fluss_Menschen.jpg" placeholder="Das Journal"></image-slot>
-        </div>
-        <div class="home-card-grad"></div>
-        <div class="home-card-body">
-          <span class="eyebrow no-rule home-card-eyebrow">Eintauchen</span>
-          <h2 class="home-card-title">Das Journal</h2>
-          <p class="home-card-text">Berichte, Wissen und Bilder von der Strecke. Für alle, die erstmal lesen wollen.</p>
-          <span class="home-card-soon-label caption">Bald verfügbar</span>
+      <!-- TODO: inner div → <a href="/journal"> sobald Seite live -->
+      <div class="home-card-wrap" id="journal" style="--d:240ms">
+        <span class="eyebrow no-rule home-card-label">Eintauchen</span>
+        <div class="home-card home-card-soon">
+          <div class="home-card-image image-frame no-grad">
+            <image-slot shape="rect" id="card-journal" src="images/HOME/07_Bunter_Fluss_Menschen.jpg" placeholder="Das Journal"></image-slot>
+          </div>
+          <div class="home-card-grad"></div>
+          <div class="home-card-body">
+            <h2 class="home-card-title">Das Journal</h2>
+            <p class="home-card-text">Berichte, Wissen und Bilder von der Strecke. Für alle, die erstmal lesen wollen.</p>
+            <span class="home-card-soon-label caption">Bald verfügbar</span>
+          </div>
         </div>
       </div>
 
@@ -178,7 +186,7 @@
         <span class="eyebrow no-rule">Wer wir sind</span>
         <h2 class="headline italic" style="margin-top: 18px;">Wir sind Marie, Johnny &amp; Susi</h2>
         <!-- TODO: Sobald /ueber-uns live ist: "fang hier an" → <a href="/ueber-uns"> + Pill-Button "Unsere Geschichte" ergänzen -->
-        <p class="body-l" style="margin-top: 20px;">Wir sind spontan von Hamburg bis nach Kapstadt gefahren: 22.000 Kilometer, 21 Länder, 125 Tage. Aus dieser Reise ist Susi &amp; The Elephants entstanden. Wenn du wissen willst, mit wem du unterwegs bist, <a href="#logbuch" class="about-link">fang hier an</a>.</p>
+        <p class="body-l" style="margin-top: 20px;">Wir sind keine Profi-Abenteurer. Wir haben ein Auto gekauft, die Jobs pausiert, die Wohnung untervermietet und sind losgefahren, in dieser Reihenfolge. 140 Tage und 23.000 Kilometer später standen wir in Kapstadt, zu dritt mit Susi, unserem Cocker Spaniel, die jede Nacht im Dachzelt geschlafen hat. Aus dieser Reise ist Susi &amp; The Elephants entstanden. Wenn du wissen willst, mit wem du unterwegs bist, <a href="#logbuch" class="about-link">fang hier an</a>.</p>
       </div>
     </div>
   </div>
@@ -239,7 +247,7 @@
 <section class="section dark home-cta-section">
   <div class="container">
     <div class="home-cta-inner reveal">
-      <h2 class="subhead home-cta-headline">Die Strecke wartet nicht.</h2>
+      <h2 class="subhead home-cta-headline">Wenn nicht jetzt, wann dann?</h2>
       <p class="body-l home-cta-text">Schreib uns, ob du mitfahren willst oder Fragen zu deiner eigenen Reise hast.</p>
       <div class="home-cta-btns">
         <a href="/expedition#mitfahren" class="btn light">Mitfahren <span class="arrow"></span></a>
@@ -435,10 +443,10 @@
   min-height: 100vh;
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
   color: #f3eee5;
-  padding: 120px var(--gutter) 12vh;
+  padding: 20vh var(--gutter) 12vh;
 }
 .home-hero-bg {
   position: absolute;
@@ -534,7 +542,7 @@ a.home-card:hover {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(20,19,15,0) 38%, rgba(20,19,15,0.72) 100%);
+  background: linear-gradient(180deg, transparent 28%, rgba(20,19,15,0.82) 100%);
   pointer-events: none;
 }
 .home-card-body {
@@ -555,10 +563,13 @@ a.home-card:hover {
   margin-top: 16px;
 }
 
-.home-card-eyebrow {
-  color: rgba(232,223,206,0.9);
-  font-size: 10px;
-  letter-spacing: 0.22em;
+.home-card-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.home-card-label {
+  color: var(--muted);
 }
 .home-card-title {
   font-family: var(--serif);
@@ -567,14 +578,14 @@ a.home-card:hover {
   font-size: clamp(20px, 2vw, 28px);
   line-height: 1.08;
   letter-spacing: -0.01em;
-  color: var(--night-ink);
+  color: #fff;
   margin: 0;
 }
 .home-card-text {
   font-family: var(--sans);
   font-size: 14px;
   line-height: 1.55;
-  color: rgba(232,223,206,0.80);
+  color: rgba(255,255,255,0.90);
   max-width: 28ch;
 }
 .home-card-btn {
@@ -594,7 +605,7 @@ a.home-card:hover {
 @media (max-width: 680px) {
   .home-cards.reveal-stagger {
     grid-template-columns: 1fr;
-    max-width: 380px;
+    max-width: 420px;
     margin: 0 auto;
   }
 }
