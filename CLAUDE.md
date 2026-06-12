@@ -115,6 +115,9 @@ nicht verwirrt wird, welches Angebot was ist. Trennung am besten über die Home-
   `sitemap.xml` aufgenommen werden. Canonical-Tag auf die www-Variante.
 - **Konsistenz vor Kreativität:** Im Zweifel die bestehende Lösung wiederverwenden,
   nicht eine neue erfinden.
+- **Navigation und Footer:** Beim Anlegen neuer Seiten IMMER 1:1 von `beratung.html`
+  kopieren, nie neu schreiben. Einzige erlaubte Anpassungen: aktiver Nav-Link und Pfade.
+  Nav-Klasse bleibt `brt-nav`, Footer-Markup bleibt identisch.
 
 ---
 

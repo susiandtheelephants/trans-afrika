@@ -18,16 +18,17 @@
 <script src="../image-slot.js" defer></script>
 <style>
 /* ============================ NAV ============================ */
-.art-nav {
+.brt-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding: 0;
   background: transparent;
+  color: #f3eee5;
   transition: background 0.4s ease, color 0.4s ease, backdrop-filter 0.4s ease;
   display: block;
 }
-.art-nav .nav-inner {
+.brt-nav .nav-inner {
   max-width: var(--max);
   margin: 0 auto;
   padding: 22px var(--gutter);
@@ -37,7 +38,22 @@
   gap: 28px;
   position: relative;
 }
-.art-nav .nav-links {
+.nav-logo {
+  grid-column: 1;
+  justify-self: start;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.nav-logo:hover { opacity: 0.75; }
+.nav-logo .amp { font-style: normal; opacity: 0.6; }
+.brt-nav .nav-links {
   list-style: none;
   margin: 0; padding: 0;
   display: flex;
@@ -46,13 +62,13 @@
   grid-column: 2;
   justify-self: center;
 }
-.art-nav .nav-btn {
+.brt-nav .nav-btn {
   grid-column: 3;
   justify-self: end;
   padding: 10px 22px;
   font-size: 11px;
 }
-.art-nav .nav-link {
+.brt-nav .nav-link {
   font-family: var(--sans);
   font-size: 12px;
   letter-spacing: 0.14em;
@@ -61,18 +77,18 @@
   opacity: 0.88;
   transition: opacity 0.2s;
 }
-.art-nav .nav-link:hover { opacity: 1; }
-.art-nav .nav-link.active { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
-.art-nav.scrolled {
+.brt-nav .nav-link:hover { opacity: 1; }
+.brt-nav .nav-link.active { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+.brt-nav.scrolled {
   background: rgba(243, 238, 229, 0.94);
   backdrop-filter: saturate(120%) blur(12px);
   -webkit-backdrop-filter: saturate(120%) blur(12px);
   color: var(--ink);
   border-bottom: 1px solid rgba(31, 29, 26, 0.06);
 }
-.art-nav.scrolled .nav-inner { padding: 14px var(--gutter); }
-.art-nav.scrolled .nav-btn { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.art-nav.scrolled .nav-btn:hover { background: transparent; color: var(--ink); }
+.brt-nav.scrolled .nav-inner { padding: 14px var(--gutter); }
+.brt-nav.scrolled .nav-btn { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.brt-nav.scrolled .nav-btn:hover { background: transparent; color: var(--ink); }
 
 .nav-burger {
   display: none;
@@ -86,9 +102,9 @@
   display: block; width: 100%; height: 1.5px;
   background: currentColor; transition: transform 0.3s;
 }
-.art-nav.open .nav-burger span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
-.art-nav.open .nav-burger span:nth-child(2) { opacity: 0; }
-.art-nav.open .nav-burger span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+.brt-nav.open .nav-burger span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.brt-nav.open .nav-burger span:nth-child(2) { opacity: 0; }
+.brt-nav.open .nav-burger span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
 .nav-drawer {
   display: none;
@@ -98,16 +114,16 @@
   flex-direction: column; gap: 18px;
   border-bottom: 1px solid var(--rule);
 }
-.art-nav.open .nav-drawer { display: flex; }
+.brt-nav.open .nav-drawer { display: flex; }
 .nav-drawer-link {
   font-family: var(--sans); font-size: 14px;
   letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
 }
 
 @media (max-width: 860px) {
-  .art-nav .nav-inner { grid-template-columns: 1fr auto; padding: 14px var(--gutter); }
-  .art-nav .nav-links { display: none; }
-  .art-nav .nav-btn { display: none; }
+  .brt-nav .nav-inner { grid-template-columns: 1fr auto; padding: 14px var(--gutter); }
+  .brt-nav .nav-links { display: none; }
+  .brt-nav .nav-btn { display: none; }
   .nav-burger { display: flex; justify-self: end; grid-column: 2; }
 }
 
@@ -304,7 +320,7 @@
 <body data-palette="sand" data-type="serif-sans" data-density="default">
 
 <!-- ============================== NAVIGATION ============================== -->
-<nav class="nav art-nav nav--on-light" id="nav">
+<nav class="nav brt-nav nav--on-light" id="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Startseite">Susi <span class="amp">&amp;</span> The Elephants</a>
     <ul class="nav-links">
