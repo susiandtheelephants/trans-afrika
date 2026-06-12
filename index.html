@@ -53,10 +53,10 @@
       <li><a href="/" class="nav-link active">Home</a></li>
       <li><a href="/expedition" class="nav-link">Expedition</a></li>
       <!-- TODO: /#reisefuehrer → /reisefuehrer sobald Seite live -->
-      <li><a href="/#reisefuehrer" class="nav-link">Reiseführer</a></li>
+      <li><a href="/reisefuehrer" class="nav-link">Reiseführer</a></li>
       <li><a href="/beratung" class="nav-link">Beratung</a></li>
       <!-- TODO: /#journal → /journal sobald Seite live -->
-      <li><a href="/#journal" class="nav-link">Journal</a></li>
+      <li><a href="/journal" class="nav-link">Journal</a></li>
     </ul>
     <a href="/expedition#mitfahren" class="btn nav-btn">Mitfahren <span class="arrow"></span></a>
     <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false">
@@ -67,10 +67,10 @@
     <a href="/" class="nav-drawer-link">Home</a>
     <a href="/expedition" class="nav-drawer-link">Expedition</a>
     <!-- TODO: /#reisefuehrer → /reisefuehrer sobald Seite live -->
-    <a href="/#reisefuehrer" class="nav-drawer-link">Reiseführer</a>
+    <a href="/reisefuehrer" class="nav-drawer-link">Reiseführer</a>
     <a href="/beratung" class="nav-drawer-link">Beratung</a>
     <!-- TODO: /#journal → /journal sobald Seite live -->
-    <a href="/#journal" class="nav-drawer-link">Journal</a>
+    <a href="/journal" class="nav-drawer-link">Journal</a>
   </div>
 </nav>
 
@@ -122,10 +122,9 @@
       </div>
 
       <!-- Karte 2: Reiseführer -->
-      <!-- TODO: inner div → <a href="/reisefuehrer"> sobald Seite live -->
       <div class="home-card-wrap" id="reisefuehrer" style="--d:80ms">
         <span class="eyebrow no-rule home-card-label">Selber fahren</span>
-        <div class="home-card home-card-soon">
+        <a href="/reisefuehrer" class="home-card">
           <div class="home-card-image image-frame no-grad">
             <image-slot shape="rect" id="card-reisefuehrer" src="images/HOME/Karte1.webp" placeholder="Der Reiseführer"></image-slot>
           </div>
@@ -133,9 +132,9 @@
           <div class="home-card-body">
             <h2 class="home-card-title">Der Reiseführer</h2>
             <p class="home-card-text">Der Guide zur Westroute: 16 Länderkapitel, echte Kosten, Visa, Grenzen, die besten Stellplätze. Alles, was wir gern früher gewusst hätten.</p>
-            <span class="home-card-soon-label caption">Bald verfügbar</span>
+            <span class="btn ghost home-card-btn">Zum Reiseführer <span class="arrow"></span></span>
           </div>
-        </div>
+        </a>
       </div>
 
       <!-- Karte 3: Beratung -->
@@ -155,10 +154,9 @@
       </div>
 
       <!-- Karte 4: Journal -->
-      <!-- TODO: inner div → <a href="/journal"> sobald Seite live -->
       <div class="home-card-wrap" id="journal" style="--d:240ms">
         <span class="eyebrow no-rule home-card-label">Eintauchen</span>
-        <div class="home-card home-card-soon">
+        <a href="/journal" class="home-card">
           <div class="home-card-image image-frame no-grad">
             <image-slot shape="rect" id="card-journal" src="images/HOME/07_Bunter_Fluss_Menschen.jpg" placeholder="Das Journal"></image-slot>
           </div>
@@ -166,9 +164,9 @@
           <div class="home-card-body">
             <h2 class="home-card-title">Das Journal</h2>
             <p class="home-card-text">Berichte, Wissen und Bilder von der Strecke: Grenzen, Begegnungen, Alltag unterwegs. Für alle, die erstmal lesen wollen.</p>
-            <span class="home-card-soon-label caption">Bald verfügbar</span>
+            <span class="btn ghost home-card-btn">Zum Journal <span class="arrow"></span></span>
           </div>
-        </div>
+        </a>
       </div>
 
     </div>
