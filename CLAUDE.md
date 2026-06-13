@@ -118,6 +118,9 @@ nicht verwirrt wird, welches Angebot was ist. Trennung am besten über die Home-
 - **Navigation und Footer:** Beim Anlegen neuer Seiten IMMER 1:1 von `beratung.html`
   kopieren, nie neu schreiben. Einzige erlaubte Anpassungen: aktiver Nav-Link und Pfade.
   Nav-Klasse bleibt `brt-nav`, Footer-Markup bleibt identisch.
+- **Journal-Artikel:** Journal-Artikel werden direkt als `.html` im Ordner `/journal`
+  gepflegt. Es gibt keine begleitenden Markdown-Dateien mehr. Änderungswünsche werden
+  an der `.html` vorgenommen. Neue Artikel-Texte kommen direkt im Prompt.
 
 ---
 

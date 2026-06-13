@@ -205,6 +205,52 @@
   .jnl-featured-img { aspect-ratio: 3 / 2; }
 }
 
+/* ============================ ARTIKEL-RASTER ============================ */
+.jnl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: clamp(28px, 4vw, 48px);
+}
+.jnl-card-wrap { display: flex; flex-direction: column; gap: 10px; }
+.jnl-card-label { }
+.jnl-card {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  transition: opacity 0.2s;
+}
+.jnl-card:hover { opacity: 0.8; }
+.jnl-card-image {
+  aspect-ratio: 4 / 3;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.jnl-card-image image-slot { width: 100%; height: 100%; display: block; }
+.jnl-card-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.jnl-card-teaser {
+  font-family: var(--sans);
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+}
+.jnl-card-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 /* ============================ FOOTER ============================ */
 .footer-min {
   background: var(--night);
@@ -308,6 +354,29 @@
 
 <!-- ============================== ARTIKEL-RASTER ============================== -->
 <!-- Neue Artikel hier als .jnl-card-wrap ergänzen (Copy-Paste-Template unten) -->
+
+<section class="section" style="padding-top: clamp(40px, 5vw, 64px); padding-bottom: clamp(64px, 8vw, 120px);">
+  <div class="container">
+    <div class="jnl-grid reveal-stagger">
+
+      <div class="jnl-card-wrap" style="--d:0ms">
+        <span class="eyebrow no-rule jnl-card-label">Kosten</span>
+        <a href="/journal/kosten" class="jnl-card">
+          <div class="jnl-card-image image-frame no-grad">
+            <image-slot id="kosten-thumb" shape="rect" placeholder="Trans-Afrika Kosten"></image-slot>
+          </div>
+          <div class="jnl-card-body">
+            <h2 class="jnl-card-title">Was eine Trans-Afrika mit dem Auto wirklich kostet</h2>
+            <p class="jnl-card-teaser">Die ehrlichste Antwort vorweg: Es gibt keine eine Zahl.</p>
+            <p class="jnl-card-meta">13. Juni 2026 &nbsp;·&nbsp; 7 Min Lesezeit</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!--
 TEMPLATE für neuen Artikel:
 <div class="jnl-card-wrap" style="- -d:0ms">
