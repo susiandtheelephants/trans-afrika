@@ -227,6 +227,22 @@
 .art-img-wrap--contain image-slot {
   background: var(--bg-soft);
 }
+.art-img-wrap--portrait {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.art-img-wrap--portrait image-slot {
+  aspect-ratio: 3 / 4;
+}
+.art-img-wrap--portrait .art-img-caption {
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .art-img-wrap--portrait {
+    max-width: 100%;
+  }
+}
 .art-img-caption {
   margin-top: 10px;
   font-family: var(--mono);
@@ -382,8 +398,8 @@
 
 <!-- ============================== BILD 1 ============================== -->
 <div class="container">
-  <div class="art-img-wrap art-img-wrap--contain reveal">
-    <image-slot id="westroute-1" shape="rect" fit="contain" src="../images/05-johnny/01_Auto_Straße.webp" alt="Vollbeladenes Reisefahrzeug an einem Hang in Südspanien zu Beginn der Trans-Afrika." placeholder="Bild Slot 1"></image-slot>
+  <div class="art-img-wrap art-img-wrap--portrait reveal">
+    <image-slot id="westroute-1" shape="rect" fit="cover" src="../images/05-johnny/01_Auto_Straße.webp" alt="Vollbeladenes Reisefahrzeug an einem Hang in Südspanien zu Beginn der Trans-Afrika." placeholder="Bild Slot 1"></image-slot>
     <p class="art-img-caption">Der letzte Tag in Europa, danach ging es auf die Fähre. Von hier sind es 23.000 Kilometer bis Kapstadt.</p>
   </div>
 </div>
