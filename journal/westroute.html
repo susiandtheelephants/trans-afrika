@@ -224,6 +224,9 @@
   border-radius: 4px;
   overflow: hidden;
 }
+.art-img-wrap--contain image-slot {
+  background: var(--bg-soft);
+}
 .art-img-caption {
   margin-top: 10px;
   font-family: var(--mono);
@@ -379,9 +382,9 @@
 
 <!-- ============================== BILD 1 ============================== -->
 <div class="container">
-  <div class="art-img-wrap reveal">
-    <image-slot id="westroute-1" shape="rect" placeholder="Übersichtskarte der Route Hamburg bis Kapstadt oder Wüstenpiste"></image-slot>
-    <p class="art-img-caption">Die Route, die wir gefahren sind: 21 Länder, 23.000 Kilometer, 140 Tage von Hamburg bis Kapstadt.</p>
+  <div class="art-img-wrap art-img-wrap--contain reveal">
+    <image-slot id="westroute-1" shape="rect" fit="contain" src="../images/05-johnny/01_Auto_Straße.webp" alt="Vollbeladenes Reisefahrzeug an einem Hang in Südspanien zu Beginn der Trans-Afrika." placeholder="Bild Slot 1"></image-slot>
+    <p class="art-img-caption">Der letzte Tag in Europa, danach ging es auf die Fähre. Von hier sind es 23.000 Kilometer bis Kapstadt.</p>
   </div>
 </div>
 
@@ -406,8 +409,8 @@
 <!-- ============================== BILD 2 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="westroute-2" shape="rect" src="../images/02-reality-check/03_Reality_Autofestgefahren_Flussbett.webp" placeholder="Piste oder Grenzsituation"></image-slot>
-    <p class="art-img-caption">Irgendwo zwischen Marokko und Mauretanien: hier beginnt die Wüstenetappe und die anstrengendste Grenze der gesamten Reise.</p>
+    <image-slot id="westroute-2" shape="rect" src="../images/02-reality-check/03_Reality_Autofestgefahren_Flussbett.webp" alt="Im Sand eines Flussbetts in Namibia festgefahrenes Reisefahrzeug, daneben Sandbleche." placeholder="Bild Slot 2"></image-slot>
+    <p class="art-img-caption">Festgefahren im Flussbett, Namibia. Mit Schaufel, Sandblechen und Schieben kommt man fast überall wieder raus.</p>
   </div>
 </div>
 
@@ -428,10 +431,9 @@
       <p>Unsere Empfehlung: sechs bis sieben Monate. Das gibt dir genug Zeit, die Länder wirklich kennenzulernen, kleine Umwege zu fahren und Puffer zu haben für das Unvorhergesehene: Krankheit, Werkstattaufenthalt, Verzögerung beim Visum. Und es hat einen sehr konkreten Nebeneffekt: Du kannst bei den Visa die günstigere Standardoption wählen, statt die Expressvariante zu zahlen, die meist rund 30 Prozent mehr kostet.</p>
 
       <h2>Was das für deine Planung heißt</h2>
-      <p>Die gute Nachricht dieser ganzen Geschichte: Du musst keine Route mehr suchen. Sie steht fest, sie wird aktuell von fast allen gefahren, und sie funktioniert. Die echten Fragen deiner Planung sind andere: welches Fahrzeug, welche Visa in welcher Reihenfolge, wie viel Budget, wie die Grenzen ablaufen, wo du nachts stehst. Genau das haben wir aufgeschrieben.</p>
+      <p>Die gute Nachricht dieser ganzen Geschichte: Du musst keine Route mehr suchen. Sie steht fest, sie wird aktuell von fast allen gefahren, und sie funktioniert. Die echten Fragen deiner Planung sind andere: welches Fahrzeug, welche Visa in welcher Reihenfolge, <a href="/journal/kosten" class="art-body-link">wie viel Budget</a>, wie die Grenzen ablaufen, wo du nachts stehst. Genau das haben wir aufgeschrieben.</p>
 
-      <!-- INTERNE LINKS, sobald Artikel existieren:
-           - "wie viel Budget" -> Link auf Kosten-Artikel /journal/kosten
+      <!-- INTERNE LINKS, sobald weitere Artikel existieren:
            - "wo du nachts stehst" oder Nigeria-Erwähnung -> spätere Detailartikel -->
 
     </div>
