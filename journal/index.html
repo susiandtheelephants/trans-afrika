@@ -145,7 +145,7 @@
 }
 
 /* ============================ FEATURED ============================ */
-.jnl-featured-section { padding-top: clamp(48px, 6vw, 72px); padding-bottom: clamp(56px, 7vw, 96px); }
+.jnl-featured-section { padding-top: clamp(48px, 6vw, 72px); padding-bottom: clamp(64px, 9vw, 120px); }
 .jnl-featured {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -205,50 +205,16 @@
   .jnl-featured-img { aspect-ratio: 3 / 2; }
 }
 
-/* ============================ ARTIKEL-RASTER ============================ */
-.jnl-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: clamp(28px, 4vw, 48px);
-}
-.jnl-card-wrap { display: flex; flex-direction: column; gap: 10px; }
-.jnl-card-label { }
-.jnl-card {
-  display: block;
-  text-decoration: none;
-  color: var(--ink);
-  transition: opacity 0.2s;
-}
-.jnl-card:hover { opacity: 0.8; }
-.jnl-card-image {
-  aspect-ratio: 4 / 3;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 16px;
-}
-.jnl-card-image image-slot { width: 100%; height: 100%; display: block; }
-.jnl-card-title {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(18px, 1.8vw, 24px);
-  line-height: 1.2;
-  color: var(--ink);
-  margin-bottom: 10px;
-}
-.jnl-card-teaser {
-  font-family: var(--sans);
-  font-size: clamp(14px, 1.1vw, 16px);
-  line-height: 1.55;
-  color: var(--ink-soft);
-  margin-bottom: 10px;
-}
-.jnl-card-meta {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
+/* ============================ SPLIT-FLIP ============================ */
+/* Bild rechts: grid-order-Wechsel, Quelle bleibt unveränderter */
+.jnl-featured--flip .jnl-featured-img { order: 2; }
+.jnl-featured--flip .jnl-featured-text { order: 1; }
+
+/* Trennlinie zwischen zwei Split-Blöcken */
+.jnl-split-sep {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: clamp(48px, 7vw, 96px) 0;
 }
 
 /* ============================ FOOTER ============================ */
@@ -333,13 +299,31 @@
   </div>
 </header>
 
-<!-- ============================== FEATURED ARTIKEL ============================== -->
-<!-- Immer den neuesten Artikel hier einsetzen -->
+<!-- ============================== ARTIKEL-LISTE ============================== -->
+<!--
+  Neue Artikel oben einfügen als .jnl-featured-Block.
+  Bildseite abwechseln: geradzahlige Einträge (2., 4., …) .jnl-featured--flip (Bild rechts).
+  TEMPLATE (Bild rechts):
+  <a href="/journal/[SLUG]" class="jnl-featured jnl-featured--flip reveal">
+    <div class="jnl-featured-img image-frame no-grad">
+      <image-slot id="[SLUG]-idx" shape="rect" src="[Bild]" placeholder="[Alt]"></image-slot>
+    </div>
+    <div class="jnl-featured-text">
+      <span class="eyebrow no-rule jnl-featured-cat">[KATEGORIE]</span>
+      <h2 class="jnl-featured-title">[Titel]</h2>
+      <p class="jnl-featured-lede">[Teaser]</p>
+      <p class="jnl-featured-meta">[Datum] · [X] Min Lesezeit</p>
+      <span class="jnl-featured-link">Artikel lesen →</span>
+    </div>
+  </a>
+-->
 <section class="section jnl-featured-section">
   <div class="container">
+
+    <!-- Artikel 1: Westroute — Bild links -->
     <a href="/journal/westroute" class="jnl-featured reveal">
       <div class="jnl-featured-img image-frame no-grad">
-        <image-slot id="featured-westroute" shape="rect" src="../images/04-route/01-north-africa/10_Camp_Sahara_2Autos.webp" placeholder="Bild Artikel 1"></image-slot>
+        <image-slot id="featured-westroute" shape="rect" src="../images/04-route/01-north-africa/10_Camp_Sahara_2Autos.webp" placeholder="Bild Westroute-Artikel"></image-slot>
       </div>
       <div class="jnl-featured-text">
         <span class="eyebrow no-rule jnl-featured-cat">Route</span>
@@ -349,50 +333,25 @@
         <span class="jnl-featured-link">Artikel lesen →</span>
       </div>
     </a>
-  </div>
-</section>
 
-<!-- ============================== ARTIKEL-RASTER ============================== -->
-<!-- Neue Artikel hier als .jnl-card-wrap ergänzen (Copy-Paste-Template unten) -->
+    <hr class="jnl-split-sep">
 
-<section class="section" style="padding-top: clamp(40px, 5vw, 64px); padding-bottom: clamp(64px, 8vw, 120px);">
-  <div class="container">
-    <div class="jnl-grid reveal-stagger">
-
-      <div class="jnl-card-wrap" style="--d:0ms">
-        <span class="eyebrow no-rule jnl-card-label">Kosten</span>
-        <a href="/journal/kosten" class="jnl-card">
-          <div class="jnl-card-image image-frame no-grad">
-            <image-slot id="kosten-thumb" shape="rect" placeholder="Trans-Afrika Kosten"></image-slot>
-          </div>
-          <div class="jnl-card-body">
-            <h2 class="jnl-card-title">Was eine Trans-Afrika mit dem Auto wirklich kostet</h2>
-            <p class="jnl-card-teaser">Die ehrlichste Antwort vorweg: Es gibt keine eine Zahl.</p>
-            <p class="jnl-card-meta">13. Juni 2026 &nbsp;·&nbsp; 7 Min Lesezeit</p>
-          </div>
-        </a>
+    <!-- Artikel 2: Kosten — Bild rechts (gespiegelt) -->
+    <a href="/journal/kosten" class="jnl-featured jnl-featured--flip reveal">
+      <div class="jnl-featured-img image-frame no-grad">
+        <image-slot id="featured-kosten" shape="rect" placeholder="Bild Kosten-Artikel"></image-slot>
       </div>
+      <div class="jnl-featured-text">
+        <span class="eyebrow no-rule jnl-featured-cat">Kosten</span>
+        <h2 class="jnl-featured-title">Was eine Trans-Afrika mit dem Auto wirklich kostet</h2>
+        <p class="jnl-featured-lede">Die ehrlichste Antwort vorweg: Es gibt keine eine Zahl. Eine Trans-Afrika kann mit einem gebrauchten Geländewagen erstaunlich günstig sein oder mit einem ausgebauten Expeditionsmobil sechsstellig werden.</p>
+        <p class="jnl-featured-meta">13. Juni 2026 &nbsp;·&nbsp; 7 Min Lesezeit</p>
+        <span class="jnl-featured-link">Artikel lesen →</span>
+      </div>
+    </a>
 
-    </div>
   </div>
 </section>
-
-<!--
-TEMPLATE für neuen Artikel:
-<div class="jnl-card-wrap" style="- -d:0ms">
-  <span class="eyebrow no-rule jnl-card-label">[KATEGORIE]</span>
-  <a href="/journal/[SLUG]" class="jnl-card">
-    <div class="jnl-card-image image-frame no-grad">
-      <image-slot id="[SLUG]-thumb" shape="rect" placeholder="Bild [Titel]"></image-slot>
-    </div>
-    <div class="jnl-card-body">
-      <h2 class="jnl-card-title">[Titel des Artikels]</h2>
-      <p class="jnl-card-teaser">[2-3 Sätze Teaser]</p>
-      <p class="jnl-card-meta">[Datum] · [X] Min Lesezeit</p>
-    </div>
-  </a>
-</div>
--->
 
 <!-- ============================== FOOTER ============================== -->
 <footer class="footer-min">
