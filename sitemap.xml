@@ -43,6 +43,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.susiandtheelephants.com/journal/grenzen</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.susiandtheelephants.com/impressum</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>yearly</changefreq>

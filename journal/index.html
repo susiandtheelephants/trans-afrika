@@ -301,27 +301,48 @@
 
 <!-- ============================== ARTIKEL-LISTE ============================== -->
 <!--
-  Neue Artikel oben einfügen als .jnl-featured-Block.
-  Bildseite abwechseln: geradzahlige Einträge (2., 4., …) .jnl-featured--flip (Bild rechts).
-  TEMPLATE (Bild rechts):
-  <a href="/journal/[SLUG]" class="jnl-featured jnl-featured--flip reveal">
+  Neuesten Artikel oben einfügen. Bildseite abwechseln:
+  1. (oben, ungerade)  → Bild LINKS  (kein Modifier)
+  2. (darunter, gerade) → Bild RECHTS (.jnl-featured--flip)
+  3. (darunter, ungerade) → Bild LINKS  (kein Modifier)
+  usw.
+
+  TEMPLATE neuer Artikel (Bild links, oben einfügen):
+  <a href="/journal/[SLUG]" class="jnl-featured reveal">
     <div class="jnl-featured-img image-frame no-grad">
-      <image-slot id="[SLUG]-idx" shape="rect" src="[Bild]" placeholder="[Alt]"></image-slot>
+      <image-slot id="[SLUG]-idx" shape="rect" placeholder="[Alt]"></image-slot>
     </div>
     <div class="jnl-featured-text">
       <span class="eyebrow no-rule jnl-featured-cat">[KATEGORIE]</span>
       <h2 class="jnl-featured-title">[Titel]</h2>
-      <p class="jnl-featured-lede">[Teaser]</p>
+      <p class="jnl-featured-lede">[Teaser, erste 2 Sätze der Lede]</p>
       <p class="jnl-featured-meta">[Datum] · [X] Min Lesezeit</p>
       <span class="jnl-featured-link">Artikel lesen →</span>
     </div>
   </a>
+  <hr class="jnl-split-sep">
 -->
 <section class="section jnl-featured-section">
   <div class="container">
 
-    <!-- Artikel 1: Westroute — Bild links -->
-    <a href="/journal/westroute" class="jnl-featured reveal">
+    <!-- Artikel 3: Grenzen — Bild links (neuester, oben) -->
+    <a href="/journal/grenzen" class="jnl-featured reveal">
+      <div class="jnl-featured-img image-frame no-grad">
+        <image-slot id="featured-grenzen" shape="rect" placeholder="Bild Grenzen-Artikel"></image-slot>
+      </div>
+      <div class="jnl-featured-text">
+        <span class="eyebrow no-rule jnl-featured-cat">Grenzen</span>
+        <h2 class="jnl-featured-title">Grenzen in Westafrika: wie ein Übergang mit dem Auto wirklich abläuft</h2>
+        <p class="jnl-featured-lede">Vor keiner anderen Sache haben angehende Overlander so viel Respekt wie vor den Grenzen. Zu Recht, sie gehören zu den intensivsten Momenten der Reise.</p>
+        <p class="jnl-featured-meta">13. Juni 2026 &nbsp;·&nbsp; 7 Min Lesezeit</p>
+        <span class="jnl-featured-link">Artikel lesen →</span>
+      </div>
+    </a>
+
+    <hr class="jnl-split-sep">
+
+    <!-- Artikel 2: Westroute — Bild rechts (gespiegelt) -->
+    <a href="/journal/westroute" class="jnl-featured jnl-featured--flip reveal">
       <div class="jnl-featured-img image-frame no-grad">
         <image-slot id="featured-westroute" shape="rect" src="../images/04-route/01-north-africa/10_Camp_Sahara_2Autos.webp" placeholder="Bild Westroute-Artikel"></image-slot>
       </div>
@@ -336,8 +357,8 @@
 
     <hr class="jnl-split-sep">
 
-    <!-- Artikel 2: Kosten — Bild rechts (gespiegelt) -->
-    <a href="/journal/kosten" class="jnl-featured jnl-featured--flip reveal">
+    <!-- Artikel 1: Kosten — Bild links -->
+    <a href="/journal/kosten" class="jnl-featured reveal">
       <div class="jnl-featured-img image-frame no-grad">
         <image-slot id="featured-kosten" shape="rect" placeholder="Bild Kosten-Artikel"></image-slot>
       </div>
