@@ -127,6 +127,9 @@ nicht verwirrt wird, welches Angebot was ist. Trennung am besten über die Home-
   `<details>`/`<summary>` ein-/ausklappbar. Alle Fragen starten zugeklappt.
 - **Journal-Übersicht:** feste inhaltliche Reihenfolge Route, Kosten, Grenzen
   (nicht nach Datum). Bildseite der Split-Blöcke alterniert links/rechts.
+- **Bilddateinamen:** immer kleingeschrieben, ohne Umlaute, Leerzeichen oder Sonderzeichen,
+  Wörter mit Bindestrich trennen. Bilder für Journal-Übersicht und Artikel liegen unter
+  `images/journal/`. Vor jeder Aufgabe `git pull` ausführen.
 
 ---
 
