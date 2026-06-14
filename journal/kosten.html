@@ -240,6 +240,51 @@
   color: var(--muted);
 }
 
+/* ============================ KOSTENTABELLE ============================ */
+.cost-table {
+  width: 100%;
+  max-width: 520px;
+  margin: clamp(32px, 4vw, 48px) 0;
+}
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.cost-row:first-child {
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 14px 0;
+  margin-bottom: 2px;
+}
+.cost-label {
+  font-family: var(--sans);
+  font-size: clamp(14px, 1.1vw, 16px);
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+.cost-amount {
+  font-family: var(--mono);
+  font-size: clamp(13px, 1vw, 15px);
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.cost-row:first-child .cost-label {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: clamp(15px, 1.15vw, 17px);
+}
+.cost-row:first-child .cost-amount {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: clamp(15px, 1.15vw, 17px);
+}
+
 /* ============================ BODY LINK ============================ */
 .art-body-link {
   color: var(--ink);
@@ -390,7 +435,7 @@
 <!-- ============================== LEDE ============================== -->
 <section class="art-lede-section">
   <div class="container">
-    <p class="art-lede reveal">Die ehrlichste Antwort vorweg: Es gibt keine eine Zahl. Eine Trans-Afrika kann mit einem gebrauchten Geländewagen erstaunlich günstig sein oder mit einem ausgebauten Expeditionsmobil sechsstellig werden. Was sich aber sehr genau benennen lässt, sind die Kostenarten, die auf jeden zukommen. Wer die kennt, kann sein eigenes Budget realistisch bauen. Hier ist, wofür auf 140 Tagen von Hamburg nach Kapstadt das Geld geflossen ist.</p>
+    <p class="art-lede reveal">Vorweg: Es gibt keine feste Zahl. Die Kosten hängen von deinem Reisestil und deinen Ansprüchen ab. Wie oft du essen gehst, was du einkaufst, wo du nachts stehst, wie oft du ins Hotel gehst und vor allem, welches Fahrzeug du wählst, das bestimmst du selbst. Es gibt aber auch Posten, die bei jedem ähnlich ausfallen, etwa Treibstoff und Visa. Wenn du dich vorher informierst, kannst du dein eigenes Budget realistisch berechnen. Hier beschreiben wir, wofür wir auf 140 Tagen von Hamburg nach Kapstadt unser Geld ausgegeben haben.</p>
   </div>
 </section>
 
@@ -408,15 +453,16 @@
     <div class="art-body reveal">
 
       <h2>Der größte Posten kommt vor der Abreise: das Fahrzeug</h2>
-      <p>Die mit Abstand größte Variable ist das Auto, und hier liegen zwischen zwei Reisenden schnell mehrere zehntausend Euro. Ein solider, zuverlässiger Geländewagen aus zweiter Hand bringt dich genauso nach Kapstadt wie ein ausgebautes Expeditionsmobil, dessen Anschaffung in Extremfällen bis an die Million reicht. Teurer ist nicht automatisch besser: Große, schwere Fahrzeuge verbrauchen mehr, sind bei Ersatzteilen schwieriger und kommen in enge Städte und auf schmale Pisten oft gar nicht erst.</p>
-      <p>Was wir empfehlen würden, steht im Reiseführer ausführlich. Fürs Budget zählt vor allem: Rechne neben dem Kaufpreis den Ausbau ein, also Dinge wie Dachzelt, ein vernünftiger Kühlschrank (hier zu sparen, haben wir bereut), Wassersystem, Schubladen und eine moderate Höherlegung. Das sind keine Nebenkosten, das ist ein eigener Budgetblock.</p>
+      <p>Die mit Abstand größte Variable ist das Auto, und hier liegen zwischen zwei Optionen schnell mehrere zehntausend Euro. Ein solider, zuverlässiger Geländewagen aus dritter Hand bringt dich genauso nach Kapstadt wie ein ausgebautes Expeditionsmobil, dessen Anschaffung in Extremfällen bis an die Million reicht. Ja, auch das haben wir gesehen. Überhaupt sind uns erstaunlich viele verschiedene Fortbewegungsmittel begegnet: ein alter BMW 5er ohne Allrad, ein Toyota Yaris, sogar ein Reliant Robin (bitte googeln) und ein rund 40 Jahre altes Mofa mit 49 ccm. Teurer ist nicht automatisch besser, und die Wahl des Fahrzeugs ist eine sehr persönliche Entscheidung.</p>
+      <p>Was wir empfehlen würden, steht ausführlich im Reiseführer. Unser Fahrzeug der Wahl war ein Toyota Land Cruiser 80 von 1991, und damit waren wir sehr zufrieden. Das Fahrzeug ist fast immer der größte Budgetblock, außer vielleicht, du fährst mit dem Fahrrad. :)</p>
 
-      <h2>Die Posten, die jeder zahlt, egal wie er reist</h2>
-      <p>Unabhängig vom Fahrzeug gibt es feste Kosten, die zur Route gehören:</p>
-      <p><strong>Das Carnet de Passage.</strong> Der Reisepass fürs Auto, das zentrale Zolldokument der Reise. Über den ADAC fällt eine Gebühr an, vor allem aber eine Kaution, die sich nach dem Fahrzeugwert richtet und entsprechend hoch ausfallen kann. Die Kaution bekommst du zurück, sie muss aber währenddessen verfügbar sein. Manche Reisende nutzen günstigere Anbieter im Ausland, etwa in Tschechien oder der Schweiz.</p>
-      <p><strong>Die Visa.</strong> Sie folgen in Afrika keinem einheitlichen System, und die Preise schwanken stark, sogar fürs selbe Land. Das Visum für die Demokratische Republik Kongo kostete uns in einer Botschaft 250 US-Dollar, in einer anderen nur rund 75 Euro. Über die ganze Route summiert sich das spürbar. Wichtig fürs Budget: Wer früh plant, kann die Standard- statt der Express-Bearbeitung wählen, die meist rund 30 Prozent teurer ist. Die vollständige Übersicht mit Preisen und Bearbeitungszeiten haben wir im Guide-Anhang zusammengestellt.</p>
-      <p><strong>Die Reise-Krankenversicherung.</strong> Für uns Pflicht, kein Kann. Gesetzliche Kassen decken außerhalb Europas oft wenig und einen Rücktransport nach Deutschland meist gar nicht, und genau der kann im Ernstfall extrem teuer werden. Eine Langzeit-Auslandsversicherung kostet einen überschaubaren monatlichen Betrag, gemessen am Risiko ist es das am leichtesten zu rechtfertigende Geld der ganzen Reise.</p>
-      <p><strong>Mögliche Sondergebühren.</strong> Es gibt Posten, von denen man vorher kaum hört. Ein Beispiel ist die berühmte 250-Euro-Senegal-Gebühr für Fahrzeuge über acht Jahre, die ohne Carnet einreisen. Solche Dinge lassen sich teils umgehen, wenn man vorbereitet ist, aber man sollte wissen, dass sie existieren.</p>
+      <h2>Die festen Posten, die zur Reise gehören</h2>
+      <p>Unabhängig vom Reisestil gibt es Kosten, die fest zur Route gehören.</p>
+      <p><strong>Diesel</strong> ist bei rund 23.000 Kilometern ein großer Posten, schwankt aber enorm: In der Westsahara, in Nigeria oder Angola ist er teils sehr günstig, in den meisten anderen Ländern auf einem stabilen Level, grundsätzlich aber immer günstiger als in Europa. Entscheidend ist der Verbrauch deines Fahrzeugs. Wir lagen bei etwa 14 Litern auf 100 Kilometer, und Diesel war damit unser höchster Kostenblock der ganzen Reise.</p>
+      <p><strong>Die Visa</strong> folgen in Afrika keinem einheitlichen System, und die Preise schwanken stark, sogar fürs selbe Land. Das Visum für die Demokratische Republik Kongo kostet in einer Botschaft 250 US-Dollar, in einer anderen nur rund 75 Euro. Über die ganze Route summiert sich das spürbar. Wichtig fürs Budget: Wähle die günstigere Botschaft für das jeweilige Visum und nutze nach Möglichkeit die Standard- statt der Express-Bearbeitung, die meist rund 30 Prozent teurer ist. Wir waren damit günstiger unterwegs als die meisten anderen Reisenden. Die vollständige Übersicht mit Preisen, Bearbeitungszeiten und der Empfehlung, wo du welches Visum am besten beantragst, steht im Guide-Anhang.</p>
+      <p><strong>Die Reise-Krankenversicherung</strong> ist für uns Pflicht, kostet relativ wenig und spart im Ernstfall mehrere tausend Euro. Gesetzliche Kassen decken außerhalb Europas oft wenig und einen Rücktransport nach Deutschland meist gar nicht, und genau der kann extrem teuer werden. Gemessen am Risiko ist es die am leichtesten zu rechtfertigende Ausgabe der ganzen Reise.</p>
+      <p><strong>Das Carnet de Passage</strong> ist der Reisepass fürs Auto, das zentrale Zolldokument der Reise. Über den ADAC fällt eine Gebühr an, vor allem aber eine Kaution, die sich nach dem Fahrzeugwert richtet und entsprechend hoch ausfallen kann. Die Kaution bekommst du zurück, sie muss aber währenddessen verfügbar sein. Manche Reisende nutzen günstigere Anbieter im Ausland, etwa in Tschechien oder der Schweiz.</p>
+      <p><strong>Mögliche Sondergebühren.</strong> Ein Beispiel ist die berühmte 250-Euro-Senegal-Gebühr für Fahrzeuge über acht Jahre, die ohne Carnet einreisen. Solche Dinge lassen sich teils umgehen, wenn man vorbereitet ist, aber man sollte wissen, dass sie existieren. Dazu kommen die Fähre von Europa nach Marokko und der Rücktransport von Kapstadt zurück nach Europa, für euch und für euer Auto.</p>
 
     </div>
   </div>
@@ -437,18 +483,71 @@
 
       <h2>Die laufenden Kosten unterwegs</h2>
       <p>Hier entscheidet dein Reisestil, und hier kannst du am meisten steuern.</p>
-      <p><strong>Diesel</strong> ist über 23.000 Kilometer ein großer Posten, schwankt aber enorm: In der Westsahara, in Nigeria oder Angola ist er teils sehr günstig, anderswo nicht. Der Verbrauch deines Fahrzeugs multipliziert sich über die Strecke, weshalb ein sparsames Auto sich doppelt auszahlt.</p>
-      <p><strong>Essen und Wasser</strong> kann sehr günstig sein, wenn du auf lokalen Märkten kaufst und selbst kochst, was den allergrößten Teil der Zeit ohnehin der Alltag ist. Ein guter Wasserfilter spart dir über Monate echtes Geld und eine Menge Plastik, wir haben damit überall Wasser aufbereitet, ohne je Probleme zu bekommen.</p>
-      <p><strong>Stellplätze</strong> sind auf dieser Route oft kostenlos oder kosten wenig, gerade im Vergleich zu Europa. Wer überwiegend frei steht und nur gelegentlich einen bezahlten Campingplatz oder ein Zimmer für die heiße Dusche nimmt, hält diesen Posten klein.</p>
-      <p><strong>Reparaturen und Unvorhergesehenes.</strong> Plane einen Puffer ein, immer. Werkstattbesuche, ein neues Teil, eine spontane Verschiffung, eine Verzögerung beim Visum: Das Unvorhergesehene ist auf einer so langen Reise das einzig Vorhersehbare.</p>
+      <p><strong>Essen</strong> kann sehr günstig sein, wenn du auf lokalen Märkten kaufst und selbst kochst, was ohnehin den größten Teil der Zeit der Alltag ist. Gehst du dagegen öfter essen, gerade in den Städten, und kaufst viel in internationalen Supermärkten, wird es schnell teuer. Viele uns vertraute europäische Produkte kosten in Afrika deutlich mehr, als wir es kennen.</p>
+      <p><strong>Stellplätze</strong> sind auf dieser Route oft kostenlos, freistehen ist meistens möglich. Wer dagegen häufiger einen bezahlten Campingplatz oder ein Zimmer für die Dusche nimmt, zahlt hier mehr. Wir haben einen Mittelweg gewählt: in einigen Städten Hotels, in Namibia auch mal ein Campingplatz, aber meistens wild gecampt.</p>
+      <p><strong>Reparaturen und Unvorhergesehenes.</strong> Wie viele Werkstattbesuche du einplanst, hängt von dir und vor allem von deinem Auto ab, ein paar Ölwechsel kommen auf jeden Fall zusammen. Dazu kommt das wirklich Unvorhergesehene, bei uns zum Beispiel ein Tierarztbesuch.</p>
+      <p><strong>Sonstiges.</strong> Kleinere Posten wie Shopping, Eintritte und Aktivitäten, Internet und Wäsche. Auch die haben wir im Reiseführer einzeln aufgeschlüsselt.</p>
 
-      <h2>Wie du dein eigenes Budget realistisch baust</h2>
-      <p>Der ehrlichste Rat: Trenne die Anschaffung (Fahrzeug und Ausbau) von den Reisekosten (alles unterwegs) und rechne beide getrennt. Die Anschaffung ist deine große Entscheidung und steht vor dem Start fest. Die Reisekosten skalieren mit deinem Stil und deiner Dauer, und länger zu reisen ist pro Tag oft günstiger als ein kurzer, hektischer Durchritt, allein schon, weil du dann die günstigeren Standard-Visa nutzen kannst.</p>
-      <p>Was wir nicht tun: dir eine Pauschalsumme nennen, die für dein Fahrzeug und deinen Stil ohnehin nicht stimmt. Was wir tun: dir jede einzelne Position offenlegen, mit den echten Beträgen, die wir bezahlt haben.</p>
+      <h2>Wie teuer ist die Trans-Afrika wirklich?</h2>
+      <p>Trenne die Anschaffung (Fahrzeug und Ausbau) von den Reisekosten (alles unterwegs) und rechne beide getrennt. Die Anschaffung ist deine große Entscheidung und steht vor dem Start fest. Hier sind unsere reinen Reisekosten, für zwei Personen und einen Hund, bei fünf Monaten unterwegs:</p>
 
-      <!-- INTERNE LINKS, sobald Artikel existieren:
-           - "wie die Grenzen ablaufen" -> Grenzen-Artikel
-           - Verweis auf Westroute-Artikel /journal/westroute (Dauer/Visa) -->
+      <div class="cost-table">
+        <div class="cost-row">
+          <span class="cost-label">Unterwegs gesamt</span>
+          <span class="cost-amount">rund 15.500 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Diesel</span>
+          <span class="cost-amount">3.350 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Visa (2 Personen)</span>
+          <span class="cost-amount">2.813 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Werkstatt und Auto-Upgrades</span>
+          <span class="cost-amount">2.500 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Hotels und Campingplätze</span>
+          <span class="cost-amount">1.750 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Lebensmittel</span>
+          <span class="cost-amount">1.500 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Restaurants</span>
+          <span class="cost-amount">1.400 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Tierarzt</span>
+          <span class="cost-amount">500 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Shopping</span>
+          <span class="cost-amount">410 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">SIM-Karten und Internet</span>
+          <span class="cost-amount">340 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Aktivitäten (Eintritte etc.)</span>
+          <span class="cost-amount">340 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Fähre nach Marokko</span>
+          <span class="cost-amount">177 Euro</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Wäscheservice</span>
+          <span class="cost-amount">80 Euro</span>
+        </div>
+      </div>
+
+      <p>Das entspricht einem Tagesdurchschnitt von knapp 110 Euro für zwei Personen und einen Hund. Wir sehen unsere Kosten als Mittelweg. Wir haben überwiegend wild gecampt und meistens selbst gekocht, waren aber in Marokko und Dakar auch mehrere Nächte in Hotels und haben in größeren Städten gern Restaurants besucht. Du kannst deutlich günstiger reisen, wenn du konsequent wild campst und auf Restaurants verzichtest. Genauso kann es teurer werden, wenn du häufiger oder in besseren Hotels schläfst.</p>
+      <p>Und es gilt: Je länger du unterwegs bist, desto geringer werden die Ausgaben pro Tag, weil sich feste Kosten wie Visa und Carnet auf mehr Tage verteilen. Im Reiseführer legen wir jede einzelne Position offen, mit den echten Beträgen, die wir bezahlt haben.</p>
 
     </div>
   </div>
@@ -461,13 +560,16 @@
       <h2>Häufige Fragen zu den Kosten einer Trans-Afrika</h2>
 
       <h3 class="art-faq-q">Was ist der größte Kostenpunkt?</h3>
-      <p>Das Fahrzeug samt Ausbau, mit Abstand. Hier liegen zwischen einem gebrauchten Geländewagen und einem Expeditionsmobil leicht mehrere zehntausend Euro. Alles andere ist im Vergleich kleiner und besser planbar.</p>
+      <p>Das Fahrzeug samt Ausbau. Hier liegen zwischen einem gebrauchten Geländewagen und einem Expeditionsmobil leicht mehrere zehntausend Euro. Alles andere ist im Vergleich kleiner und besser planbar.</p>
+
+      <h3 class="art-faq-q">Was hat eure Reise unterwegs gekostet?</h3>
+      <p>Rund 15.500 Euro für zwei Personen und einen Hund bei fünf Monaten, ohne die Anschaffung des Fahrzeugs. Das sind knapp 110 Euro pro Tag. Der größte laufende Posten war Diesel.</p>
 
       <h3 class="art-faq-q">Kann man die Reise günstig machen?</h3>
-      <p>Ja, vor allem über das Fahrzeug, freies Stehen, Selbstkochen und eine längere Reisedauer mit Standard-Visa. Der Reisestil bestimmt die laufenden Kosten stärker als das Ziel.</p>
+      <p>Ja, vor allem über das Fahrzeug. Zusätzlich sparst du, indem du viel freistehst, selbst kochst und bei Tanken und Visa strategisch clever vorgehst.</p>
 
       <h3 class="art-faq-q">Welche festen Gebühren kommen sicher auf mich zu?</h3>
-      <p>Carnet de Passage (Gebühr plus rückzahlbare Kaution), Visa für die meisten Länder, eine Reise-Krankenversicherung und einzelne Sondergebühren auf der Route. Die vollständige Aufstellung mit Beträgen steht im Reiseführer.</p>
+      <p>Carnet de Passage (Gebühr plus rückzahlbare Kaution), Visa für die meisten Länder, eine Reise-Krankenversicherung und einzelne Sondergebühren wie die Fähre von Europa nach Marokko. Die vollständige Aufstellung mit Beträgen steht im Reiseführer.</p>
     </div>
   </div>
 </section>
@@ -483,7 +585,15 @@
       "name": "Was ist der größte Kostenpunkt bei einer Trans-Afrika?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Das Fahrzeug samt Ausbau, mit Abstand. Hier liegen zwischen einem gebrauchten Geländewagen und einem Expeditionsmobil leicht mehrere zehntausend Euro. Alles andere ist im Vergleich kleiner und besser planbar."
+        "text": "Das Fahrzeug samt Ausbau. Hier liegen zwischen einem gebrauchten Geländewagen und einem Expeditionsmobil leicht mehrere zehntausend Euro. Alles andere ist im Vergleich kleiner und besser planbar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was hat eure Trans-Afrika unterwegs gekostet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rund 15.500 Euro für zwei Personen und einen Hund bei fünf Monaten, ohne die Anschaffung des Fahrzeugs. Das sind knapp 110 Euro pro Tag. Der größte laufende Posten war Diesel."
       }
     },
     {
@@ -491,7 +601,7 @@
       "name": "Kann man eine Trans-Afrika günstig machen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja, vor allem über das Fahrzeug, freies Stehen, Selbstkochen und eine längere Reisedauer mit Standard-Visa. Der Reisestil bestimmt die laufenden Kosten stärker als das Ziel."
+        "text": "Ja, vor allem über das Fahrzeug. Zusätzlich sparst du, indem du viel freistehst, selbst kochst und bei Tanken und Visa strategisch clever vorgehst."
       }
     },
     {
@@ -499,7 +609,7 @@
       "name": "Welche festen Gebühren kommen bei einer Trans-Afrika sicher auf mich zu?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Carnet de Passage (Gebühr plus rückzahlbare Kaution), Visa für die meisten Länder, eine Reise-Krankenversicherung und einzelne Sondergebühren auf der Route."
+        "text": "Carnet de Passage (Gebühr plus rückzahlbare Kaution), Visa für die meisten Länder, eine Reise-Krankenversicherung und einzelne Sondergebühren wie die Fähre von Europa nach Marokko."
       }
     }
   ]
@@ -512,7 +622,7 @@
     <div class="art-cta reveal">
       <span class="eyebrow no-rule">Wenn du konkret rechnest</span>
       <h2 class="art-cta-headline">Jede Position, jeder Betrag, den wir bezahlt haben.</h2>
-      <p class="art-cta-text">Im Reiseführer findest du die vollständige Kostenaufstellung: Fahrzeug und Ausbau, die Visa-Übersicht mit Einzelpreisen für alle Länder, Carnet, Versicherung und die laufenden Kosten unterwegs. Damit baust du dein eigenes Budget auf echten Zahlen statt auf Schätzungen. Und wenn du es lieber im Gespräch durchgehst: dafür gibt es die Beratung.</p>
+      <p class="art-cta-text">Im Reiseführer findest du die vollständige Kostenaufstellung: Fahrzeug und Ausbau, die Visa-Übersicht mit der Empfehlung, wo du welches Visum am günstigsten beantragst, Carnet, Versicherung und alle laufenden Kosten unterwegs. Damit baust du dein eigenes Budget auf echten Zahlen statt auf Schätzungen. Und wenn du es lieber im Gespräch durchgehst: dafür gibt es die Beratung.</p>
       <div class="art-cta-btns">
         <a href="/reisefuehrer" class="btn solid">Zum Reiseführer <span class="arrow"></span></a>
         <a href="/beratung" class="btn ghost-dark">Zur Beratung <span class="arrow"></span></a>
