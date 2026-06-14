@@ -285,6 +285,64 @@
   font-size: clamp(15px, 1.15vw, 17px);
 }
 
+/* ============================ FAQ-AKKORDEON ============================ */
+.art-faq-accordion {
+  max-width: 680px;
+  border-top: 1px solid var(--rule);
+  margin-top: clamp(28px, 3vw, 40px);
+}
+.art-faq-accordion .acc-item {
+  border-bottom: 1px solid var(--rule);
+}
+.art-faq-accordion .acc-item summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.art-faq-accordion .acc-item summary::-webkit-details-marker { display: none; }
+.art-faq-accordion .acc-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.3;
+  color: var(--ink);
+}
+.art-faq-accordion .acc-icon {
+  width: 18px; height: 18px;
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+}
+.art-faq-accordion .acc-icon::before,
+.art-faq-accordion .acc-icon::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s;
+}
+.art-faq-accordion .acc-icon::before { width: 14px; height: 1px; }
+.art-faq-accordion .acc-icon::after  { width: 1px; height: 14px; }
+.art-faq-accordion .acc-item[open] .acc-icon::after {
+  transform: translate(-50%, -50%) scaleY(0);
+}
+.art-faq-accordion .acc-body {
+  padding: 0 0 22px 0;
+}
+.art-faq-accordion .acc-body p {
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
 /* ============================ BODY LINK ============================ */
 .art-body-link {
   color: var(--ink);
@@ -558,18 +616,24 @@
   <div class="container">
     <div class="art-body reveal">
       <h2>Häufige Fragen zu den Kosten einer Trans-Afrika</h2>
-
-      <h3 class="art-faq-q">Was ist der größte Kostenpunkt?</h3>
-      <p>Das Fahrzeug samt Ausbau. Hier liegen zwischen einem gebrauchten Geländewagen und einem Expeditionsmobil leicht mehrere zehntausend Euro. Alles andere ist im Vergleich kleiner und besser planbar.</p>
-
-      <h3 class="art-faq-q">Was hat eure Reise unterwegs gekostet?</h3>
-      <p>Rund 15.500 Euro für zwei Personen und einen Hund bei fünf Monaten, ohne die Anschaffung des Fahrzeugs. Das sind knapp 110 Euro pro Tag. Der größte laufende Posten war Diesel.</p>
-
-      <h3 class="art-faq-q">Kann man die Reise günstig machen?</h3>
-      <p>Ja, vor allem über das Fahrzeug. Zusätzlich sparst du, indem du viel freistehst, selbst kochst und bei Tanken und Visa strategisch clever vorgehst.</p>
-
-      <h3 class="art-faq-q">Welche festen Gebühren kommen sicher auf mich zu?</h3>
-      <p>Carnet de Passage (Gebühr plus rückzahlbare Kaution), Visa für die meisten Länder, eine Reise-Krankenversicherung und einzelne Sondergebühren wie die Fähre von Europa nach Marokko. Die vollständige Aufstellung mit Beträgen steht im Reiseführer.</p>
+      <div class="art-faq-accordion">
+        <details class="acc-item">
+          <summary><span class="acc-title">Was ist der größte Kostenpunkt?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>Das Fahrzeug samt Ausbau. Hier liegen zwischen einem gebrauchten Geländewagen und einem Expeditionsmobil leicht mehrere zehntausend Euro. Alles andere ist im Vergleich kleiner und besser planbar.</p></div>
+        </details>
+        <details class="acc-item">
+          <summary><span class="acc-title">Was hat eure Reise unterwegs gekostet?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>Rund 15.500 Euro für zwei Personen und einen Hund bei fünf Monaten, ohne die Anschaffung des Fahrzeugs. Das sind knapp 110 Euro pro Tag. Der größte laufende Posten war Diesel.</p></div>
+        </details>
+        <details class="acc-item">
+          <summary><span class="acc-title">Kann man die Reise günstig machen?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>Ja, vor allem über das Fahrzeug. Zusätzlich sparst du, indem du viel freistehst, selbst kochst und bei Tanken und Visa strategisch clever vorgehst.</p></div>
+        </details>
+        <details class="acc-item">
+          <summary><span class="acc-title">Welche festen Gebühren kommen sicher auf mich zu?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>Carnet de Passage (Gebühr plus rückzahlbare Kaution), Visa für die meisten Länder, eine Reise-Krankenversicherung und einzelne Sondergebühren wie die Fähre von Europa nach Marokko. Die vollständige Aufstellung mit Beträgen steht im Reiseführer.</p></div>
+        </details>
+      </div>
     </div>
   </div>
 </section>
