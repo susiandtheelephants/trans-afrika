@@ -121,6 +121,12 @@ nicht verwirrt wird, welches Angebot was ist. Trennung am besten über die Home-
 - **Journal-Artikel:** Journal-Artikel werden direkt als `.html` im Ordner `/journal`
   gepflegt. Es gibt keine begleitenden Markdown-Dateien mehr. Änderungswünsche werden
   an der `.html` vorgenommen. Neue Artikel-Texte kommen direkt im Prompt.
+- **FAQ-Blöcke:** werden site-weit als klappbares Akkordeon dargestellt (Referenz:
+  `expedition.html`, Klassen `.art-faq-accordion`, `.acc-item`, `.acc-title`,
+  `.acc-icon`, `.acc-body`). Antworttexte stehen immer im HTML, nur per
+  `<details>`/`<summary>` ein-/ausklappbar. Alle Fragen starten zugeklappt.
+- **Journal-Übersicht:** feste inhaltliche Reihenfolge Route, Kosten, Grenzen
+  (nicht nach Datum). Bildseite der Split-Blöcke alterniert links/rechts.
 
 ---
 

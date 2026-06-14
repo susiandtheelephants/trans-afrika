@@ -301,48 +301,30 @@
 
 <!-- ============================== ARTIKEL-LISTE ============================== -->
 <!--
-  Neuesten Artikel oben einfügen. Bildseite abwechseln:
-  1. (oben, ungerade)  → Bild LINKS  (kein Modifier)
-  2. (darunter, gerade) → Bild RECHTS (.jnl-featured--flip)
-  3. (darunter, ungerade) → Bild LINKS  (kein Modifier)
-  usw.
+  FESTE INHALTLICHE REIHENFOLGE: Route → Kosten → Grenzen.
+  NICHT chronologisch sortieren. Neue Artikel bewusst einsortieren.
+  Bildseite alterniert: 1. links, 2. rechts (--flip), 3. links, 4. rechts, …
 
-  TEMPLATE neuer Artikel (Bild links, oben einfügen):
-  <a href="/journal/[SLUG]" class="jnl-featured reveal">
+  TEMPLATE neuer Artikel (Bild rechts, Position 4):
+  <hr class="jnl-split-sep">
+  <a href="/journal/[SLUG]" class="jnl-featured jnl-featured--flip reveal">
     <div class="jnl-featured-img image-frame no-grad">
-      <image-slot id="[SLUG]-idx" shape="rect" placeholder="[Alt]"></image-slot>
+      <image-slot id="featured-[SLUG]" shape="rect" placeholder="[Alt]"></image-slot>
     </div>
     <div class="jnl-featured-text">
       <span class="eyebrow no-rule jnl-featured-cat">[KATEGORIE]</span>
       <h2 class="jnl-featured-title">[Titel]</h2>
-      <p class="jnl-featured-lede">[Teaser, erste 2 Sätze der Lede]</p>
+      <p class="jnl-featured-lede">[Teaser 2-3 Sätze]</p>
       <p class="jnl-featured-meta">[Datum] · [X] Min Lesezeit</p>
       <span class="jnl-featured-link">Artikel lesen →</span>
     </div>
   </a>
-  <hr class="jnl-split-sep">
 -->
 <section class="section jnl-featured-section">
   <div class="container">
 
-    <!-- Artikel 3: Grenzen — Bild links (neuester, oben) -->
-    <a href="/journal/grenzen" class="jnl-featured reveal">
-      <div class="jnl-featured-img image-frame no-grad">
-        <image-slot id="featured-grenzen" shape="rect" placeholder="Bild Grenzen-Artikel"></image-slot>
-      </div>
-      <div class="jnl-featured-text">
-        <span class="eyebrow no-rule jnl-featured-cat">Grenzen</span>
-        <h2 class="jnl-featured-title">Grenzen in Westafrika: wie ein Übergang mit dem Auto wirklich abläuft</h2>
-        <p class="jnl-featured-lede">Vor keiner anderen Sache haben angehende Overlander so viel Respekt wie vor den Grenzen. Zu Recht, sie gehören zu den intensivsten Momenten der Reise.</p>
-        <p class="jnl-featured-meta">13. Juni 2026 &nbsp;·&nbsp; 7 Min Lesezeit</p>
-        <span class="jnl-featured-link">Artikel lesen →</span>
-      </div>
-    </a>
-
-    <hr class="jnl-split-sep">
-
-    <!-- Artikel 2: Westroute — Bild rechts (gespiegelt) -->
-    <a href="/journal/westroute" class="jnl-featured jnl-featured--flip reveal">
+    <!-- 1: Route (Westroute) — Bild links -->
+    <a href="/journal/westroute" class="jnl-featured reveal">
       <div class="jnl-featured-img image-frame no-grad">
         <image-slot id="featured-westroute" shape="rect" src="../images/04-route/01-north-africa/10_Camp_Sahara_2Autos.webp" placeholder="Bild Westroute-Artikel"></image-slot>
       </div>
@@ -357,15 +339,31 @@
 
     <hr class="jnl-split-sep">
 
-    <!-- Artikel 1: Kosten — Bild links -->
-    <a href="/journal/kosten" class="jnl-featured reveal">
+    <!-- 2: Kosten — Bild rechts -->
+    <a href="/journal/kosten" class="jnl-featured jnl-featured--flip reveal">
       <div class="jnl-featured-img image-frame no-grad">
         <image-slot id="featured-kosten" shape="rect" placeholder="Bild Kosten-Artikel"></image-slot>
       </div>
       <div class="jnl-featured-text">
         <span class="eyebrow no-rule jnl-featured-cat">Kosten</span>
         <h2 class="jnl-featured-title">Was eine Trans-Afrika mit dem Auto wirklich kostet</h2>
-        <p class="jnl-featured-lede">Die ehrlichste Antwort vorweg: Es gibt keine eine Zahl. Eine Trans-Afrika kann mit einem gebrauchten Geländewagen erstaunlich günstig sein oder mit einem ausgebauten Expeditionsmobil sechsstellig werden.</p>
+        <p class="jnl-featured-lede">Vorweg: Es gibt keine feste Zahl. Die Kosten hängen von deinem Reisestil und deinen Ansprüchen ab. Es gibt aber Posten, die bei jedem ähnlich ausfallen.</p>
+        <p class="jnl-featured-meta">13. Juni 2026 &nbsp;·&nbsp; 7 Min Lesezeit</p>
+        <span class="jnl-featured-link">Artikel lesen →</span>
+      </div>
+    </a>
+
+    <hr class="jnl-split-sep">
+
+    <!-- 3: Grenzen — Bild links -->
+    <a href="/journal/grenzen" class="jnl-featured reveal">
+      <div class="jnl-featured-img image-frame no-grad">
+        <image-slot id="featured-grenzen" shape="rect" placeholder="Bild Grenzen-Artikel"></image-slot>
+      </div>
+      <div class="jnl-featured-text">
+        <span class="eyebrow no-rule jnl-featured-cat">Grenzen</span>
+        <h2 class="jnl-featured-title">Grenzen in Westafrika: wie ein Übergang mit dem Auto wirklich abläuft</h2>
+        <p class="jnl-featured-lede">Vor keiner anderen Sache haben angehende Overlander so viel Respekt wie vor den Grenzen. Zu Recht, sie gehören zu den intensivsten Momenten der Reise.</p>
         <p class="jnl-featured-meta">13. Juni 2026 &nbsp;·&nbsp; 7 Min Lesezeit</p>
         <span class="jnl-featured-link">Artikel lesen →</span>
       </div>
