@@ -203,6 +203,9 @@
 @media (max-width: 760px) {
   .jnl-featured { grid-template-columns: 1fr; }
   .jnl-featured-img { aspect-ratio: 3 / 2; }
+  /* Mobil: immer Bild oben, Text unten, unabhaengig von Desktop-Flip */
+  .jnl-featured--flip .jnl-featured-img { order: 1; }
+  .jnl-featured--flip .jnl-featured-text { order: 2; }
 }
 
 /* ============================ SPLIT-FLIP ============================ */
