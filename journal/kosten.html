@@ -388,6 +388,15 @@
   margin-top: 8px;
 }
 
+/* ============================ WEITERLESEN ============================ */
+.art-weiterlesen-section { padding: clamp(40px, 5vw, 64px) 0; border-top: 1px solid var(--rule); }
+.art-weiterlesen > .eyebrow { display: block; margin-bottom: clamp(20px, 2.5vw, 28px); }
+.art-weiterlesen-links { display: flex; gap: clamp(24px, 4vw, 48px); flex-wrap: wrap; }
+.art-weiterlesen-item { flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: inherit; transition: opacity 0.2s; }
+.art-weiterlesen-item:hover { opacity: 0.65; }
+.art-weiterlesen-cat { margin-bottom: 0; }
+.art-weiterlesen-title { font-family: var(--serif); font-style: italic; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.35; color: var(--ink); }
+
 /* ============================ ZURÜCK-LINK ============================ */
 .art-back {
   display: inline-flex;
@@ -447,8 +456,8 @@
   html, body { overflow-x: hidden; }
 }
 /* ============================ BILDAUSSCHNITT ============================ */
-#kosten-1 img { object-position: 50% 15%; }
-#kosten-2 img { object-position: 50% 15%; }
+#kosten-1 img { object-position: 50% 85%; }
+#kosten-2 img { object-position: 50% 75%; }
 </style>
 </head>
 <body data-palette="sand" data-type="serif-sans" data-density="default">
@@ -682,6 +691,25 @@
   ]
 }
 </script>
+
+<!-- ============================== WEITERLESEN ============================== -->
+<section class="art-weiterlesen-section">
+  <div class="container">
+    <div class="art-weiterlesen reveal">
+      <span class="eyebrow no-rule">Weiterlesen</span>
+      <div class="art-weiterlesen-links">
+        <a href="/journal/westroute" class="art-weiterlesen-item">
+          <span class="art-weiterlesen-cat eyebrow no-rule">Route</span>
+          <span class="art-weiterlesen-title">Die Westroute durch Afrika: warum aktuell nur ein Weg von Europa nach Kapstadt führt</span>
+        </a>
+        <a href="/journal/grenzen" class="art-weiterlesen-item">
+          <span class="art-weiterlesen-cat eyebrow no-rule">Grenzen</span>
+          <span class="art-weiterlesen-title">Grenzen in Westafrika: wie ein Übergang mit dem Auto wirklich abläuft</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============================== CTA-BOX ============================== -->
 <section class="art-cta-section">
