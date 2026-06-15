@@ -227,7 +227,8 @@
 .art-img-wrap--contain image-slot {
   background: var(--bg-soft);
 }
-#westroute-1 img { object-position: 50% 85%; }
+/* Bildausschnitt: align="..." am <image-slot>-Element steuern, nicht per CSS.
+   "top" = oben, "bottom" = unten, "70%" = Fokus 70% von oben. */
 .art-img-wrap--portrait {
   max-width: 360px;
   margin-left: auto;
@@ -477,7 +478,7 @@
 <!-- ============================== BILD 1 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="westroute-1" shape="rect" fit="cover" src="../images/05-johnny/01_Auto_Straße.webp" alt="Vollbeladenes Reisefahrzeug an einem Hang in Südspanien zu Beginn der Trans-Afrika." placeholder="Bild Slot 1"></image-slot>
+    <image-slot id="westroute-1" shape="rect" fit="cover" align="bottom" src="../images/05-johnny/01_Auto_Straße.webp" alt="Vollbeladenes Reisefahrzeug an einem Hang in Südspanien zu Beginn der Trans-Afrika." placeholder="Bild Slot 1"></image-slot>
     <p class="art-img-caption">Der letzte Tag in Europa, danach ging es auf die Fähre. Von hier sind es 23.000 Kilometer bis Kapstadt.</p>
   </div>
 </div>
@@ -503,7 +504,7 @@
 <!-- ============================== BILD 2 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="westroute-2" shape="rect" src="../images/02-reality-check/03_Reality_Autofestgefahren_Flussbett.webp" alt="Im Sand eines Flussbetts in Namibia festgefahrenes Reisefahrzeug, daneben Sandbleche." placeholder="Bild Slot 2"></image-slot>
+    <image-slot id="westroute-2" shape="rect" align="60%" src="../images/02-reality-check/03_Reality_Autofestgefahren_Flussbett.webp" alt="Im Sand eines Flussbetts in Namibia festgefahrenes Reisefahrzeug, daneben Sandbleche." placeholder="Bild Slot 2"></image-slot>
     <p class="art-img-caption">Festgefahren im Flussbett, Namibia. Mit Schaufel, Sandblechen und Schieben kommt man fast überall wieder raus.</p>
   </div>
 </div>

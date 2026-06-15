@@ -403,7 +403,8 @@
 }
 
 /* ============================ BILDAUSSCHNITT ============================ */
-#grenzen-2 img { object-position: center bottom; }
+/* Bildausschnitt: align="..." am <image-slot>-Element steuern, nicht per CSS.
+   "top" = oben, "bottom" = unten, "70%" = Fokus 70% von oben. */
 
 /* ============================ REVEAL MOBILE ============================ */
 @media (max-width: 768px) {
@@ -464,7 +465,7 @@
 <!-- ============================== BILD 1 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="grenzen-1" shape="rect" src="../images/journal/DRKongoGrenzbuero.webp" alt="Grenzbeamter an einem Schreibtisch in einem Grenzbüro in der Demokratischen Republik Kongo." placeholder="Grenzsituation / Schlange / Wüstengrenze"></image-slot>
+    <image-slot id="grenzen-1" shape="rect" align="40%" src="../images/journal/DRKongoGrenzbuero.webp" alt="Grenzbeamter an einem Schreibtisch in einem Grenzbüro in der Demokratischen Republik Kongo." placeholder="Grenzsituation / Schlange / Wüstengrenze"></image-slot>
     <p class="art-img-caption">Grenzübergänge gehören zu den intensivsten Momenten der Reise. Hier die Grenze in die DRC.</p>
   </div>
 </div>
@@ -499,7 +500,7 @@
 <!-- ============================== BILD 2 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="grenzen-2" shape="rect" src="../images/journal/VisaFormularAusfuellen.webp" alt="Visa-Antragsformulare und Dokumente auf einem Tisch." placeholder="Checkpoint / Dokumente / Auto an Kontrolle"></image-slot>
+    <image-slot id="grenzen-2" shape="rect" align="bottom" src="../images/journal/VisaFormularAusfuellen.webp" alt="Visa-Antragsformulare und Dokumente auf einem Tisch." placeholder="Checkpoint / Dokumente / Auto an Kontrolle"></image-slot>
     <p class="art-img-caption">Marie bei der Erledigung von administrativen Formalitäten.</p>
   </div>
 </div>

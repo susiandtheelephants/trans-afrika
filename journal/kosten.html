@@ -456,8 +456,8 @@
   html, body { overflow-x: hidden; }
 }
 /* ============================ BILDAUSSCHNITT ============================ */
-#kosten-1 img { object-position: 50% 65%; }
-#kosten-2 img { object-position: 50% 55%; }
+/* Bildausschnitt: align="..." am <image-slot>-Element steuern, nicht per CSS.
+   "top" = oben, "bottom" = unten, "70%" = Fokus 70% von oben. */
 </style>
 </head>
 <body data-palette="sand" data-type="serif-sans" data-density="default">
@@ -512,7 +512,7 @@
 <!-- ============================== BILD 1 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="kosten-1" shape="rect" src="../images/04-route/03-nigeria-transition/02_Auto_Tankstelle.webp" alt="Reisefahrzeug an einer Tankstelle in Nigeria." placeholder="Auto an Stellplatz / beim Tanken / Werkstatt"></image-slot>
+    <image-slot id="kosten-1" shape="rect" align="bottom" src="../images/04-route/03-nigeria-transition/02_Auto_Tankstelle.webp" alt="Reisefahrzeug an einer Tankstelle in Nigeria." placeholder="Auto an Stellplatz / beim Tanken / Werkstatt"></image-slot>
     <p class="art-img-caption">Unser Land Cruiser an einer Tankstelle in Nigeria.</p>
   </div>
 </div>
@@ -541,7 +541,7 @@
 <!-- ============================== BILD 2 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="kosten-2" shape="rect" src="../images/04-route/02-west-africa/02_Marktstand.webp" alt="Marktstand in Westafrika." placeholder="unterwegs, Markt / Einkauf / Lagerfeuer"></image-slot>
+    <image-slot id="kosten-2" shape="rect" align="65%" src="../images/04-route/02-west-africa/02_Marktstand.webp" alt="Marktstand in Westafrika." placeholder="unterwegs, Markt / Einkauf / Lagerfeuer"></image-slot>
     <p class="art-img-caption">Ein kleiner Shop irgendwo in Westafrika.</p>
   </div>
 </div>

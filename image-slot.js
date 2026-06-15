@@ -30,6 +30,14 @@
  *                corner-drag to scale. The crop persists alongside the image
  *                in the sidecar. contain/fill stay static.
  *   position     object-position for fit=contain|fill.     (default '50% 50%')
+ *   align        Crop anchor for fit=cover (the default).  Examples:
+ *                  align="top"    — zeigt den oberen Bildbereich
+ *                  align="bottom" — zeigt den unteren Bildbereich (z.B. Reifen sichtbar)
+ *                  align="70%"    — Fokuspunkt 70% von oben (zeigt mehr vom unteren Bereich)
+ *                  align="30%"    — Fokuspunkt 30% von oben (zeigt mehr vom oberen Bereich)
+ *                  align="30% 70%" — horizontal 30%, vertikal 70%
+ *                CSS-Regeln wie #id img { object-position } greifen NICHT (Shadow DOM).
+ *                Immer das align-Attribut am Element selbst verwenden.
  *   placeholder  Empty-state caption.                      (default 'Drop an image')
  *   src          Optional initial/fallback image URL. A user drop overrides
  *                it; clearing the drop reveals src again.
