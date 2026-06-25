@@ -151,11 +151,31 @@ p { margin: 0; }
 /* ============================================================
    Typography
    ============================================================ */
+
+/* Editorial prose — erzählende Fließtexte (Ledes, Wer-wir-sind-Blöcke).
+   Serife + großzügiger Rhythmus, angelehnt an Reisemagazin-Typografie. */
+.prose-editorial {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(1.15rem, 0.9rem + 0.8vw, 1.4rem);
+  line-height: 1.55;
+  letter-spacing: 0.2px;
+  color: #1c1c1c;
+  max-width: 38rem;
+  text-wrap: pretty;
+}
+.prose-editorial em,
+.prose-editorial i {
+  font-family: var(--serif);
+  font-style: italic;
+}
+
 .eyebrow {
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
   display: inline-flex;
@@ -269,6 +289,7 @@ p { margin: 0; }
 .section.dark .lede { color: rgba(232, 223, 206, 0.78); }
 .section.dark .eyebrow,
 .section.dark .caption { color: rgba(232, 223, 206, 0.6); }
+.section.dark .prose-editorial { color: rgba(232, 223, 206, 0.88); }
 
 /* ============================================================
    Buttons

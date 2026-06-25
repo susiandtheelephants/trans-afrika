@@ -116,8 +116,9 @@ These are switchable via `data-palette` on `<html>` or a root container:
 | `.lede` | serif | `clamp(22px, 2.2vw, 32px)` | 400 | 1.35 | -0.005em | italic | Opening paragraph / deck text. Max-width 30ch. Color: `--ink-soft` |
 | `.body-l` | sans | `clamp(17px, 1.3vw, 20px)` | 400 | 1.6 | — | normal | Large body text. Max-width 58ch. Color: `--ink-soft` |
 | `.body` | sans | `16px` | 400 | 1.65 | — | normal | Default body. Max-width 60ch. Color: `--ink-soft` |
-| `.eyebrow` | sans | `11px` | 500 | 1.4 | 0.22em | uppercase | Section labels. Includes a 28px rule `::before` by default (suppress with `.no-rule`). Color: `--muted` |
+| `.eyebrow` | sans | `0.72rem` | 500 | 1.4 | `2px` | uppercase | Section labels. Includes a 28px rule `::before` by default (suppress with `.no-rule`). Color: `--muted` |
 | `.caption` | sans | `12px` | 500 | 1.4 | 0.1em | uppercase | Image captions, meta labels. Color: `--muted` |
+| `.prose-editorial` | serif | `clamp(1.15rem, 0.9rem + 0.8vw, 1.4rem)` | 400 | 1.55 | `0.2px` | normal | Erzählende Fließtexte (Ledes, Wer-wir-sind-Blöcke). Cormorant Regular, Farbe `#1c1c1c`, max-width 38rem. `<em>`/`<i>` rendert als Cormorant Italic. Nicht für Navigation, Buttons, FAQ oder Preiskarten verwenden. |
 
 ### 3.3 Type Pairing Presets (Tweakable)
 
