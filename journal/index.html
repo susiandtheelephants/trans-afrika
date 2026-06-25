@@ -200,6 +200,11 @@
   text-decoration-color: var(--rule);
   text-underline-offset: 3px;
 }
+/* ============================ SPLIT-FLIP ============================ */
+/* Bild rechts: grid-order-Wechsel, Quelle bleibt unveränderter */
+.jnl-featured--flip .jnl-featured-img { order: 2; }
+.jnl-featured--flip .jnl-featured-text { order: 1; }
+
 @media (max-width: 760px) {
   .jnl-featured { grid-template-columns: 1fr; }
   .jnl-featured-img { aspect-ratio: 3 / 2; }
@@ -207,11 +212,6 @@
   .jnl-featured--flip .jnl-featured-img { order: 1; }
   .jnl-featured--flip .jnl-featured-text { order: 2; }
 }
-
-/* ============================ SPLIT-FLIP ============================ */
-/* Bild rechts: grid-order-Wechsel, Quelle bleibt unveränderter */
-.jnl-featured--flip .jnl-featured-img { order: 2; }
-.jnl-featured--flip .jnl-featured-text { order: 1; }
 
 /* Trennlinie zwischen zwei Split-Blöcken */
 .jnl-split-sep {
