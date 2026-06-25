@@ -52,6 +52,10 @@
       <span class="eyebrow no-rule">Selber fahren</span>
       <h1 class="display rf-display">Der Reiseführer.</h1>
       <p class="rf-sub">Dein Reiseführer für die Afrika-Durchquerung mit dem Auto. Selbst gefahren, gründlich recherchiert, ehrlich aufgeschrieben.</p>
+      <div class="rf-hero-actions">
+        <a href="https://payhip.com/b/ERDL0" class="btn solid rf-hero-btn" target="_blank" rel="noopener">Jetzt kaufen <span class="arrow"></span></a>
+        <span class="rf-hero-preis">34,90&thinsp;€ &nbsp;·&nbsp; PDF</span>
+      </div>
       <a href="#inhalt" class="rf-inhalt-link">Was drin ist →</a>
       <p class="rf-hero-facts">Geschrieben nach 23.000 km &nbsp;·&nbsp; 21 Ländern &nbsp;·&nbsp; 140 Tagen</p>
     </div>
@@ -435,9 +439,24 @@
   max-width: 36ch;
   margin-top: 20px;
 }
+.rf-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 32px;
+}
+.rf-hero-btn { flex-shrink: 0; }
+.rf-hero-preis {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
 .rf-inhalt-link {
   display: inline-block;
-  margin-top: 28px;
+  margin-top: 18px;
   font-family: var(--sans);
   font-size: 14px;
   color: var(--ink-soft);
@@ -471,6 +490,7 @@
 @media (max-width: 760px) {
   .rf-hero-inner { grid-template-columns: 1fr; }
   .rf-hero-img-wrap { aspect-ratio: 4 / 5; max-width: 100%; }
+  .rf-hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
 
 /* ============================ FAKTEN-BAND ============================ */
