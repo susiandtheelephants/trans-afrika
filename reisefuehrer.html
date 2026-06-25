@@ -185,36 +185,20 @@
 </section>
 
 <!-- ============================== KAUF-SEKTION ============================== -->
-<!-- ZUSTAND A: VORBESTELLUNG (aktiv) -->
-<section class="section rf-kauf-section" id="kaufen">
-  <div class="container">
-    <div class="rf-kauf-inner reveal">
-      <span class="eyebrow no-rule">Bald erhältlich</span>
-      <h2 class="headline italic rf-kauf-headline">Der Guide erscheint in Kürze.</h2>
-      <p class="rf-kauf-text">Wir schreiben die letzten Kapitel und machen das PDF fertig. Wenn du Bescheid bekommen willst, sobald er da ist, schreib uns kurz per WhatsApp. Wir melden uns am Erscheinungstag bei dir.</p>
-      <a href="https://wa.me/491629813596?text=Hallo%2C%20sagt%20mir%20Bescheid%2C%20wenn%20der%20Reisef%C3%BChrer%20erscheint." class="btn solid rf-kauf-btn" target="_blank" rel="noopener">Bescheid bekommen <span class="arrow"></span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ZUSTAND B: LAUNCH (auskommentiert, aktivieren wenn Guide fertig)
 <section class="section rf-kauf-section" id="kaufen">
   <div class="container">
     <div class="rf-kauf-inner reveal">
       <span class="eyebrow no-rule">Das PDF</span>
       <h2 class="headline italic rf-kauf-headline">Hol dir den Guide.</h2>
       <div class="rf-kauf-preis">
-        <span class="rf-preis-zahl">[TODO: PREIS]€</span>
-        <p class="rf-preis-format">PDF &nbsp;·&nbsp; Sofortiger Download &nbsp;·&nbsp; [TODO: SEITENZAHL] Seiten</p>
-        [TODO Entscheidung: <p class="rf-preis-update">Aktualisierungen inklusive: Käufer bekommen neue Versionen kostenlos.</p>]
+        <span class="rf-preis-zahl">34,90&thinsp;€</span>
+        <p class="rf-preis-format">PDF &nbsp;·&nbsp; Sofortiger Download &nbsp;·&nbsp; inkl. MwSt.</p>
+        <p class="rf-preis-update">Aktualisierungen inklusive: Käufer bekommen neue Versionen kostenlos.</p>
       </div>
-      [TODO: Payhip-Link Digital Product einsetzen]
-      <a href="#" class="btn solid rf-kauf-btn">Jetzt kaufen <span class="arrow"></span></a>
-      [TODO optional: <a href="#" class="rf-leseprobe-link" target="_blank" rel="noopener">Leseprobe lesen (PDF)</a>]
+      <a href="https://payhip.com/b/ERDL0" class="btn solid rf-kauf-btn" target="_blank" rel="noopener">Jetzt kaufen <span class="arrow"></span></a>
     </div>
   </div>
 </section>
--->
 
 <!-- ============================== FAQ ============================== -->
 <section class="section faq-section" style="background: var(--bg-soft);">
@@ -601,6 +585,45 @@
   max-width: 58ch;
 }
 .rf-kauf-btn { align-self: flex-start; }
+.rf-kauf-preis {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.rf-preis-zahl {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+.rf-preis-format {
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.rf-preis-update {
+  font-family: var(--sans);
+  font-size: clamp(14px, 1.1vw, 15px);
+  color: var(--ink-soft);
+  margin: 4px 0 0;
+}
+.rf-leseprobe-link {
+  align-self: flex-start;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+.rf-leseprobe-link:hover { text-decoration-color: var(--ink); }
 .rf-faq-link {
   color: var(--ink);
   text-decoration: underline;
