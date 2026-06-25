@@ -51,13 +51,13 @@
     <div class="rf-hero-copy reveal">
       <span class="eyebrow no-rule">Selber fahren</span>
       <h1 class="display rf-display">Der Reiseführer.</h1>
-      <p class="rf-sub">Dein Reiseführer für die Afrika-Durchquerung mit dem Auto. Selbst gefahren, gründlich recherchiert, ehrlich aufgeschrieben.</p>
+      <p class="rf-sub">Dein Reiseführer für die Afrika-Durchquerung mit dem Auto. Wir sind die Strecke selbst gefahren und haben aufgeschrieben, was wir unterwegs wirklich gebraucht hätten.</p>
       <div class="rf-hero-actions">
         <a href="https://payhip.com/b/ERDL0" class="btn solid rf-hero-btn" target="_blank" rel="noopener">Jetzt kaufen <span class="arrow"></span></a>
         <span class="rf-hero-preis">34,90&thinsp;€ &nbsp;·&nbsp; PDF</span>
       </div>
       <a href="#inhalt" class="rf-inhalt-link">Was drin ist →</a>
-      <p class="rf-hero-facts">Geschrieben nach 23.000 km &nbsp;·&nbsp; 21 Ländern &nbsp;·&nbsp; 140 Tagen</p>
+      <p class="rf-hero-facts">Gefahren 2025/2026 &nbsp;·&nbsp; 23.000 km &nbsp;·&nbsp; 21 Länder &nbsp;·&nbsp; 140 Tage</p>
     </div>
     <div class="rf-hero-img-wrap image-frame reveal">
       <!-- TODO: Cover-Bild einsetzen, sobald es existiert. Bis dahin: Reise-Foto (z.B. Karte auf Motorhaube). -->
@@ -102,6 +102,7 @@
     <div class="rf-section-head reveal">
       <span class="eyebrow no-rule">Der Inhalt</span>
       <h2 class="headline italic" style="margin-top: 18px;">Fünf Teile, ein Ziel: dass du ankommst.</h2>
+      <p class="rf-inhalt-sub">Damit du vorbereitet bist, die Highlights nicht verpasst und sicher ankommst.</p>
     </div>
 
     <div class="rf-parts reveal-stagger">
@@ -148,7 +149,7 @@
 
     </div>
 
-    <p class="rf-anhang-line reveal">Im Anhang: Visa-Übersicht &nbsp;·&nbsp; Einkaufsliste mit Produktempfehlungen &nbsp;·&nbsp; Packliste zum Abhaken &nbsp;·&nbsp; Fiche-Vorlage</p>
+    <p class="rf-anhang-line reveal">Im Anhang: Visa-Übersicht &nbsp;·&nbsp; Einkaufsliste mit Produktempfehlungen &nbsp;·&nbsp; Packliste zum Abhaken &nbsp;·&nbsp; Fiche-Vorlage &nbsp;·&nbsp; Nigeria-Reiseplan-Vorlage</p>
 
   </div>
 </section>
@@ -185,6 +186,12 @@
       </div>
 
     </div>
+
+    <div class="rf-disclaimer reveal">
+      <span class="eyebrow no-rule">Wie aktuell ist das</span>
+      <p class="rf-disclaimer-text">Auf dieser Route ändern sich Dinge schnell, das wissen wir. Zwei Sachen sprechen trotzdem für diesen Guide: Wir sind gerade erst zurückgekommen, die Infos sind also so frisch wie kaum woanders. Und das meiste, wie Grenzen ablaufen, wie der Alltag funktioniert, was die Route ausmacht, bleibt über die Jahre gleich. Aktualisierungen bekommst du außerdem kostenlos.</p>
+    </div>
+
   </div>
 </section>
 
@@ -500,6 +507,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(24px, 3vw, 48px);
   text-align: center;
+  align-items: start;
 }
 .rf-stat-num {
   display: block;
@@ -525,6 +533,16 @@
 /* ============================ INHALT ============================ */
 .rf-inhalt-section { padding-top: clamp(56px, 7vw, 96px); padding-bottom: clamp(56px, 7vw, 96px); }
 .rf-section-head { text-align: center; margin-bottom: clamp(40px, 5vw, 64px); }
+.rf-inhalt-sub {
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.1vw, 17px);
+  color: var(--ink-soft);
+  margin-top: 16px;
+  max-width: 44ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
 .rf-parts {
   display: flex;
   flex-direction: column;
@@ -569,6 +587,19 @@
 
 /* ============================ FÜR WEN ============================ */
 .rf-fuerwen-section { padding-top: clamp(56px, 7vw, 96px); padding-bottom: clamp(56px, 7vw, 96px); }
+.rf-disclaimer {
+  max-width: 640px;
+  margin: clamp(48px, 6vw, 72px) auto 0;
+  padding-top: clamp(32px, 4vw, 48px);
+  border-top: 1px solid var(--rule);
+}
+.rf-disclaimer-text {
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-top: 14px;
+}
 .rf-profiles {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -591,9 +622,12 @@
 /* ============================ KAUF ============================ */
 .rf-kauf-section { padding-top: clamp(56px, 7vw, 96px); padding-bottom: clamp(56px, 7vw, 96px); }
 .rf-kauf-inner {
-  max-width: 680px;
+  max-width: 560px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: clamp(20px, 2.5vw, 28px);
 }
 .rf-kauf-headline { margin-top: 12px; }
@@ -604,7 +638,7 @@
   color: var(--ink-soft);
   max-width: 58ch;
 }
-.rf-kauf-btn { align-self: flex-start; }
+.rf-kauf-btn { align-self: center; }
 .rf-kauf-preis {
   display: flex;
   flex-direction: column;
