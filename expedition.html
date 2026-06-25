@@ -235,7 +235,7 @@
     <a href="/beratung" class="nav-drawer-link">Beratung</a>
     <!-- TODO: /#journal → /journal sobald Seite live -->
     <a href="/journal" class="nav-drawer-link">Journal</a>
-    <a href="#mitfahren" class="nav-drawer-link">Mitfahren</a>
+    <a href="#mitfahren" class="btn nav-drawer-cta">Mitfahren <span class="arrow"></span></a>
   </div>
 </nav>
 
@@ -1100,6 +1100,10 @@ Du fährst mit.</h2>
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 500;
+}
+.nav-drawer-cta {
+  align-self: flex-start;
+  margin-top: 6px;
 }
 
 @media (max-width: 760px) {
