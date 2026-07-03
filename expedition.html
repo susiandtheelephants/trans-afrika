@@ -220,7 +220,7 @@
       <!-- TODO: /#journal → /journal sobald Seite live -->
       <li><a href="/journal" class="nav-link">Journal</a></li>
     </ul>
-    <a href="#mitfahren" class="btn nav-btn">Mitfahren <span class="arrow"></span></a>
+    <a href="#mitfahren" class="btn nav-btn">Kennenlernen <span class="arrow"></span></a>
 
     <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -235,7 +235,7 @@
     <a href="/beratung" class="nav-drawer-link">Beratung</a>
     <!-- TODO: /#journal → /journal sobald Seite live -->
     <a href="/journal" class="nav-drawer-link">Journal</a>
-    <a href="#mitfahren" class="btn nav-drawer-cta">Mitfahren <span class="arrow"></span></a>
+    <a href="#mitfahren" class="btn nav-drawer-cta">Kennenlernen <span class="arrow"></span></a>
   </div>
 </nav>
 
@@ -275,7 +275,7 @@
   <div class="hero-copy">
     <h1 class="display hero-display">Trans<span class="roman hero-dash">-</span>Afrika.</h1>
     <h2 class="headline italic hero-sub">Eine geführte Overland-Expedition von Europa bis Kapstadt. In deinem eigenen Fahrzeug.</h2>
-    <a href="#mitfahren" class="btn solid hero-cta">Mitfahren <span class="arrow"></span></a>
+    <a href="#mitfahren" class="btn solid hero-cta">Kennenlernen <span class="arrow"></span></a>
   </div>
 
   <div class="hero-dots">
@@ -635,7 +635,7 @@ Du fährst mit.</h2>
       </div>
 
       <div class="leistungen-cta reveal">
-        <a href="#mitfahren" class="btn solid">Mitfahren <span class="arrow"></span></a>
+        <a href="#mitfahren" class="btn solid">Kennenlernen <span class="arrow"></span></a>
       </div>
     </div>
   </div>
@@ -651,7 +651,7 @@ Du fährst mit.</h2>
         <div class="johnny-rule"></div>
         <p class="body-l">Johnny kennt den Kontinent wie wenige andere. Seit 2010 reist er durch Afrika, von einem Jahr in Kapstadt über Expeditionen durch Namibia und Tansania bis zur großen Durchquerung von Europa bis Kapstadt: 22.000 Kilometer, 21 Länder, 125 Tage. Er plant die Route, organisiert Visa und Grenzübertritte, recherchiert die sichersten Strecken und die besten Stellplätze. Damit du dich auf das konzentrieren kannst, wofür du hier bist: Afrika erleben.</p>
 
-        <a href="#mitfahren" class="btn solid johnny-btn">Mitfahren <span class="arrow"></span></a>
+        <a href="#mitfahren" class="btn solid johnny-btn">Kennenlernen <span class="arrow"></span></a>
       </div>
       <div class="johnny-portrait-wrap reveal">
         <div class="johnny-watermark">TRANS-AFRIKA 2027</div>
@@ -954,7 +954,7 @@ Du fährst mit.</h2>
 <!-- ============================== MOBILE STICKY CTA ============================== -->
 <div class="mobile-cta" id="mobileCta">
   <a href="#kontaktformular">
-    Mitfahren
+    Kennenlernen
     <span class="arrow"></span>
   </a>
 </div>
@@ -1348,20 +1348,26 @@ Du fährst mit.</h2>
 }
 .stats-wrap { max-width: var(--max); }
 .stats-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: clamp(24px, 3vw, 56px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2vw, 28px);
   width: 100%;
 }
-.stats-grid .stat { flex: 1 1 0; min-width: 0; }
 .stat {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 28px;
+  justify-content: flex-start;
+  gap: 18px;
+  min-width: 0;
+  background: var(--night-2);
+  border: 1px solid rgba(232,223,206,0.15);
+  border-radius: 6px;
+  padding: clamp(28px, 3vw, 40px) clamp(16px, 2vw, 24px);
+  transition: border-color 0.3s;
 }
+.stat:hover { border-color: rgba(232,223,206,0.35); }
 .stat-icon {
   width: 64px;
   height: 64px;
@@ -1398,7 +1404,6 @@ Du fährst mit.</h2>
   line-height: 1.5;
   color: rgba(232,223,206,0.7);
   max-width: 22ch;
-  margin-top: -16px;
 }
 .icon-credit {
   margin-top: clamp(40px, 5vw, 64px);
@@ -1411,9 +1416,11 @@ Du fährst mit.</h2>
 }
 .icon-credit a { text-decoration: underline; text-underline-offset: 2px; }
 .icon-credit a:hover { opacity: 0.7; }
-@media (max-width: 760px) {
-  .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px 24px; }
-  .stats-grid .stat { flex: none; }
+@media (max-width: 900px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .stats-grid { grid-template-columns: 1fr; }
 }
 
 /* ============================ EMOTION ============================ */

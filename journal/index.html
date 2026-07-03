@@ -119,10 +119,6 @@
   font-family: var(--sans); font-size: 14px;
   letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
 }
-.nav-drawer-cta {
-  align-self: flex-start;
-  margin-top: 6px;
-}
 
 @media (max-width: 860px) {
   .brt-nav .nav-inner { grid-template-columns: 1fr auto; padding: 14px var(--gutter); }
@@ -204,18 +200,15 @@
   text-decoration-color: var(--rule);
   text-underline-offset: 3px;
 }
+@media (max-width: 760px) {
+  .jnl-featured { grid-template-columns: 1fr; }
+  .jnl-featured-img { aspect-ratio: 3 / 2; }
+}
+
 /* ============================ SPLIT-FLIP ============================ */
 /* Bild rechts: grid-order-Wechsel, Quelle bleibt unveränderter */
 .jnl-featured--flip .jnl-featured-img { order: 2; }
 .jnl-featured--flip .jnl-featured-text { order: 1; }
-
-@media (max-width: 760px) {
-  .jnl-featured { grid-template-columns: 1fr; }
-  .jnl-featured-img { aspect-ratio: 3 / 2; }
-  /* Mobil: immer Bild oben, Text unten, unabhaengig von Desktop-Flip */
-  .jnl-featured--flip .jnl-featured-img { order: 1; }
-  .jnl-featured--flip .jnl-featured-text { order: 2; }
-}
 
 /* Trennlinie zwischen zwei Split-Blöcken */
 .jnl-split-sep {
@@ -281,7 +274,7 @@
       <li><a href="/beratung" class="nav-link">Beratung</a></li>
       <li><a href="/journal" class="nav-link active">Journal</a></li>
     </ul>
-    <a href="/expedition#mitfahren" class="btn nav-btn">Mitfahren <span class="arrow"></span></a>
+    <a href="/expedition#mitfahren" class="btn nav-btn">Kennenlernen <span class="arrow"></span></a>
     <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -349,7 +342,7 @@
     <!-- 2: Kosten — Bild rechts -->
     <a href="/journal/kosten" class="jnl-featured jnl-featured--flip reveal">
       <div class="jnl-featured-img image-frame no-grad">
-        <image-slot id="featured-kosten" shape="rect" src="../images/journal/kosten.webp" alt="Detailaufnahme von Getränk, Limette und Trinkwasserbeutel." placeholder="Bild Kosten-Artikel"></image-slot>
+        <image-slot id="featured-kosten" shape="rect" placeholder="Bild Kosten-Artikel"></image-slot>
       </div>
       <div class="jnl-featured-text">
         <span class="eyebrow no-rule jnl-featured-cat">Kosten</span>
@@ -365,7 +358,7 @@
     <!-- 3: Grenzen — Bild links -->
     <a href="/journal/grenzen" class="jnl-featured reveal">
       <div class="jnl-featured-img image-frame no-grad">
-        <image-slot id="featured-grenzen" shape="rect" src="../images/journal/grenzescanner.webp" alt="Fahrzeug-Scanner an einer Grenze." placeholder="Bild Grenzen-Artikel"></image-slot>
+        <image-slot id="featured-grenzen" shape="rect" placeholder="Bild Grenzen-Artikel"></image-slot>
       </div>
       <div class="jnl-featured-text">
         <span class="eyebrow no-rule jnl-featured-cat">Grenzen</span>

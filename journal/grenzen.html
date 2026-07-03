@@ -119,10 +119,6 @@
   font-family: var(--sans); font-size: 14px;
   letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
 }
-.nav-drawer-cta {
-  align-self: flex-start;
-  margin-top: 6px;
-}
 
 @media (max-width: 860px) {
   .brt-nav .nav-inner { grid-template-columns: 1fr auto; padding: 14px var(--gutter); }
@@ -172,9 +168,8 @@
   font-family: var(--serif);
   font-style: italic;
   font-size: clamp(19px, 2vw, 26px);
-  line-height: 1.55;
-  letter-spacing: 0.2px;
-  color: #1c1c1c;
+  line-height: 1.45;
+  color: var(--ink-soft);
   max-width: 64ch;
 }
 
@@ -229,7 +224,7 @@
 .art-img-wrap image-slot {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 9;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -345,15 +340,6 @@
   margin-top: 8px;
 }
 
-/* ============================ WEITERLESEN ============================ */
-.art-weiterlesen-section { padding: clamp(40px, 5vw, 64px) 0; border-top: 1px solid var(--rule); }
-.art-weiterlesen > .eyebrow { display: block; margin-bottom: clamp(20px, 2.5vw, 28px); }
-.art-weiterlesen-links { display: flex; gap: clamp(24px, 4vw, 48px); flex-wrap: wrap; }
-.art-weiterlesen-item { flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: inherit; transition: opacity 0.2s; }
-.art-weiterlesen-item:hover { opacity: 0.65; }
-.art-weiterlesen-cat { margin-bottom: 0; }
-.art-weiterlesen-title { font-family: var(--serif); font-style: italic; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.35; color: var(--ink); }
-
 /* ============================ ZURÜCK-LINK ============================ */
 .art-back {
   display: inline-flex;
@@ -407,10 +393,6 @@
   .footer-wa { display: inline-flex; }
 }
 
-/* ============================ BILDAUSSCHNITT ============================ */
-/* Bildausschnitt: align="..." am <image-slot>-Element steuern, nicht per CSS.
-   "top" = oben, "bottom" = unten, "70%" = Fokus 70% von oben. */
-
 /* ============================ REVEAL MOBILE ============================ */
 @media (max-width: 768px) {
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
@@ -431,7 +413,7 @@
       <li><a href="/beratung" class="nav-link">Beratung</a></li>
       <li><a href="/journal" class="nav-link active">Journal</a></li>
     </ul>
-    <a href="/expedition#mitfahren" class="btn nav-btn">Mitfahren <span class="arrow"></span></a>
+    <a href="/expedition#mitfahren" class="btn nav-btn">Kennenlernen <span class="arrow"></span></a>
     <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -442,7 +424,6 @@
     <a href="/reisefuehrer" class="nav-drawer-link">Reiseführer</a>
     <a href="/beratung" class="nav-drawer-link">Beratung</a>
     <a href="/journal" class="nav-drawer-link active">Journal</a>
-    <a href="/expedition#mitfahren" class="btn nav-drawer-cta">Mitfahren <span class="arrow"></span></a>
   </div>
 </nav>
 
@@ -464,15 +445,15 @@
 <!-- ============================== LEDE ============================== -->
 <section class="art-lede-section">
   <div class="container">
-    <p class="art-lede reveal">Grenzen gehören zu den intensivsten Momenten der Reise. Auf der Westroute gibt es zwischen 15 und 23 Grenzübergänge, je nachdem, ob du durch Gambia, Guinea-Bissau, Sierra Leone, Liberia und Gabun fährst. Sie gehören zum Alltag und kosten Nerven, manche sind in einer Stunde erledigt, andere ziehen sich über einen halben Tag. Nach den ersten Übergängen entwickelst du aber eine Routine und wirst entspannter. Wir teilen, wie eine Grenze in Westafrika wirklich abläuft, welche Papiere du brauchst und wie du an Checkpoints ruhig bleibst.</p>
+    <p class="art-lede reveal">Vor keiner anderen Sache haben angehende Overlander so viel Respekt wie vor den Grenzen. Zu Recht, sie gehören zu den intensivsten Momenten der Reise. Aber sie sind machbar, und nach den ersten Übergängen wird Routine daraus. Wie eine Grenze in Westafrika wirklich abläuft, welche Papiere du brauchst und wie du an Checkpoints ruhig bleibst, aus 21 Ländern und deutlich mehr Grenzübergängen.</p>
   </div>
 </section>
 
 <!-- ============================== BILD 1 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="grenzen-1" shape="rect" align="40%" src="../images/journal/DRKongoGrenzbuero.webp" alt="Grenzbeamter an einem Schreibtisch in einem Grenzbüro in der Demokratischen Republik Kongo." placeholder="Grenzsituation / Schlange / Wüstengrenze"></image-slot>
-    <p class="art-img-caption">Hier sitzen wir in einem kleinen Grenzposten zur DRC.</p>
+    <image-slot id="grenzen-1" shape="rect" placeholder="Grenzsituation / Schlange / Wüstengrenze"></image-slot>
+    <p class="art-img-caption">Grenzübergänge gehören zu den intensivsten Momenten der Reise. Und sie werden mit jedem Mal leichter.</p>
   </div>
 </div>
 
@@ -481,21 +462,22 @@
   <div class="container">
     <div class="art-body reveal">
 
-      <h2>Die komplizierteste Grenze: Marokko nach Mauretanien</h2>
-      <p>Die komplizierteste Grenze der gesamten Westroute ist die zwischen Marokko und Mauretanien. Der einzige Landübergang zwischen beiden Ländern liegt bei Guerguerat, und zwischen marokkanischer und mauretanischer Seite liegt ein kilometerlanges Stück unbefestigtes Niemandsland, ein Zeichen für die anhaltenden Spannungen zwischen den Ländern. Das Gute daran: Die Grenze kommt gleich am Anfang der Reise, und wenn du sie hinter dir hast, hast du den anstrengendsten Übergang überstanden. Drei bis sechs Stunden solltest du einplanen.</p>
-      <p>Auf marokkanischer Seite wird das Auto systematisch durchleuchtet, etwas, das wir danach nur noch an der Grenze vom Senegal nach Guinea erlebt haben. Dazu gibt es viele Stationen, zu denen du musst. Der Reisepass wird mehrfach geprüft, bevor er gestempelt wird, du gibst die Einreisekarte ab, die du bei der Einreise nach Marokko bekommen hast, und es gibt ein paar weitere Stationen, deren Zweck uns nicht ganz klar war. Unübersichtlich, aber strukturierter als das, was dich auf der mauretanischen Seite nach dem Niemandsland erwartet.</p>
-      <p>Dort wird es noch etwas chaotischer. Sobald du ankommst, sprechen dich diverse Leute an, sie wollen dir helfen, Geld wechseln oder dich durch den Prozess führen. Der Ablauf zieht sich über zahlreiche Stationen in verschiedenen, oft nicht beschrifteten Gebäuden: mehrere Passkontrollen, die temporäre Einfuhrgenehmigung fürs Auto, das Visum mit Foto und Fingerabdrücken (rund 55 Euro pro Person, bar und passend in Euro) und am Ende die mauretanische Kfz-Versicherung, die wir gleich an der Grenze abgeschlossen haben. Welche Station in welcher Reihenfolge, wie du welches Gebäude findest und welche Kosten anfallen, dokumentieren wir Schritt für Schritt im <a href="/reisefuehrer" class="art-body-link">Reiseführer</a>.</p>
+      <h2>Manche dauern eine Stunde, manche einen halben Tag</h2>
+      <p>Die ehrliche Erwartung zuerst: Es gibt nicht die eine Grenze. Manche sind in einer Stunde erledigt, andere ziehen sich über einen halben Tag und sind undurchsichtig. Das gehört dazu, es kostet Nerven, und man gewöhnt sich daran.</p>
+      <p>Die komplizierteste der <a href="/journal/westroute" class="art-body-link">gesamten Westroute</a> ist die zwischen Marokko und Mauretanien, der einzige Landübergang zwischen beiden Ländern, mitten in der Wüste. Sie ist auch die einzige, an der das Auto systematisch gescannt wird, und sie kommt gleich am Anfang der Reise. Das hat etwas Gutes: Wenn du sie hinter dir hast, hast du die anstrengendste Grenze überstanden. Drei bis sechs Stunden solltest du dort einplanen, zwischen marokkanischer und mauretanischer Seite liegt ein kurzes Stück unbefestigtes Niemandsland.</p>
 
       <h2>So läuft ein Übergang ab</h2>
-      <p>Im Kern wiederholt sich überall dasselbe Muster, auch wenn die Reihenfolge variiert. Auf der einen Seite die Ausreise: Ausreisestempel in den Pass, Ausfuhr des Fahrzeugs im Carnet vermerken. Dann, nach einer kurzen Fahrt, in einem neuen Gebäude die Einreise ins nächste Land: Visums-Check, Einreisestempel, Fahrzeug-Importgenehmigung (per Carnet oder als temporäre Einfuhr), teilweise ein Gelbfieber-Nachweis und manchmal eine Fahrzeugkontrolle.</p>
-      <p>Die Schwierigkeit liegt darin, dass die Gebäude oft nicht einheitlich beschriftet sind, nicht in einer klaren Reihenfolge stehen und sich Händler, Geldwechsler und SIM-Karten-Verkäufer dazwischen tummeln. Was uns geholfen hat, war eine einfache Rollenteilung: Einer bleibt am Auto, der andere organisiert die Stempel. So bleibt das Fahrzeug, und bei uns der Hund, nie unbeaufsichtigt, und es gibt eine klare Verantwortung für die Unterlagen. Es kann allerdings sein, dass alle Personen bei der Einreise vorstellig werden müssen, etwa für Fingerabdrücke oder ein Foto.</p>
+      <p>Im Kern wiederholt sich überall dasselbe Muster, auch wenn die Reihenfolge variiert. Auf der einen Seite die Ausreise: Ausreisestempel in den Pass, Ausfuhr des Fahrzeugs im Carnet vermerken. Dann, oft nach einem Stück Niemandsland, die Einreise ins nächste Land: Einreisestempel, Fahrzeug-Importgenehmigung (per Carnet oder als temporäre Einfuhr direkt an der Grenze), gegebenenfalls eine lokale Kfz-Versicherung, manchmal eine Fahrzeugkontrolle.</p>
+      <p>Klingt nach viel, ist aber ein abarbeitbarer Ablauf. Was hilft, ist eine einfache Rollenteilung: Einer bleibt am Auto, der andere organisiert die Stempel. So bleibt das Fahrzeug nie unbeaufsichtigt, und ihr verliert euch nicht im Gewusel.</p>
 
       <h2>Die Papiere, die du griffbereit brauchst</h2>
-      <p>Deine Vorbereitung entscheidet oft, wie schnell und einfach du durchkommst. Diese Dokumente solltest du an jeder Grenze sofort zur Hand haben, im Original und als Kopie: das Visum ausgedruckt (wenn nicht im Reisepass eingeklebt), Reisepass, Führerschein, Fahrzeugschein, das Carnet de Passage und Kopien von allem. Gelegentlich wird zusätzlich ein Gelbfieber-Impfausweis verlangt, seltener der internationale Führerschein.</p>
-      <p>In der Westsahara und Mauretanien empfiehlt es sich außerdem, einige Kopien eines sogenannten Fiche dabeizuhaben. Das Fiche ist ein standardisiertes Formular mit deinen Personen- und Fahrzeugdaten, das an vielen Checkpoints verlangt wird. Wenn du zwanzig vorbereitete Kopien dabei hast, reichst du eine einfach durch, statt jedes Mal alles per Hand auszufüllen. Welche Dokumente genau, in welcher Menge, und eine fertige Fiche-Vorlage zum Ausdrucken haben wir im <a href="/reisefuehrer" class="art-body-link">Reiseführer</a> zusammengestellt.</p>
+      <p>Vorbereitung entscheidet hier fast alles. Diese Dokumente solltest du an jeder Grenze sofort zur Hand haben, im Original und als Kopie:</p>
+      <p>Reisepass, Führerschein und internationaler Führerschein, Fahrzeugschein, das Carnet de Passage und Kopien von allem. Dazu zwei Dinge, die viele unterschätzen: ein Stapel <strong>Fiche-Kopien</strong> und der <strong>Gelbfieber-Impfausweis</strong>.</p>
+      <p>Das Fiche ist ein standardisiertes Formular mit deinen Personen- und Fahrzeugdaten, das an vielen Checkpoints verlangt wird. Wenn du zwanzig vorbereitete Kopien dabei hast, reichst du sie einfach durch, statt jedes Mal alles per Hand auszufüllen. Die Gelbfieberimpfung ist für fast jedes Land in Westafrika vorgeschrieben, ohne den gelben Nachweis kommst du an vielen Grenzen nicht weiter.</p>
+      <p>Welche Dokumente genau, in welcher Menge, und eine fertige Fiche-Vorlage zum Ausdrucken haben wir im Reiseführer zusammengestellt.</p>
 
       <h2>Helfer, Fixer und ein klarer Kopf</h2>
-      <p>An vielen Grenzen wirst du von selbsternannten Helfern angesprochen. An den meisten brauchst du sie nicht und kannst sie freundlich ignorieren. Die Ausnahme war für uns Mauretanien. Dort hat sich uns ein Fixer aufgedrängt, der uns durch den Prozess geführt und dafür gesorgt hat, dass unsere Pässe schneller gestempelt wurden. Am Ende haben wir ihm freiwillig ein kleines Trinkgeld gegeben. Eigentlich wollten wir es ohne Fixer machen, aber am Ende waren wir froh über die Hilfe, und die paar Euro waren es wert. Es geht genauso ohne, dauert dann im Zweifel nur etwas länger.</p>
+      <p>An vielen Grenzen wirst du von selbsternannten Helfern angesprochen. Die gute Nachricht: An den meisten Grenzen brauchst du sie nicht und kannst sie freundlich ignorieren. Die Ausnahmen auf unserer Route waren Marokko und vor allem Mauretanien. An der Mauretanien-Grenze haben wir uns bewusst von einem Fixer durch den Prozess führen lassen, er hat dafür gesorgt, dass unsere Pässe schneller gestempelt wurden, und am Ende haben wir ihm freiwillig ein kleines Trinkgeld gegeben. Das war es wert. Ohne Fixer geht es auch, dauert dann aber meist länger.</p>
       <p>Die Regel, die uns überall geholfen hat: nicht ablenken lassen. Geldwechseln und SIM-Karte kaufen schiebst du auf die Zeit nach dem Übergang. An der Grenze konzentrierst du dich nur auf die Stempel.</p>
 
     </div>
@@ -505,8 +487,8 @@
 <!-- ============================== BILD 2 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="grenzen-2" shape="rect" align="70%" src="../images/journal/VisaFormularAusfuellen.webp" alt="Visa-Antragsformulare und Dokumente auf einem Tisch." placeholder="Checkpoint / Dokumente / Auto an Kontrolle"></image-slot>
-    <p class="art-img-caption">Marie bei der Erledigung von administrativen Formalitäten.</p>
+    <image-slot id="grenzen-2" shape="rect" placeholder="Checkpoint / Dokumente / Auto an Kontrolle"></image-slot>
+    <p class="art-img-caption">Dokumente griffbereit, einer bleibt am Auto. Mit Vorbereitung verliert der Grenztag seinen Schrecken.</p>
   </div>
 </div>
 
@@ -516,12 +498,12 @@
     <div class="art-body reveal">
 
       <h2>Wenn ein Checkpoint schwierig wird</h2>
-      <p>Checkpoints gibt es unabhängig von Grenzen relativ viele entlang des Weges. Sie fühlen sich oft an wie eine Mini-Grenze. Im Großteil wirst du durchgewunken, und wenn du angehalten wirst, reicht meistens ein kurzer Gruß oder ein kurzes Gespräch, in Mauretanien reichst du einfach ein Fiche heraus. Sollte es doch mal zäher werden, gibt es ein paar Grundsätze.</p>
-      <p>Das Wichtigste: Sei höflich, ruhig, geduldig und positiv. Das klingt selbstverständlich, aber in stressigen Situationen oder nach langen Tagen fällt es oft schwer. Beginne jedes Gespräch mit einer freundlichen, energetischen Begrüßung in der Landessprache. In etwa 90 Prozent der Fälle kannst du nach einem kurzen Gespräch weiterfahren. Wir empfehlen außerdem, nach Möglichkeit nur Kopien herauszugeben, erstaunlicherweise reicht das meistens.</p>
-      <p>Wirst du nach Geld gefragt, hilft ein freundliches „Nein, ich habe nichts für dich" oder ein Lächeln mit den Worten „Ich habe nur ein Lächeln dabei und wünsche dir und deiner Familie einen schönen Tag." Nicht aggressiv, einfach ruhig und bestimmt. Im <a href="/reisefuehrer" class="art-body-link">Reiseführer</a> beschreiben wir einige unserer Checkpoint-Begegnungen und geben mehr Tipps, etwa wenn du wirklich einen Fehler gemacht hast oder die Stimmung doch einmal kippt.</p>
+      <p>Zwischen den Grenzen liegen Checkpoints, und die meisten sind unkompliziert: Fiche durchreichen, kurzer Gruß, weiterfahren. Manchmal wird es zäher. Dafür ein paar Grundsätze, die uns durch jede Situation getragen haben.</p>
+      <p>Manchmal hat der Beamte schlicht recht: Du bist zu schnell gefahren oder hast ein Schild übersehen. Dann hilft Ruhe und Geduld. Wenn eine <a href="/journal/kosten" class="art-body-link">Strafe fällig wird</a>, zahlst du sie, aber nur gegen eine Quittung. Allein die Bitte um eine offizielle Quittung klärt die meisten Situationen, weil es die inoffiziellen schnell uninteressant macht.</p>
+      <p>Wird es wirklich hartnäckig und zieht sich über Stunden, ist der wirksamste Hebel die Erwähnung deiner Botschaft. Der Reisepass ist Eigentum des ausstellenden Landes, und der Hinweis, dass du die Botschaft kontaktieren möchtest, löst viele Blockaden von allein. Bleib dabei immer höflich und ruhig, Eskalation in der Stimme hilft nie, Gelassenheit fast immer.</p>
 
       <h2>Der Grenztag verliert seinen Schrecken</h2>
-      <p>Nach den ersten Übergängen wirst du merken: Das Muster wiederholt sich, deine Routine wird besser, und was am Anfang einschüchternd wirkte, wird zu einem normalen Teil des Reisetags. Du lernst den Rhythmus kennen und verstehst, dass kein Weg an Geduld vorbeiführt.</p>
+      <p>Nach den ersten Übergängen wirst du merken: Das Muster wiederholt sich, deine Routine wird besser, und was am Anfang einschüchternd wirkte, wird zu einem normalen Teil des Reisetags. Respekt ja, Angst nein, das gilt an der Grenze genauso wie auf der Strecke.</p>
 
     </div>
   </div>
@@ -535,15 +517,15 @@
       <div class="art-faq-accordion">
         <details class="acc-item">
           <summary><span class="acc-title">Welche ist die schwierigste Grenze der Westroute?</span><span class="acc-icon"></span></summary>
-          <div class="acc-body"><p>Die zwischen Marokko und Mauretanien bei Guerguerat, mit einem langen Stück Niemandsland dazwischen. Plane drei bis sechs Stunden ein. Sie kommt früh auf der Reise, danach wird es leichter.</p></div>
+          <div class="acc-body"><p>Die zwischen Marokko und Mauretanien, der einzige Landübergang zwischen beiden Ländern, mitten in der Wüste. Plane drei bis sechs Stunden ein. Sie kommt früh auf der Reise, danach wird es leichter.</p></div>
         </details>
         <details class="acc-item">
-          <summary><span class="acc-title">Welche Dokumente brauche ich an einer Grenze?</span><span class="acc-icon"></span></summary>
-          <div class="acc-body"><p>Reisepass, Führerschein, Fahrzeugschein, Carnet de Passage und Kopien von allem, dazu das ausgedruckte Visum, falls es nicht im Pass klebt. Gelegentlich kommt ein Gelbfieber-Impfausweis dazu, seltener der internationale Führerschein. In der Westsahara und Mauretanien helfen Fiche-Kopien. Die vollständige Liste und eine Fiche-Vorlage stehen im Reiseführer.</p></div>
+          <summary><span class="acc-title">Welche Dokumente brauche ich an jeder Grenze?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>Reisepass, Führerschein und internationaler Führerschein, Fahrzeugschein, Carnet de Passage, Kopien von allem, dazu Fiche-Kopien und den Gelbfieber-Impfausweis. Die vollständige Liste und eine Fiche-Vorlage stehen im Reiseführer.</p></div>
         </details>
         <details class="acc-item">
           <summary><span class="acc-title">Was mache ich, wenn ein Beamter Geld verlangt?</span><span class="acc-icon"></span></summary>
-          <div class="acc-body"><p>Ruhig und freundlich bleiben. Ein bestimmtes, höfliches „Nein" reicht in den allermeisten Fällen, oft hilft es, nur Kopien statt Originale herauszugeben. Bleib geduldig und positiv, Eskalation hilft nie. Nur wenn es wirklich hartnäckig wird, ist der Hinweis auf die eigene Botschaft ein letztes Mittel.</p></div>
+          <div class="acc-body"><p>Ruhig bleiben, um eine offizielle Quittung bitten, das klärt die meisten Fälle. Bei hartnäckigen Situationen hilft der Hinweis, dass du deine Botschaft kontaktieren möchtest. Immer höflich, nie laut.</p></div>
         </details>
       </div>
     </div>
@@ -561,7 +543,7 @@
       "name": "Welche ist die schwierigste Grenze der Trans-Afrika Westroute?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Die zwischen Marokko und Mauretanien bei Guerguerat, mit einem langen Stück Niemandsland dazwischen. Plane drei bis sechs Stunden ein. Sie kommt früh auf der Reise, danach wird es leichter."
+        "text": "Die zwischen Marokko und Mauretanien, der einzige Landübergang zwischen beiden Ländern, mitten in der Wüste. Plane drei bis sechs Stunden ein. Sie kommt früh auf der Reise, danach wird es leichter."
       }
     },
     {
@@ -569,7 +551,7 @@
       "name": "Welche Dokumente brauche ich an Grenzen in Westafrika?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Reisepass, Führerschein, Fahrzeugschein, Carnet de Passage und Kopien von allem, dazu das ausgedruckte Visum, falls es nicht im Pass klebt. Gelegentlich kommt ein Gelbfieber-Impfausweis dazu, seltener der internationale Führerschein. In der Westsahara und Mauretanien helfen Fiche-Kopien."
+        "text": "Reisepass, Führerschein und internationaler Führerschein, Fahrzeugschein, Carnet de Passage, Kopien von allem, dazu Fiche-Kopien und den Gelbfieber-Impfausweis."
       }
     },
     {
@@ -577,31 +559,12 @@
       "name": "Was mache ich, wenn ein Beamter an der Grenze Geld verlangt?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ruhig und freundlich bleiben. Ein bestimmtes, höfliches Nein reicht in den allermeisten Fällen, oft hilft es, nur Kopien statt Originale herauszugeben. Nur wenn es wirklich hartnäckig wird, ist der Hinweis auf die eigene Botschaft ein letztes Mittel."
+        "text": "Ruhig bleiben, um eine offizielle Quittung bitten, das klärt die meisten Fälle. Bei hartnäckigen Situationen hilft der Hinweis, dass du deine Botschaft kontaktieren möchtest. Immer höflich, nie laut."
       }
     }
   ]
 }
 </script>
-
-<!-- ============================== WEITERLESEN ============================== -->
-<section class="art-weiterlesen-section">
-  <div class="container">
-    <div class="art-weiterlesen reveal">
-      <span class="eyebrow no-rule">Weiterlesen</span>
-      <div class="art-weiterlesen-links">
-        <a href="/journal/westroute" class="art-weiterlesen-item">
-          <span class="art-weiterlesen-cat eyebrow no-rule">Route</span>
-          <span class="art-weiterlesen-title">Die Westroute durch Afrika: warum aktuell nur ein Weg von Europa nach Kapstadt führt</span>
-        </a>
-        <a href="/journal/kosten" class="art-weiterlesen-item">
-          <span class="art-weiterlesen-cat eyebrow no-rule">Kosten</span>
-          <span class="art-weiterlesen-title">Was eine Trans-Afrika mit dem Auto wirklich kostet</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============================== CTA-BOX ============================== -->
 <section class="art-cta-section">
@@ -609,7 +572,7 @@
     <div class="art-cta reveal">
       <span class="eyebrow no-rule">Wenn du konkret planst</span>
       <h2 class="art-cta-headline">Jede Grenze, Schritt für Schritt.</h2>
-      <p class="art-cta-text">Im Reiseführer dokumentieren wir jeden Grenzübergang der Westroute so, wie wir ihn erlebt haben: welche Station in welcher Reihenfolge, welche Papiere, welche Kosten. Dazu eine Visa-Übersicht für EU-Bürger und eine Fiche-Vorlage zum Ausdrucken. Und wenn du eine konkrete Grenze mit uns durchsprechen willst: dafür gibt es die Beratung.</p>
+      <p class="art-cta-text">Im Reiseführer dokumentieren wir jeden Grenzübergang der Westroute so, wie wir ihn erlebt haben: welche Schalter in welcher Reihenfolge, welche Papiere, welche Kosten. Dazu die Visa-Übersicht für EU-Bürger und eine Fiche-Vorlage zum Ausdrucken. Und wenn du eine konkrete Grenze mit uns durchsprechen willst: dafür gibt es die Beratung.</p>
       <div class="art-cta-btns">
         <a href="/reisefuehrer" class="btn solid">Zum Reiseführer <span class="arrow"></span></a>
         <a href="/beratung" class="btn ghost-dark">Zur Beratung <span class="arrow"></span></a>
