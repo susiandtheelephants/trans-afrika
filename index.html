@@ -480,11 +480,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 22px;
+  gap: 0;
 }
 .home-display {
   color: #f6f1e6;
   line-height: 0.92;
+  font-size: clamp(42px, 7.4vw, 115px);
 }
 .home-lede {
   color: rgba(243, 238, 229, 0.88);
@@ -492,8 +493,9 @@
   font-family: var(--sans);
   font-size: clamp(18px, 1.4vw, 20px);
   line-height: 1.6;
-  max-width: 48ch;
+  max-width: 36ch;
   letter-spacing: 0.01em;
+  margin-top: clamp(32px, 5vh, 72px);
 }
 
 @media (max-width: 760px) {

@@ -76,7 +76,7 @@ bestehenden Stil einfügen, als wäre sie schon immer Teil der Site gewesen.
   Superlative. Es ist "kein einfacher Urlaub, sondern eine echte Expedition".
 - **Eckdaten konsistent halten:**
   - **Eigene Reise von Marie & Johnny:** 23.000 km, 21 Länder, 140 Tage (Dezember 2025 bis April 2026). Für Über-uns- und Erfahrungs-Texte (Beratungs-Hero, About-Sektion, persönliche Erzählung).
-  - **Angebotene Expedition:** 22.000 km, 21 Länder, ~125 Tage, ab 14.990€ p.P. (Einzelfahrerzuschlag 7.990€), 5 bis 8 Fahrzeuge, Start Anfang 2027. Für alle Angebots-Texte (Expedition, Home-Karten).
+  - **Angebotene Expedition:** 22.000 km, 21 Länder, ~125 Tage, ab 14.990€ p.P. (Einzelfahrerzuschlag 7.990€), maximal 6 Fahrzeuge, Durchführung ab 4 Fahrzeugen, Start Anfang 2027. Für alle Angebots-Texte (Expedition, Home-Karten).
   - **Nicht vermischen.** Niemals 140 Tage für die Expedition oder 125 Tage für die eigene Reise verwenden.
 
 ---
