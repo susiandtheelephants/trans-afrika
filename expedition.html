@@ -2612,7 +2612,31 @@ panels.forEach((p) => {
   });
   updatePanelCounter(p);
 });
-restartGallery();
+
+// Auto-Galerie erst starten, wenn die Routen-Sektion sichtbar wird
+let rgStarted = false;
+const routeSection = document.getElementById('route');
+if (routeSection) {
+  const rgObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (!rgStarted) {
+          rgStarted = true;
+          // Beim ersten Sichtbarwerden alle Panels auf Bild 1 zuruecksetzen
+          panels.forEach((p) => {
+            const imgs = p.querySelectorAll('.rg-image');
+            imgs.forEach((im, idx) => im.classList.toggle('active', idx === 0));
+            updatePanelCounter(p);
+          });
+        }
+        restartGallery();
+      } else if (rgInterval) {
+        clearInterval(rgInterval);
+      }
+    });
+  }, { threshold: 0.25 });
+  rgObserver.observe(routeSection);
+}
 
 // ---------- Contact form (Formspree, async submit) ----------
 const form = document.getElementById('contactForm');
