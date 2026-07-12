@@ -91,7 +91,7 @@
   <div class="home-hero-veil"></div>
   <div class="home-hero-copy reveal">
     <h1 class="display home-display">Die Expedition deines Lebens.</h1>
-    <p class="lede home-lede">Im eigenen Fahrzeug quer durch Afrika. Mitfahren, selber fahren oder erstmal eintauchen.</p>
+    <p class="lede home-lede"><span>Im eigenen Fahrzeug quer durch Afrika.</span><span>Mitfahren, selber fahren oder erstmal eintauchen.</span></p>
   </div>
 </header>
 
@@ -486,6 +486,7 @@
   color: #f6f1e6;
   line-height: 0.92;
   font-size: clamp(42px, 7.4vw, 115px);
+  text-shadow: 0 1px 16px rgba(20,19,15,0.35);
 }
 .home-lede {
   color: rgba(243, 238, 229, 0.88);
@@ -493,10 +494,12 @@
   font-family: var(--sans);
   font-size: clamp(18px, 1.4vw, 20px);
   line-height: 1.6;
-  max-width: 36ch;
+  max-width: none;
   letter-spacing: 0.01em;
-  margin-top: clamp(32px, 5vh, 72px);
+  margin-top: clamp(64px, 12vh, 140px);
+  text-shadow: 0 1px 16px rgba(20,19,15,0.35);
 }
+.home-lede span { display: block; }
 
 @media (max-width: 760px) {
   .home-hero {
@@ -506,6 +509,11 @@
     padding-top: 22vh;
     padding-bottom: 10vh;
   }
+  .home-lede {
+    margin-top: clamp(28px, 7vh, 60px);
+    max-width: 26ch;
+  }
+  .home-lede span { display: inline; }
 }
 
 /* ============================ KARTEN ============================ */
