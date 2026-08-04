@@ -632,10 +632,10 @@ image-slot {
   color: rgba(243,238,229,.95);
 }
 
-/* Mobile aus */
+/* Auf Mobil sichtbar, gleiche Logik wie Desktop */
 @media (max-width: 768px) {
   .desktop-whatsapp {
-    display: none;
+    display: flex;
   }
 }
 /* ============================================================

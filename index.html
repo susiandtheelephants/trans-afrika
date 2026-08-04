@@ -841,30 +841,25 @@ a.home-card:hover {
   .footer-mid, .footer-legal, .footer-logo { flex: none; text-align: center; justify-content: center; }
 }
 
-/* ============================ DESKTOP WHATSAPP ============================ */
+/* ============================ WHATSAPP-BUTTON ============================ */
 .desktop-whatsapp {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 150;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.88;
 }
-@media (min-width: 1024px) {
-  .desktop-whatsapp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    right: 28px;
-    bottom: 28px;
-    z-index: 150;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: var(--ink);
-    color: var(--bg);
-    transition: transform 0.25s ease, opacity 0.25s ease;
-    opacity: 0.88;
-  }
-  .desktop-whatsapp:hover { transform: scale(1.08); opacity: 1; }
-  .desktop-whatsapp .wa-icon { width: 22px; height: 22px; }
-}
+.desktop-whatsapp:hover { transform: scale(1.08); opacity: 1; }
+.desktop-whatsapp .wa-icon { width: 22px; height: 22px; }
 
 /* ============================ SCROLL OFFSET ============================ */
 html { scroll-padding-top: 72px; }

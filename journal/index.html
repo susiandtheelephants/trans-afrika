@@ -210,6 +210,12 @@
 .jnl-featured--flip .jnl-featured-img { order: 2; }
 .jnl-featured--flip .jnl-featured-text { order: 1; }
 
+/* Auf Mobil einheitlich: bei ALLEN Eintraegen zuerst das Bild, dann der Text */
+@media (max-width: 760px) {
+  .jnl-featured--flip .jnl-featured-img { order: 0; }
+  .jnl-featured--flip .jnl-featured-text { order: 0; }
+}
+
 /* Trennlinie zwischen zwei Split-Blöcken */
 .jnl-split-sep {
   border: none;
