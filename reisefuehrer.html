@@ -60,8 +60,7 @@
       <p class="rf-hero-facts">Gefahren 2025/2026 &nbsp;·&nbsp; 23.000 km &nbsp;·&nbsp; 21 Länder &nbsp;·&nbsp; 140 Tage</p>
     </div>
     <div class="rf-hero-img-wrap image-frame reveal">
-      <!-- TODO: Cover-Bild einsetzen, sobald es existiert. Bis dahin: Reise-Foto (z.B. Karte auf Motorhaube). -->
-      <image-slot id="guide-cover" shape="rect" placeholder="Cover einfügen"></image-slot>
+      <image-slot id="guide-cover" shape="rect" src="images/HOME/reisefuehrer_titelblatt.webp" placeholder="Cover einfügen"></image-slot>
     </div>
   </div>
 </header>
@@ -488,7 +487,7 @@
   line-height: 1.6;
 }
 .rf-hero-img-wrap {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1200 / 1698;
   border-radius: 4px;
   overflow: hidden;
   max-width: 480px;
@@ -500,7 +499,7 @@
 }
 @media (max-width: 760px) {
   .rf-hero-inner { grid-template-columns: 1fr; }
-  .rf-hero-img-wrap { aspect-ratio: 4 / 5; max-width: 100%; }
+  .rf-hero-img-wrap { aspect-ratio: 1200 / 1698; max-width: 100%; }
   .rf-hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
 
