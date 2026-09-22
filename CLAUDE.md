@@ -28,8 +28,11 @@ zu einer Mehr-Bereiche-Website ausgebaut. Siehe Abschnitt 5 für die geplante St
 - **DNS:** Cloudflare. `.de` leitet auf `.com` weiter. `www` ist Production,
   non-www leitet per 307 auf www.
 - **Kontaktformular:** Formspree.
-- **Schriften:** lokal eingebunden (variable TTFs im Ordner `/fonts/`), keine
-  Google-Fonts-Verlinkung. `font-display: optional` in allen `@font-face`-Blöcken.
+- **Schriften:** lokal eingebunden (variable WOFF2 im Ordner `/fonts/`, TTF als
+  Rückfall), keine Google-Fonts-Verlinkung. `font-display: optional` in allen
+  `@font-face`-Blöcken. Die zwei Schnitte oberhalb der Falz (Inter Tight Regular
+  und Cormorant Italic) werden im `<head>` jeder Seite als WOFF2 vorgeladen
+  (`rel="preload" as="font" type="font/woff2" crossorigin`).
 - **Kein Tracking, keine Cookies, kein Analytics.** Bewusste Datenschutz-Entscheidung,
   positiv im Datenschutz formuliert. NICHT ohne ausdrückliche Anweisung Tracking,
   Google Analytics, Tag Manager o.Ä. einbauen.
