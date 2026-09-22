@@ -758,7 +758,7 @@ Du fährst mit.</h2>
     <div class="contact-head reveal">
       <span class="eyebrow no-rule">Warteliste</span>
       <h2 class="display contact-display">Sei bei der ersten Expedition dabei.</h2>
-      <p class="body-l contact-lede">Die erste Expedition startet im Winter 2027/28. So habt ihr genug Vorlauf für Sabbatical, Fahrzeug und Papiere. Trag dich unverbindlich auf die Warteliste ein: Du erfährst als Erstes den genauen Termin und kannst dir vor allen anderen einen Platz reservieren.</p>
+      <p class="body-l contact-lede">Die erste Expedition startet im Winter 2027/28. So hast du genug Vorlauf für Sabbatical, Fahrzeug und Papiere. Trag dich unverbindlich auf die Warteliste ein: Du erfährst als Erstes den genauen Termin und kannst dir vor allen anderen einen Platz reservieren.</p>
     </div>
   </div>
 
@@ -781,12 +781,6 @@ Du fährst mit.</h2>
 <!-- ============================== SECTION 11 — KONTAKT TEIL B (Formular, hell) ============================== -->
 <section id="mitfahren" class="section contact-form-section">
   <div class="container contact-form-wrap">
-    <div class="contact-form-head reveal">
-      <h3 class="subhead">
-        <img class="cfh-icon" src="images/icons/writing.webp" alt="" aria-hidden="true">
-        <span>Schreib uns</span>
-      </h3>
-    </div>
 
     <form class="contact-form-light reveal" id="contactForm" action="https://formspree.io/f/xpqbgblo" method="POST" novalidate>
       <input type="hidden" name="_subject" value="Warteliste 2027/28">
@@ -806,7 +800,7 @@ Du fährst mit.</h2>
       </label>
       <label class="cfl-field cfl-float">
         <input type="tel" name="telefon" placeholder="Telefonnummer">
-        <span class="cfl-label">Telefonnummer</span>
+        <span class="cfl-label">Telefonnummer <span class="cfl-opt">(optional)</span></span>
       </label>
       <div class="cfl-field cfl-select-custom">
         <span class="cfl-label caption">Fahrzeug vorhanden?</span>
@@ -833,7 +827,7 @@ Du fährst mit.</h2>
     placeholder=" "
   ></textarea>
 
-  <span class="cfl-label">Deine Nachricht</span>
+  <span class="cfl-label">Deine Nachricht <span class="cfl-opt">(optional)</span></span>
 </label>
       <div class="cfl-field cfl-select-custom">
   <span class="cfl-label caption">Wie willst du kontaktiert werden?</span>
@@ -852,7 +846,7 @@ Du fährst mit.</h2>
   <input type="hidden" name="kontaktart" id="kontaktartInput" required>
 </div>
 <label class="cfl-consent">
-  <input type="checkbox" name="infomail" value="ja" checked>
+  <input type="checkbox" name="infomail" value="ja" required>
   <span>Ich möchte per E-Mail über die Expedition 2027/28 informiert werden. Abmelden kann ich mich jederzeit. <a href="/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a></span>
 </label>
 <div class="cfl-submit-wrap">
@@ -2226,6 +2220,7 @@ Du fährst mit.</h2>
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
+.cfl-opt { opacity: 0.6; }
 
 /* Floating-label fields */
 .cfl-float { padding-top: 22px; gap: 0; }
