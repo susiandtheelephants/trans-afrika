@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://www.susiandtheelephants.com/journal/grenzen">
+<link rel="alternate" hreflang="de" href="https://www.susiandtheelephants.com/journal/grenzen">
+<link rel="alternate" hreflang="en" href="https://www.susiandtheelephants.com/en/journal/borders">
+<link rel="alternate" hreflang="x-default" href="https://www.susiandtheelephants.com/journal/grenzen">
 <title>Grenzen in Westafrika: wie ein Übergang mit dem Auto wirklich abläuft</title>
 <meta name="description" content="Grenzen auf der Trans-Afrika: wie ein Übergang in Westafrika wirklich abläuft, welche Dokumente du brauchst und wie du an Checkpoints souverän bleibst. Aus eigener Erfahrung.">
 <meta property="og:title" content="Grenzen in Westafrika: wie ein Übergang mit dem Auto wirklich abläuft">
@@ -126,10 +129,53 @@
   letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
 }
 
-@media (max-width: 860px) {
+/* ============================ SPRACHUMSCHALTER ============================ */
+.brt-nav .nav-end {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav-lang,
+.nav-drawer-lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  font-weight: 500;
+}
+.nav-lang a,
+.nav-drawer-lang a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.nav-lang a:hover,
+.nav-drawer-lang a:hover { opacity: 1; }
+.nav-lang-active { text-decoration: underline; text-underline-offset: 4px; }
+.nav-lang-sep { opacity: 0.4; }
+/* In der Kopfzeile nur die andere Sprache als Link, engere Abstände: sonst passt die volle Navigation nicht in eine Zeile */
+.brt-nav .nav-end .nav-lang-active,
+.brt-nav .nav-end .nav-lang-sep { display: none; }
+.brt-nav .nav-links { gap: 28px; }
+.brt-nav .nav-end { gap: 20px; }
+.nav--on-light .nav-lang { color: var(--ink); }
+.nav-drawer-lang { font-size: 14px; letter-spacing: 0.1em; }
+.nav-drawer-lang a,
+.nav-drawer-lang .nav-lang-active { padding: 10px 12px; }
+.nav-drawer-lang a:first-child,
+.nav-drawer-lang .nav-lang-active:first-child { padding-left: 0; }
+
+/* Volle Navigation erst ab 1061px, darunter passt sie nicht sicher in eine Zeile (auch mit Ersatzschrift) */
+@media (max-width: 1060px) {
   .brt-nav .nav-inner { grid-template-columns: 1fr auto; padding: 14px var(--gutter); }
   .brt-nav .nav-links { display: none; }
   .brt-nav .nav-btn { display: none; }
+  .brt-nav .nav-end { display: none; }
   .nav-burger { display: flex; justify-self: end; grid-column: 2; }
 }
 
@@ -419,7 +465,12 @@
       <li><a href="/beratung" class="nav-link">Beratung</a></li>
       <li><a href="/journal" class="nav-link active">Journal</a></li>
     </ul>
-    <a href="/expedition#mitfahren" class="btn nav-btn">Kennenlernen <span class="arrow"></span></a>
+    <div class="nav-end">
+      <div class="nav-lang" aria-label="Sprache">
+        <span class="nav-lang-active" aria-current="true">DE</span><span class="nav-lang-sep" aria-hidden="true">/</span><a href="/en/journal/borders" hreflang="en" lang="en">EN</a>
+      </div>
+      <a href="/expedition#mitfahren" class="btn nav-btn">Kennenlernen <span class="arrow"></span></a>
+    </div>
     <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -430,6 +481,9 @@
     <a href="/reisefuehrer" class="nav-drawer-link">Reiseführer</a>
     <a href="/beratung" class="nav-drawer-link">Beratung</a>
     <a href="/journal" class="nav-drawer-link active">Journal</a>
+    <div class="nav-drawer-lang" aria-label="Sprache">
+      <span class="nav-lang-active" aria-current="true">DE</span><span class="nav-lang-sep" aria-hidden="true">/</span><a href="/en/journal/borders" hreflang="en" lang="en">EN</a>
+    </div>
   </div>
 </nav>
 
