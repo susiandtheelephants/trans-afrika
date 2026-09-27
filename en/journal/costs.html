@@ -1,30 +1,31 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://www.susiandtheelephants.com/journal/westroute">
-<link rel="alternate" hreflang="de" href="https://www.susiandtheelephants.com/journal/westroute">
-<link rel="alternate" hreflang="en" href="https://www.susiandtheelephants.com/en/journal/west-route">
-<link rel="alternate" hreflang="x-default" href="https://www.susiandtheelephants.com/journal/westroute">
-<title>Mit dem Auto durch Afrika: die Westroute von Hamburg nach Kapstadt</title>
-<meta name="description" content="Hamburg nach Kapstadt mit dem Auto: warum aktuell nur die Westroute durch Afrika funktioniert, wie sie verläuft und was du über Sicherheit und Reisedauer wissen musst.">
-<meta property="og:title" content="Mit dem Auto durch Afrika: die Westroute von Hamburg nach Kapstadt">
-<meta property="og:description" content="Hamburg nach Kapstadt mit dem Auto: warum aktuell nur die Westroute durch Afrika funktioniert, wie sie verläuft und was du über Sicherheit und Reisedauer wissen musst.">
-<meta property="og:url" content="https://www.susiandtheelephants.com/journal/westroute">
+<link rel="canonical" href="https://www.susiandtheelephants.com/en/journal/costs">
+<link rel="alternate" hreflang="de" href="https://www.susiandtheelephants.com/journal/kosten">
+<link rel="alternate" hreflang="en" href="https://www.susiandtheelephants.com/en/journal/costs">
+<link rel="alternate" hreflang="x-default" href="https://www.susiandtheelephants.com/journal/kosten">
+<title>What does a Trans Africa by vehicle cost? The real items</title>
+<meta name="description" content="What crossing Africa in your own vehicle really costs: vehicle, carnet, visas, diesel, insurance. The honest list of items from 140 days on the road.">
+<meta property="og:title" content="What does a Trans Africa by vehicle cost? The real items">
+<meta property="og:description" content="What crossing Africa in your own vehicle really costs: vehicle, carnet, visas, diesel, insurance. The honest list of items from 140 days on the road.">
+<meta property="og:url" content="https://www.susiandtheelephants.com/en/journal/costs">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://www.susiandtheelephants.com/images/og/journal.jpg">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://www.susiandtheelephants.com/images/og/kosten.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" href="../images/icons/apple-touch-icon.png">
-<link rel="apple-touch-icon" href="../images/icons/apple-touch-icon.png">
-<link rel="manifest" href="../images/icons/site.webmanifest">
+<link rel="icon" type="image/png" href="/images/icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+<link rel="manifest" href="/images/icons/site.webmanifest">
 <link rel="preload" href="/fonts/InterTight-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/CormorantGaramond-Italic-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../styles.css">
-<script src="../image-slot.js" defer></script>
+<link rel="stylesheet" href="/styles.css">
+<script src="/image-slot.js" defer></script>
 <style>
 /* ============================ NAV ============================ */
 .brt-nav {
@@ -257,6 +258,10 @@
   margin-bottom: 24px;
 }
 .art-body p:last-child { margin-bottom: 0; }
+.art-body strong {
+  font-weight: 600;
+  color: var(--ink);
+}
 .art-faq-q {
   font-family: var(--serif);
   font-style: italic;
@@ -284,24 +289,6 @@
 .art-img-wrap--contain image-slot {
   background: var(--bg-soft);
 }
-/* Bildausschnitt: align="..." am <image-slot>-Element steuern, nicht per CSS.
-   "top" = oben, "bottom" = unten, "70%" = Fokus 70% von oben. */
-.art-img-wrap--portrait {
-  max-width: 360px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.art-img-wrap--portrait image-slot {
-  aspect-ratio: 3 / 4;
-}
-.art-img-wrap--portrait .art-img-caption {
-  text-align: center;
-}
-@media (max-width: 600px) {
-  .art-img-wrap--portrait {
-    max-width: 100%;
-  }
-}
 .art-img-caption {
   margin-top: 10px;
   font-family: var(--mono);
@@ -311,15 +298,50 @@
   color: var(--muted);
 }
 
-/* ============================ BODY LINK ============================ */
-.art-body-link {
-  color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: var(--rule);
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.2s;
+/* ============================ KOSTENTABELLE ============================ */
+.cost-table {
+  width: 100%;
+  max-width: 520px;
+  margin: clamp(32px, 4vw, 48px) 0;
 }
-.art-body-link:hover { text-decoration-color: var(--ink); }
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.cost-row:first-child {
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 14px 0;
+  margin-bottom: 2px;
+}
+.cost-label {
+  font-family: var(--sans);
+  font-size: clamp(14px, 1.1vw, 16px);
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+.cost-amount {
+  font-family: var(--mono);
+  font-size: clamp(13px, 1vw, 15px);
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.cost-row:first-child .cost-label {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: clamp(15px, 1.15vw, 17px);
+}
+.cost-row:first-child .cost-amount {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: clamp(15px, 1.15vw, 17px);
+}
 
 /* ============================ FAQ-AKKORDEON ============================ */
 .art-faq-accordion {
@@ -378,6 +400,16 @@
   color: var(--ink-soft);
   margin: 0;
 }
+
+/* ============================ BODY LINK ============================ */
+.art-body-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+.art-body-link:hover { text-decoration-color: var(--ink); }
 
 /* ============================ CTA-BOX ============================ */
 .art-cta-section {
@@ -481,6 +513,9 @@
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
   html, body { overflow-x: hidden; }
 }
+/* ============================ BILDAUSSCHNITT ============================ */
+/* Bildausschnitt: align="..." am <image-slot>-Element steuern, nicht per CSS.
+   "top" = oben, "bottom" = unten, "70%" = Fokus 70% von oben. */
 </style>
 </head>
 <body data-palette="sand" data-type="serif-sans" data-density="default">
@@ -488,34 +523,34 @@
 <!-- ============================== NAVIGATION ============================== -->
 <nav class="nav brt-nav nav--on-light" id="nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="Startseite">Susi <span class="amp">&amp;</span> The Elephants</a>
+    <a href="/en/" class="nav-logo" aria-label="Home page">Susi <span class="amp">&amp;</span> The Elephants</a>
     <ul class="nav-links">
-      <li><a href="/" class="nav-link">Home</a></li>
-      <li><a href="/expedition" class="nav-link">Expedition</a></li>
-      <li><a href="/reisefuehrer" class="nav-link">Reiseführer</a></li>
-      <li><a href="/beratung" class="nav-link">Beratung</a></li>
-      <li><a href="/journal" class="nav-link active">Journal</a></li>
+      <li><a href="/en/" class="nav-link">Home</a></li>
+      <li><a href="/en/expedition" class="nav-link">Expedition</a></li>
+      <li><a href="/en/guide" class="nav-link">Guide</a></li>
+      <li><a href="/en/consulting" class="nav-link">Consulting</a></li>
+      <li><a href="/en/journal" class="nav-link active">Journal</a></li>
     </ul>
     <div class="nav-end">
-      <div class="nav-lang" aria-label="Sprache">
-        <span class="nav-lang-active" aria-current="true">DE</span><span class="nav-lang-sep" aria-hidden="true">/</span><a href="/en/journal/west-route" hreflang="en" lang="en">EN</a>
+      <div class="nav-lang" aria-label="Language">
+        <a href="/journal/kosten" hreflang="de" lang="de">DE</a><span class="nav-lang-sep" aria-hidden="true">/</span><span class="nav-lang-active" aria-current="true">EN</span>
       </div>
-      <a href="/expedition#mitfahren" class="btn nav-btn">Kennenlernen <span class="arrow"></span></a>
+      <a href="/en/expedition#mitfahren" class="btn nav-btn">Travel with us <span class="arrow"></span></a>
     </div>
-    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false">
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="nav-drawer" id="navDrawer" aria-hidden="true">
-    <a href="/" class="nav-drawer-link">Home</a>
-    <a href="/expedition" class="nav-drawer-link">Expedition</a>
-    <a href="/reisefuehrer" class="nav-drawer-link">Reiseführer</a>
-    <a href="/beratung" class="nav-drawer-link">Beratung</a>
-    <a href="/journal" class="nav-drawer-link active">Journal</a>
-    <div class="nav-drawer-lang" aria-label="Sprache">
-      <span class="nav-lang-active" aria-current="true">DE</span><span class="nav-lang-sep" aria-hidden="true">/</span><a href="/en/journal/west-route" hreflang="en" lang="en">EN</a>
+    <a href="/en/" class="nav-drawer-link">Home</a>
+    <a href="/en/expedition" class="nav-drawer-link">Expedition</a>
+    <a href="/en/guide" class="nav-drawer-link">Guide</a>
+    <a href="/en/consulting" class="nav-drawer-link">Consulting</a>
+    <a href="/en/journal" class="nav-drawer-link active">Journal</a>
+    <div class="nav-drawer-lang" aria-label="Language">
+      <a href="/journal/kosten" hreflang="de" lang="de">DE</a><span class="nav-lang-sep" aria-hidden="true">/</span><span class="nav-lang-active" aria-current="true">EN</span>
     </div>
-    <a href="/expedition#mitfahren" class="btn nav-drawer-cta">Kennenlernen <span class="arrow"></span></a>
+    <a href="/en/expedition#mitfahren" class="btn nav-drawer-cta">Travel with us <span class="arrow"></span></a>
   </div>
 </nav>
 
@@ -523,12 +558,12 @@
 <header class="art-header">
   <div class="container">
     <div class="art-header-inner reveal">
-      <span class="eyebrow no-rule art-eyebrow">Route</span>
-      <h1 class="art-h1">Die Westroute durch Afrika: warum aktuell nur ein Weg von Europa nach Kapstadt führt</h1>
+      <span class="eyebrow no-rule art-eyebrow">Costs</span>
+      <h1 class="art-h1">What a Trans Africa crossing by vehicle really costs</h1>
       <div class="art-meta">
-        <span>12. Juni 2026</span>
+        <span>26 June 2026</span>
         <span class="art-meta-sep">·</span>
-        <span>6 Min Lesezeit</span>
+        <span>7 min read</span>
       </div>
     </div>
   </div>
@@ -537,15 +572,15 @@
 <!-- ============================== LEDE ============================== -->
 <section class="art-lede-section">
   <div class="container">
-    <p class="art-lede reveal">Wir sind die Westroute durch Afrika selbst gefahren: 23.000 Kilometer, 21 Länder, 140 Tage von Hamburg bis Kapstadt. Historisch gibt es drei Wege, Afrika zu durchqueren. In der Realität ist aktuell nur eine Route möglich. Warum das so ist, wie die Westroute verläuft und was du über Sicherheit, Reisezeit und Dauer wissen solltest, bevor du ernsthaft planst.</p>
+    <p class="art-lede reveal">First things first: there is no single figure. What it costs depends on how you travel and what you expect. How often you eat out, what you buy, where you sleep, how often you take a hotel and, above all, which vehicle you choose, all of that is yours to decide. But some items come out much the same for everyone, fuel and visas among them. If you read up beforehand, you can work out a realistic budget of your own. Here is what we spent our money on over 140 days from Hamburg to Cape Town.</p>
   </div>
 </section>
 
 <!-- ============================== BILD 1 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="westroute-1" align="75%" shape="rect" fit="cover" align="bottom" src="../images/05-johnny/01_Auto_Straße.webp" alt="Vollbeladenes Reisefahrzeug an einem Hang in Südspanien zu Beginn der Trans-Afrika." placeholder="Bild Slot 1"></image-slot>
-    <p class="art-img-caption">Der letzte Tag in Europa, danach ging es auf die Fähre. Von hier sind es 23.000 Kilometer bis Kapstadt.</p>
+    <image-slot id="kosten-1" shape="rect" align="65%" src="/images/journal/werkstattabidjan.webp" alt="The travellers' Toyota Land Cruiser outside a car parts shop in Abidjan." placeholder="Vehicle at a camp spot / refuelling / garage"></image-slot>
+    <p class="art-img-caption">Our Land Cruiser at 4x4 CI in Abidjan.</p>
   </div>
 </div>
 
@@ -554,14 +589,17 @@
   <div class="container">
     <div class="art-body reveal">
 
-      <h2>Die drei historischen Routen für die Afrika-Durchquerung</h2>
-      <p>Die legendärste Art, die Sahara zu durchqueren, wäre die zentrale Route: über Algerien in den Niger, die klassische Linie der alten Sahara-Expeditionen. Aktuell ist sie unrealistisch. Im Niger besteht in zahlreichen Regionen ein hohes Risiko von Entführungen, Gewaltkriminalität und Terroranschlägen, und auch im Norden Nigerias besteht ein erhebliches Risiko für terroristische Angriffe von „Islamic State West Africa (ISWA)" und Boko Haram. Für die Nachbarländer Mali und Burkina Faso bestehen ebenso deutliche Reisewarnungen. Diese Route ist damit auf absehbare Zeit keine Option.</p>
-      <p>Die Ostroute führt von Ägypten in den Sudan und weiter nach Äthiopien. Im Sudan herrscht seit April 2023 Krieg zwischen Militär und paramilitärischen Gruppen, und auch die Lage im Norden Äthiopiens ist volatil. Wer trotzdem über den Osten fahren will, kann das Auto per Schiff nach Mombasa in Kenia verschiffen und von dort nach Süden fahren. Das ist eine schöne Reise, aber ehrlicherweise eher eine halbe Trans-Afrika.</p>
-      <p>Bleibt die Westroute über Marokko, die Westsahara und Mauretanien in den Senegal, dann die Atlantikseite des Kontinents hinunter bis nach Südafrika. Es ist die längste Route und die Strecke, die durch die meisten Länder führt, aber auch die einzige realistische Route aktuell. Bei uns waren es am Ende 23.000 Kilometer und 140 Tage.</p>
+      <h2>The biggest item comes before you leave: the vehicle</h2>
+      <p>By far the biggest variable is the vehicle, and the gap between two options is easily tens of thousands of euros. A solid, reliable third-hand 4x4 gets you to Cape Town just as well as a fully built expedition truck, which in extreme cases runs close to a million. Yes, we saw that too. We met a surprising range of transport along the way: an old BMW 5 Series with no four wheel drive, a Toyota Yaris, even a Reliant Robin (worth a search) and a 40 year old 49 cc moped. More expensive is not automatically better, and choosing a vehicle is a very personal decision.</p>
+      <p>What we would recommend is set out in full in the guide. Our own choice was a 1991 Toyota Land Cruiser 80, and we were very happy with it. The vehicle is almost always the largest single block of the budget, unless you are going by bicycle. :)</p>
 
-      <h2>So verläuft die Westroute</h2>
-      <p>Die Reise beginnt symbolisch perfekt mit einer Fährfahrt: meistens von Algeciras in Südspanien nach Marokko, anderthalb Stunden, rund 200 Euro für zwei Personen und ein Auto. Danach geht es durch Marokko und die Westsahara an die mauretanische Grenze, mitten in der Wüste. <a href="/journal/grenzen" class="art-body-link">Diese Grenze ist die komplexeste der gesamten Route</a>, und sie kommt gleich am Anfang. Das ist eine gute Nachricht: Wenn du sie geschafft hast, hast du die anstrengendste Grenze hinter dir.</p>
-      <p>Ab dem Senegal beginnt Westafrika, und mit ihm der dichteste Teil der Reise: Gambia, Guinea, Elfenbeinküste, Ghana, Togo, Benin, Nigeria. Wahlweise sogar noch mit Sierra Leone und Liberia. Danach kommt Zentralafrika mit Kamerun, der Republik Kongo und einem kurzen, intensiven Stück Demokratische Republik Kongo, bevor Angola, Namibia und Südafrika den Süden einläuten. Jeder dieser Abschnitte hat seinen eigenen Rhythmus, seine eigene Landschaft und seine eigenen Überraschungen. Nordafrika von Marokko bis Mauretanien ist durch die Wüste geprägt, Westafrika ist dicht besiedelt, farbenfroh und hat viel Strand, Zentralafrika wird durch den Regenwald dominiert, und ab Angola öffnet sich die Landschaft wieder. Jeder Abschnitt und jedes Land haben ihren eigenen Reiz und ihre eigenen Besonderheiten. Im Reiseführer gehen wir auf jedes Land detailliert ein, zeigen Visums-Beschaffung, Grenzen, Besonderheiten und teilen unsere Highlights.</p>
+      <h2>The fixed costs that come with the route</h2>
+      <p>Whatever your style of travel, some costs come with the route itself.</p>
+      <p><strong>Diesel.</strong> Over 23,000 kilometres it is a large item, and the price swings enormously. In Western Sahara, Nigeria or Angola it is very cheap in places, in most other countries it sits at a stable level, and it is always cheaper than in Europe. What decides the total is your vehicle's consumption. We used around 14 litres per 100 kilometres, which made diesel our single biggest cost of the whole trip.</p>
+      <p><strong>Visas.</strong> They follow no single system in Africa, and prices vary a lot, even for the same country. The visa for DR Congo costs 250 US dollars at one embassy and around 75 euros at another. Across the whole route that adds up noticeably. What matters for the budget: choose the cheaper embassy for each visa, and take standard processing rather than express where you can, since express usually costs around 30 per cent more. It kept us below what most other travellers paid. The full overview, with prices, processing times and our recommendation on where to apply for which visa, is in the appendix of the guide.</p>
+      <p><strong>Travel medical insurance.</strong> Not optional, in our view. It costs relatively little and saves several thousand euros if something happens. German statutory health insurance covers little outside Europe and usually nothing at all for repatriation, which is exactly the part that can become extremely expensive. Measured against the risk, it is the easiest expense on the whole trip to justify.</p>
+      <p><strong>The Carnet de Passages en Douane</strong> is the passport for your vehicle, the central customs document of the trip. Issued through the ADAC (the German motoring club) it carries a fee, and above all a deposit, which is based on the value of the vehicle and can be high. You get the deposit back, but it has to be available in the meantime. Some travellers use cheaper providers abroad, in the Czech Republic or Switzerland for instance.</p>
+      <p><strong>Possible one-off fees.</strong> One example is the well known 250 euro Senegal charge for vehicles over eight years old entering without a carnet. Some of these can be avoided if you are prepared, but you should know they exist. Add to that the ferry from Europe to Morocco, and getting yourselves and your vehicle back from Cape Town to Europe.</p>
 
     </div>
   </div>
@@ -570,8 +608,8 @@
 <!-- ============================== BILD 2 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="westroute-2" shape="rect" align="45%" src="../images/02-reality-check/03_Reality_Autofestgefahren_Flussbett.webp" alt="Im Sand eines Flussbetts in Namibia festgefahrenes Reisefahrzeug, daneben Sandbleche." placeholder="Bild Slot 2"></image-slot>
-    <p class="art-img-caption">Festgefahren im Flussbett, Namibia. Mit Schaufel, Sandblechen und Schieben kommt man fast überall wieder raus.</p>
+    <image-slot id="kosten-2" shape="rect" align="75%" src="/images/journal/marktguinea.webp" alt="Busy market street in Guinea with the expedition vehicle at the roadside." placeholder="on the road, market / shopping / camp fire"></image-slot>
+    <p class="art-img-caption">We pull over on the main road and do our shopping at the market in Guinea.</p>
   </div>
 </div>
 
@@ -580,19 +618,73 @@
   <div class="container">
     <div class="art-body reveal">
 
-      <h2>Ist die Westroute sicher?</h2>
-      <p>Die spontane Antwort ist ja. Die Westroute ist aktuell sehr gut fahrbar. Alle Grenzen sind offen, und die Länder oder zumindest die Regionen, durch die du auf der klassischen Strecke fährst, sind sicher. Wichtig ist aber auch zu verstehen, dass es Nachbarländer und Grenzregionen gibt, die du meiden solltest. Dazu zählen Mali, Burkina Faso und der Niger, der Norden Nigerias, der Norden von Ghana, Togo und Benin sowie der Osten der Demokratischen Republik Kongo. Dort gibt es Entführungen, Terrorgruppen oder anhaltende bewaffnete Konflikte.</p>
-      <p>Die klassische Route selbst ist ein sicherer Korridor, aber sie verlangt, dass du weißt, wo der Korridor verläuft und wo er endet.</p>
+      <h2>The running costs on the road</h2>
+      <p>This is where your style of travel decides, and where you have the most control.</p>
+      <p><strong>Food</strong> can be very cheap if you buy at local markets and cook yourself, which is what most days look like anyway. Eat out often, especially in the cities, and buy a lot in international supermarkets, and it gets expensive quickly. Many of the European products we are used to cost considerably more in Africa than at home.</p>
+      <p><strong>Camp spots</strong> on this route are often free, and camping free is usually possible. Take a paid campsite or a room for the shower more often and you pay more here. We took the middle way: hotels in some cities, the odd campsite in Namibia, but wild camping most of the time.</p>
+      <p><strong>Repairs and the unforeseen.</strong> How many garage visits you should budget for depends on you and above all on your vehicle, a few oil changes will happen in any case. Then there is the genuinely unforeseen, which in our case included a trip to the vet.</p>
+      <p><strong>Other.</strong> Smaller items such as shopping, entrance fees and activities, internet and laundry. We have broken those down individually in the guide too.</p>
 
-      <h2>Wann du fahren solltest</h2>
-      <p>Die beste Reisezeit ist der europäische Winter, grob von September bis Mai. Viele Overlander starten im September oder November in Marokko, wir sind Anfang Dezember losgefahren. Damit umgehst du zwei Dinge gleichzeitig: die extreme Sommerhitze in der Sahara, in Marokko und Mauretanien, und die Regenzeit in West- und Zentralafrika, die klassischerweise zwischen Mai und November liegt. Hältst du dieses Fenster ungefähr ein, kommst du in Namibia und Südafrika zum dortigen Herbst an. Eine gute Zeit mit milden Temperaturen, wenig Regen und weniger Touristen.</p>
+      <h2>So what does a Trans Africa really cost?</h2>
+      <p>Separate the purchase (vehicle and build) from the travel costs (everything on the road) and work them out apart from each other. The purchase is your big decision and it is settled before you leave. Here are our travel costs alone, for two people and a dog, over five months:</p>
 
-      <h2>Wie lange du brauchst</h2>
-      <p>Wir haben Overlander getroffen, die sich ein ganzes Jahr Zeit nehmen, und ein Paar, das die Route in zwei Monaten durchgezogen hat. Wir waren 140 Tage unterwegs. Das war gut, aber ehrlicherweise etwas knapp.</p>
-      <p>Unsere Empfehlung sind sechs bis sieben Monate. Das gibt dir genug Zeit, die Länder wirklich kennenzulernen, kleine Umwege zu fahren und Puffer zu haben für das Unvorhergesehene: Krankheit, Werkstattaufenthalt, Verzögerung beim Visum. Und es hat einen sehr konkreten Nebeneffekt: Du kannst bei den Visa die günstigere Standardoption wählen, statt die Expressvariante zu zahlen, die meist rund 30 Prozent mehr kostet.</p>
+      <div class="cost-table">
+        <div class="cost-row">
+          <span class="cost-label">Total on the road</span>
+          <span class="cost-amount">around 15,500 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Diesel</span>
+          <span class="cost-amount">3,350 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Visas (2 people)</span>
+          <span class="cost-amount">2,813 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Garage and vehicle upgrades</span>
+          <span class="cost-amount">2,500 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Hotels and campsites</span>
+          <span class="cost-amount">1,750 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Groceries</span>
+          <span class="cost-amount">1,500 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Restaurants</span>
+          <span class="cost-amount">1,400 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Vet</span>
+          <span class="cost-amount">500 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Shopping</span>
+          <span class="cost-amount">410 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">SIM cards and internet</span>
+          <span class="cost-amount">340 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Activities (entrance fees and so on)</span>
+          <span class="cost-amount">340 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Ferry to Morocco</span>
+          <span class="cost-amount">177 euros</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Laundry</span>
+          <span class="cost-amount">80 euros</span>
+        </div>
+      </div>
 
-      <h2>Was das für deine Planung heißt</h2>
-      <p>Deine grobe Route steht fest. Du musst nur entscheiden, ob du Sierra Leone und Liberia besuchen willst, welche Grenze du von Nigeria nach Kamerun nimmst und wie du deine Zeit im südlichen Afrika verbringen möchtest. Dazu die Fragen unabhängig von der Route: welches Fahrzeug, welche Visa in welcher Reihenfolge, <a href="/journal/kosten" class="art-body-link">wie viel Budget</a>, <a href="/journal/grenzen" class="art-body-link">wie die Grenzen ablaufen</a>, wo du nachts stehst. Genau das haben wir in unserem Reiseführer aufgeschrieben.</p>
+      <p>That works out at just under 110 euros a day for two people and a dog. We see our costs as the middle way. We wild camped most of the time and usually cooked ourselves, but we also spent several nights in hotels in Morocco and Dakar and were glad of the restaurants in the larger cities. You can travel considerably cheaper by camping free throughout and skipping restaurants. It can just as easily become more expensive if you sleep in hotels more often, or in better ones.</p>
+      <p>And one rule holds: the longer you are on the road, the lower your spend per day, because fixed costs like visas and the carnet spread over more days. In the guide we set out every single item, with the real amounts we paid.</p>
 
     </div>
   </div>
@@ -602,19 +694,23 @@
 <section class="art-body-section" style="padding-top: 0; padding-bottom: clamp(40px, 5vw, 64px);">
   <div class="container">
     <div class="art-body reveal">
-      <h2>Häufige Fragen zur Westroute durch Afrika</h2>
+      <h2>Common questions about the cost of a Trans Africa</h2>
       <div class="art-faq-accordion">
         <details class="acc-item">
-          <summary><span class="acc-title">Wie lange dauert die Trans-Afrika auf der Westroute?</span><span class="acc-icon"></span></summary>
-          <div class="acc-body"><p>Wir empfehlen sechs bis sieben Monate. Wir selbst waren 140 Tage unterwegs und hätten gern einen Monat mehr gehabt. Schneller als drei Monate wird die Reise zur reinen Fahrerei.</p></div>
+          <summary><span class="acc-title">What is the biggest single cost?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>The vehicle and its build. Between a used 4x4 and an expedition truck there are easily tens of thousands of euros. Everything else is smaller and easier to plan.</p></div>
         </details>
         <details class="acc-item">
-          <summary><span class="acc-title">Wann ist die beste Reisezeit?</span><span class="acc-icon"></span></summary>
-          <div class="acc-body"><p>Der europäische Winter, idealerweise Start zwischen September und Dezember. So vermeidest du die Sommerhitze in der Sahara und die Regenzeit in West- und Zentralafrika.</p></div>
+          <summary><span class="acc-title">What did your trip cost on the road?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>Around 15,500 euros for two people and a dog over five months, not counting the vehicle itself. That is just under 110 euros a day. The largest running item was diesel.</p></div>
         </details>
         <details class="acc-item">
-          <summary><span class="acc-title">Ist die Westroute sicher?</span><span class="acc-icon"></span></summary>
-          <div class="acc-body"><p>Die klassische Strecke ist aktuell gut fahrbar, alle Grenzen sind offen. Es gibt aber Nachbarregionen, etwa Mali, den Niger oder den Norden Nigerias, die du meiden solltest. Respekt ja, Angst nein.</p></div>
+          <summary><span class="acc-title">Can it be done cheaply?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>Yes, above all through the vehicle. Beyond that you save by camping free a lot, cooking yourself, and being strategic about fuel and visas.</p></div>
+        </details>
+        <details class="acc-item">
+          <summary><span class="acc-title">Which fixed fees will I definitely face?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>The Carnet de Passages (a fee plus a refundable deposit), visas for most countries, travel medical insurance, and individual one-off charges such as the ferry from Europe to Morocco. The full list with amounts is in the guide.</p></div>
         </details>
       </div>
     </div>
@@ -629,26 +725,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Wie lange dauert die Trans-Afrika auf der Westroute?",
+      "name": "What is the biggest single cost on a Trans Africa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Wir empfehlen sechs bis sieben Monate. Wir selbst waren 140 Tage unterwegs und hätten gern einen Monat mehr gehabt. Schneller als drei Monate wird die Reise zur reinen Fahrerei."
+        "text": "The vehicle and its build. Between a used 4x4 and an expedition truck there are easily tens of thousands of euros. Everything else is smaller and easier to plan."
       }
     },
     {
       "@type": "Question",
-      "name": "Wann ist die beste Reisezeit für die Westroute durch Afrika?",
+      "name": "What did your Trans Africa cost on the road?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Der europäische Winter, idealerweise Start zwischen September und Dezember. So vermeidest du die Sommerhitze in der Sahara und die Regenzeit in West- und Zentralafrika."
+        "text": "Around 15,500 euros for two people and a dog over five months, not counting the vehicle itself. That is just under 110 euros a day. The largest running item was diesel."
       }
     },
     {
       "@type": "Question",
-      "name": "Ist die Westroute durch Afrika sicher?",
+      "name": "Can a Trans Africa be done cheaply?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Die klassische Strecke ist aktuell gut fahrbar, alle Grenzen sind offen. Es gibt aber Nachbarregionen, etwa Mali, den Niger oder den Norden Nigerias, die du meiden solltest. Respekt ja, Angst nein."
+        "text": "Yes, above all through the vehicle. Beyond that you save by camping free a lot, cooking yourself, and being strategic about fuel and visas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which fixed fees will I definitely face on a Trans Africa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Carnet de Passages (a fee plus a refundable deposit), visas for most countries, travel medical insurance, and individual one-off charges such as the ferry from Europe to Morocco."
       }
     }
   ]
@@ -659,15 +763,15 @@
 <section class="art-weiterlesen-section">
   <div class="container">
     <div class="art-weiterlesen reveal">
-      <span class="eyebrow no-rule">Weiterlesen</span>
+      <span class="eyebrow no-rule">Read next</span>
       <div class="art-weiterlesen-links">
-        <a href="/journal/kosten" class="art-weiterlesen-item">
-          <span class="art-weiterlesen-cat eyebrow no-rule">Kosten</span>
-          <span class="art-weiterlesen-title">Was eine Trans-Afrika mit dem Auto wirklich kostet</span>
+        <a href="/en/journal/west-route" class="art-weiterlesen-item">
+          <span class="art-weiterlesen-cat eyebrow no-rule">Route</span>
+          <span class="art-weiterlesen-title">The west route through Africa: why only one way from Europe to Cape Town works right now</span>
         </a>
-        <a href="/journal/grenzen" class="art-weiterlesen-item">
-          <span class="art-weiterlesen-cat eyebrow no-rule">Grenzen</span>
-          <span class="art-weiterlesen-title">Grenzen in Westafrika: wie ein Übergang mit dem Auto wirklich abläuft</span>
+        <a href="/journal/grenzen" hreflang="de" class="art-weiterlesen-item">
+          <span class="art-weiterlesen-cat eyebrow no-rule">Borders</span>
+          <span class="art-weiterlesen-title">Borders in West Africa: how a crossing by vehicle actually works</span>
         </a>
       </div>
     </div>
@@ -678,12 +782,12 @@
 <section class="art-cta-section">
   <div class="container">
     <div class="art-cta reveal">
-      <span class="eyebrow no-rule">Wenn du konkret planst</span>
-      <h2 class="art-cta-headline">Die ganze Westroute, Land für Land.</h2>
-      <p class="art-cta-text">Wir haben alles, was wir auf 140 Tagen Trans-Afrika gelernt haben, in einem Reiseführer zusammengeschrieben: alle 16 Länderkapitel, jede Grenze Schritt für Schritt, die Visa-Übersicht für EU-Bürger, echte Kosten und die besten Stellplätze. Genau die Schritt-für-Schritt-Vorbereitung, die uns selbst gefehlt hat. Und wenn du lieber direkt mit uns sprichst: dafür gibt es die Beratung.</p>
+      <span class="eyebrow no-rule">If you are working out the numbers</span>
+      <h2 class="art-cta-headline">Every item, every amount we paid.</h2>
+      <p class="art-cta-text">In the guide you will find the full cost breakdown: vehicle and build, the visa overview with our recommendation on where each visa is cheapest to apply for, carnet, insurance and all the running costs on the road. Enough to build your own budget on real numbers instead of estimates. And if you would rather go through it in conversation, that is what the consulting is for.</p>
       <div class="art-cta-btns">
-        <a href="/reisefuehrer" class="btn solid">Zum Reiseführer <span class="arrow"></span></a>
-        <a href="/beratung" class="btn ghost-dark">Zur Beratung <span class="arrow"></span></a>
+        <a href="/en/guide" class="btn solid">To the guide <span class="arrow"></span></a>
+        <a href="/en/consulting" class="btn ghost-dark">To consulting <span class="arrow"></span></a>
       </div>
     </div>
   </div>
@@ -691,15 +795,15 @@
 
 <!-- ============================== ZURÜCK-LINK ============================== -->
 <div class="container" style="padding-bottom: clamp(48px, 6vw, 80px);">
-  <a href="/journal" class="art-back">← Zum Journal</a>
+  <a href="/en/journal" class="art-back">← Back to the journal</a>
 </div>
 
 <!-- ============================== FOOTER ============================== -->
 <footer class="footer-min">
   <div class="container footer-row">
 
-    <a href="/" class="footer-logo" aria-label="Susi and the Elephants">
-      <img class="footer-logo-img" src="../images/icons/apple-touch-icon.png" alt="" width="32" height="32">
+    <a href="/en/" class="footer-logo" aria-label="Susi and the Elephants">
+      <img class="footer-logo-img" src="/images/icons/apple-touch-icon.png" alt="" width="32" height="32">
     </a>
 
     <a href="https://instagram.com/susiandtheelephants" class="footer-mid" aria-label="Instagram: @susiandtheelephants" target="_blank" rel="noopener">
@@ -711,7 +815,7 @@
       <span>susiandtheelephants</span>
     </a>
 
-    <a href="https://wa.me/491629813596?text=Hi%20Johnny,%20ich%20habe%20eine%20Frage." class="footer-mid footer-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <a href="https://wa.me/491629813596?text=Hi%20Johnny,%20I%20have%20a%20question." class="footer-mid footer-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
       <svg class="ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/>
@@ -721,8 +825,8 @@
     </a>
 
     <div class="footer-legal">
-      <a href="/impressum">Impressum</a>
-      <a href="/datenschutz">Datenschutz</a>
+      <a href="/impressum" hreflang="de">Imprint</a>
+      <a href="/datenschutz" hreflang="de">Privacy</a>
     </div>
 
   </div>
@@ -756,7 +860,7 @@ const io = new IntersectionObserver((entries) => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
   }
 }, { threshold: 0.10, rootMargin: '0px 0px -6% 0px' });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
 </script>
 
 </body>
