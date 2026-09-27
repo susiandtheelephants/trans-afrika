@@ -460,6 +460,11 @@
 .nav-drawer-lang a:hover { opacity: 1; }
 .nav-lang-active { text-decoration: underline; text-underline-offset: 4px; }
 .nav-lang-sep { opacity: 0.4; }
+/* In der Kopfzeile nur die andere Sprache als Link, engere Abstände: sonst passt die volle Navigation nicht in eine Zeile */
+.brt-nav .nav-end .nav-lang-active,
+.brt-nav .nav-end .nav-lang-sep { display: none; }
+.brt-nav .nav-links { gap: 28px; }
+.brt-nav .nav-end { gap: 20px; }
 .nav--on-light .nav-lang { color: var(--ink); }
 .nav-drawer-lang { font-size: 14px; letter-spacing: 0.1em; }
 .nav-drawer-lang a,
@@ -467,7 +472,8 @@
 .nav-drawer-lang a:first-child,
 .nav-drawer-lang .nav-lang-active:first-child { padding-left: 0; }
 
-@media (max-width: 860px) {
+/* Volle Navigation erst ab 1061px, darunter passt sie nicht sicher in eine Zeile (auch mit Ersatzschrift) */
+@media (max-width: 1060px) {
   .brt-nav .nav-inner { grid-template-columns: 1fr auto; padding: 14px var(--gutter); }
   .brt-nav .nav-links { display: none; }
   .brt-nav .nav-btn { display: none; }

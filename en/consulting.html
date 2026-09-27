@@ -35,16 +35,16 @@
     <a href="/en/" class="nav-logo" aria-label="Home page">Susi <span class="amp">&amp;</span> The Elephants</a>
     <ul class="nav-links">
       <li><a href="/en/" class="nav-link">Home</a></li>
-      <li><a href="/expedition" class="nav-link">Expedition</a></li>
+      <li><a href="/en/expedition" class="nav-link">Expedition</a></li>
       <li><a href="/en/guide" class="nav-link">Guide</a></li>
       <li><a href="/en/consulting" class="nav-link active">Consulting</a></li>
-      <li><a href="/journal" class="nav-link">Journal</a></li>
+      <li><a href="/en/journal" class="nav-link">Journal</a></li>
     </ul>
     <div class="nav-end">
       <div class="nav-lang" aria-label="Language">
         <a href="/beratung" hreflang="de" lang="de">DE</a><span class="nav-lang-sep" aria-hidden="true">/</span><span class="nav-lang-active" aria-current="true">EN</span>
       </div>
-      <a href="/expedition#mitfahren" class="btn nav-btn">Travel with us <span class="arrow"></span></a>
+      <a href="/en/expedition#mitfahren" class="btn nav-btn">Travel with us <span class="arrow"></span></a>
     </div>
     <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -52,14 +52,14 @@
   </div>
   <div class="nav-drawer" id="navDrawer" aria-hidden="true">
     <a href="/en/" class="nav-drawer-link">Home</a>
-    <a href="/expedition" class="nav-drawer-link">Expedition</a>
+    <a href="/en/expedition" class="nav-drawer-link">Expedition</a>
     <a href="/en/guide" class="nav-drawer-link">Guide</a>
     <a href="/en/consulting" class="nav-drawer-link">Consulting</a>
-    <a href="/journal" class="nav-drawer-link">Journal</a>
+    <a href="/en/journal" class="nav-drawer-link">Journal</a>
     <div class="nav-drawer-lang" aria-label="Language">
       <a href="/beratung" hreflang="de" lang="de">DE</a><span class="nav-lang-sep" aria-hidden="true">/</span><span class="nav-lang-active" aria-current="true">EN</span>
     </div>
-    <a href="/expedition#mitfahren" class="btn nav-drawer-cta">Travel with us <span class="arrow"></span></a>
+    <a href="/en/expedition#mitfahren" class="btn nav-drawer-cta">Travel with us <span class="arrow"></span></a>
   </div>
 </nav>
 
@@ -91,7 +91,7 @@
   <div class="container brt-intro">
     <div class="reveal">
       <p class="lede brt-lede">We drove the west route ourselves: 23,000 kilometres, 21 countries, 140 days, from Hamburg to Cape Town. Along the way we learned the things that are in no forum: how borders really work, which visa applications cost you nerves, and where you can park up well at night. That is the knowledge you get, cut to fit your trip.</p>
-      <p class="brt-redirect">Would you rather drive in convoy with us? Then the <a href="/expedition" class="brt-link">expedition</a> is your route.</p>
+      <p class="brt-redirect">Would you rather drive in convoy with us? Then the <a href="/en/expedition" class="brt-link">expedition</a> is your route.</p>
     </div>
   </div>
 </section>
@@ -481,6 +481,11 @@
 .nav-drawer-lang a:hover { opacity: 1; }
 .nav-lang-active { text-decoration: underline; text-underline-offset: 4px; }
 .nav-lang-sep { opacity: 0.4; }
+/* In der Kopfzeile nur die andere Sprache als Link, engere Abstände: sonst passt die volle Navigation nicht in eine Zeile */
+.brt-nav .nav-end .nav-lang-active,
+.brt-nav .nav-end .nav-lang-sep { display: none; }
+.brt-nav .nav-links { gap: 28px; }
+.brt-nav .nav-end { gap: 20px; }
 .nav--on-light .nav-lang { color: var(--ink); }
 .nav-drawer-lang { font-size: 14px; letter-spacing: 0.1em; }
 .nav-drawer-lang a,
@@ -488,7 +493,8 @@
 .nav-drawer-lang a:first-child,
 .nav-drawer-lang .nav-lang-active:first-child { padding-left: 0; }
 
-@media (max-width: 860px) {
+/* Volle Navigation erst ab 1061px, darunter passt sie nicht sicher in eine Zeile (auch mit Ersatzschrift) */
+@media (max-width: 1060px) {
   .brt-nav .nav-inner { grid-template-columns: 1fr auto; padding: 14px var(--gutter); }
   .brt-nav .nav-links { display: none; }
   .brt-nav .nav-btn { display: none; }
