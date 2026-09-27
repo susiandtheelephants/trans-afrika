@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://www.susiandtheelephants.com/en/journal/west-route">
-<link rel="alternate" hreflang="de" href="https://www.susiandtheelephants.com/journal/westroute">
-<link rel="alternate" hreflang="en" href="https://www.susiandtheelephants.com/en/journal/west-route">
-<link rel="alternate" hreflang="x-default" href="https://www.susiandtheelephants.com/journal/westroute">
-<title>Driving through Africa: the west route from Germany to Cape Town</title>
-<meta name="description" content="Germany to Cape Town by vehicle: why only the west route through Africa works at the moment, how it runs, and what you need to know about safety and how long it takes.">
-<meta property="og:title" content="Driving through Africa: the west route from Germany to Cape Town">
-<meta property="og:description" content="Germany to Cape Town by vehicle: why only the west route through Africa works at the moment, how it runs, and what you need to know about safety and how long it takes.">
-<meta property="og:url" content="https://www.susiandtheelephants.com/en/journal/west-route">
+<link rel="canonical" href="https://www.susiandtheelephants.com/en/journal/borders">
+<link rel="alternate" hreflang="de" href="https://www.susiandtheelephants.com/journal/grenzen">
+<link rel="alternate" hreflang="en" href="https://www.susiandtheelephants.com/en/journal/borders">
+<link rel="alternate" hreflang="x-default" href="https://www.susiandtheelephants.com/journal/grenzen">
+<title>Borders in West Africa: how a crossing by vehicle actually works</title>
+<meta name="description" content="Borders on a Trans Africa: how a crossing in West Africa actually works, which documents you need and how to stay composed at checkpoints. From our own experience.">
+<meta property="og:title" content="Borders in West Africa: how a crossing by vehicle actually works">
+<meta property="og:description" content="Borders on a Trans Africa: how a crossing in West Africa actually works, which documents you need and how to stay composed at checkpoints. From our own experience.">
+<meta property="og:url" content="https://www.susiandtheelephants.com/en/journal/borders">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
-<meta property="og:image" content="https://www.susiandtheelephants.com/images/og/journal.jpg">
+<meta property="og:image" content="https://www.susiandtheelephants.com/images/og/grenzen.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -129,10 +129,6 @@
   font-family: var(--sans); font-size: 14px;
   letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
 }
-.nav-drawer-cta {
-  align-self: flex-start;
-  margin-top: 6px;
-}
 
 /* ============================ SPRACHUMSCHALTER ============================ */
 .brt-nav .nav-end {
@@ -225,9 +221,8 @@
   font-family: var(--serif);
   font-style: italic;
   font-size: clamp(19px, 2vw, 26px);
-  line-height: 1.55;
-  letter-spacing: 0.2px;
-  color: #1c1c1c;
+  line-height: 1.45;
+  color: var(--ink-soft);
   max-width: 64ch;
 }
 
@@ -258,6 +253,10 @@
   margin-bottom: 24px;
 }
 .art-body p:last-child { margin-bottom: 0; }
+.art-body strong {
+  font-weight: 600;
+  color: var(--ink);
+}
 .art-faq-q {
   font-family: var(--serif);
   font-style: italic;
@@ -278,30 +277,9 @@
 .art-img-wrap image-slot {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 9;
   border-radius: 4px;
   overflow: hidden;
-}
-.art-img-wrap--contain image-slot {
-  background: var(--bg-soft);
-}
-/* Bildausschnitt: align="..." am <image-slot>-Element steuern, nicht per CSS.
-   "top" = oben, "bottom" = unten, "70%" = Fokus 70% von oben. */
-.art-img-wrap--portrait {
-  max-width: 360px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.art-img-wrap--portrait image-slot {
-  aspect-ratio: 3 / 4;
-}
-.art-img-wrap--portrait .art-img-caption {
-  text-align: center;
-}
-@media (max-width: 600px) {
-  .art-img-wrap--portrait {
-    max-width: 100%;
-  }
 }
 .art-img-caption {
   margin-top: 10px;
@@ -311,16 +289,6 @@
   text-transform: uppercase;
   color: var(--muted);
 }
-
-/* ============================ BODY LINK ============================ */
-.art-body-link {
-  color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: var(--rule);
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.2s;
-}
-.art-body-link:hover { text-decoration-color: var(--ink); }
 
 /* ============================ FAQ-AKKORDEON ============================ */
 .art-faq-accordion {
@@ -379,6 +347,16 @@
   color: var(--ink-soft);
   margin: 0;
 }
+
+/* ============================ BODY LINK ============================ */
+.art-body-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+.art-body-link:hover { text-decoration-color: var(--ink); }
 
 /* ============================ CTA-BOX ============================ */
 .art-cta-section {
@@ -499,7 +477,7 @@
     </ul>
     <div class="nav-end">
       <div class="nav-lang" aria-label="Language">
-        <a href="/journal/westroute" hreflang="de" lang="de">DE</a><span class="nav-lang-sep" aria-hidden="true">/</span><span class="nav-lang-active" aria-current="true">EN</span>
+        <a href="/journal/grenzen" hreflang="de" lang="de">DE</a><span class="nav-lang-sep" aria-hidden="true">/</span><span class="nav-lang-active" aria-current="true">EN</span>
       </div>
       <a href="/en/expedition#mitfahren" class="btn nav-btn">Travel with us <span class="arrow"></span></a>
     </div>
@@ -514,7 +492,7 @@
     <a href="/en/consulting" class="nav-drawer-link">Consulting</a>
     <a href="/en/journal" class="nav-drawer-link active">Journal</a>
     <div class="nav-drawer-lang" aria-label="Language">
-      <a href="/journal/westroute" hreflang="de" lang="de">DE</a><span class="nav-lang-sep" aria-hidden="true">/</span><span class="nav-lang-active" aria-current="true">EN</span>
+      <a href="/journal/grenzen" hreflang="de" lang="de">DE</a><span class="nav-lang-sep" aria-hidden="true">/</span><span class="nav-lang-active" aria-current="true">EN</span>
     </div>
     <a href="/en/expedition#mitfahren" class="btn nav-drawer-cta">Travel with us <span class="arrow"></span></a>
   </div>
@@ -524,12 +502,12 @@
 <header class="art-header">
   <div class="container">
     <div class="art-header-inner reveal">
-      <span class="eyebrow no-rule art-eyebrow">Route</span>
-      <h1 class="art-h1">The west route through Africa: why only one way from Europe to Cape Town works right now</h1>
+      <span class="eyebrow no-rule art-eyebrow">Borders</span>
+      <h1 class="art-h1">Borders in West Africa: how a crossing by vehicle actually works</h1>
       <div class="art-meta">
-        <span>12 June 2026</span>
+        <span>10 July 2026</span>
         <span class="art-meta-sep">·</span>
-        <span>6 min read</span>
+        <span>7 min read</span>
       </div>
     </div>
   </div>
@@ -538,15 +516,15 @@
 <!-- ============================== LEDE ============================== -->
 <section class="art-lede-section">
   <div class="container">
-    <p class="art-lede reveal">We drove the west route through Africa ourselves: 23,000 kilometres, 21 countries, 140 days from Hamburg to Cape Town. Historically there are three ways to cross the continent. In practice only one of them works at the moment. Why that is, how the west route runs, and what you should know about safety, season and duration before you start planning in earnest.</p>
+    <p class="art-lede reveal">Nothing worries people planning their first overland trip more than the borders. Fairly so: they are among the most intense moments of the trip. But they are manageable, and after the first few they turn into routine. How a border in West Africa actually works, which papers you need and how to stay calm at checkpoints, from 21 countries and a good many more crossings.</p>
   </div>
 </section>
 
 <!-- ============================== BILD 1 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="westroute-1" align="75%" shape="rect" fit="cover" align="bottom" src="/images/05-johnny/01_Auto_Straße.webp" alt="Fully loaded expedition vehicle on a hillside in southern Spain at the start of the Trans Africa." placeholder="Image slot 1"></image-slot>
-    <p class="art-img-caption">The last day in Europe, and then onto the ferry. From here it is 23,000 kilometres to Cape Town.</p>
+    <image-slot id="grenzen-1" shape="rect" align="40%" src="/images/journal/dr-kongo-grenzbuero.webp" alt="Border official at a desk in a border office in DR Congo." placeholder="Border scene / queue / desert border"></image-slot>
+    <p class="art-img-caption">Border crossings are among the most intense moments of the trip. This is us entering the DRC.</p>
   </div>
 </div>
 
@@ -555,14 +533,23 @@
   <div class="container">
     <div class="art-body reveal">
 
-      <h2>The three historic routes across Africa</h2>
-      <p>The most storied way to cross the Sahara would be the central route: through Algeria into Niger, the classic line of the old desert expeditions. At the moment it is not realistic. In many regions of Niger there is a high risk of kidnapping, violent crime and terrorist attacks, and in northern Nigeria there is a serious risk of attacks by Islamic State West Africa (ISWA) and Boko Haram. The neighbouring countries Mali and Burkina Faso carry equally clear travel warnings. For the foreseeable future this route is not an option.</p>
-      <p>The east route runs from Egypt into Sudan and on into Ethiopia. Sudan has been at war since April 2023, between the army and paramilitary groups, and northern Ethiopia is volatile too. If you still want to travel down the eastern side, you can ship your vehicle to Mombasa in Kenya and drive south from there. It is a fine trip, but it is honestly only half a Trans Africa.</p>
-      <p>That leaves the west route: Morocco, Western Sahara and Mauritania into Senegal, then down the Atlantic side of the continent to South Africa. It is the longest route and the one that passes through the most countries, and at the moment it is the only realistic one. For us it came to 23,000 kilometres and 140 days.</p>
+      <h2>Some take an hour, some take half a day</h2>
+      <p>The honest expectation first: there is no such thing as the typical border. Some are done in an hour, others drag on for half a day and stay opaque throughout. It comes with the trip, it costs you some nerve, and you get used to it.</p>
+      <p>The most complicated on the <a href="/en/journal/west-route" class="art-body-link">whole west route</a> is the one between Morocco and Mauritania, the only land crossing between the two countries, out in the desert. It is also the only one where the vehicle is systematically scanned, and it comes right at the start of the trip. Which has its good side: once it is behind you, the hardest border is over. Allow three to six hours. Between the Moroccan and the Mauritanian side there is a short stretch of unsealed no man's land.</p>
 
-      <h2>How the west route runs</h2>
-      <p>It begins with a ferry, which is a fitting way to start: usually from Algeciras in southern Spain to Morocco, an hour and a half, around 200 euros for two people and a vehicle. From there you drive through Morocco and Western Sahara to the Mauritanian border, out in the desert. <a href="/en/journal/borders" class="art-body-link">That border is the most complicated on the whole route</a>, and it comes right at the start. Which is good news: once you are through it, the hardest border is behind you.</p>
-      <p>West Africa proper starts in Senegal, and with it the densest part of the trip: The Gambia, Guinea, Côte d'Ivoire, Ghana, Togo, Benin, Nigeria, with Sierra Leone and Liberia too if you want them. Then Central Africa, with Cameroon, the Republic of the Congo and a short, intense stretch of DR Congo, before Angola, Namibia and South Africa bring in the south. Each of these sections has its own rhythm, its own landscape and its own surprises. North Africa from Morocco to Mauritania is shaped by the desert, West Africa is densely populated, full of colour and full of beaches, Central Africa is dominated by rainforest, and from Angola on, the land opens up again. Every section and every country has something of its own. In the guide we go through each country in detail: how to get the visa, how the border works, what to watch for, and the places we liked best.</p>
+      <h2>How a crossing works</h2>
+      <p>At its core the same pattern repeats everywhere, even if the order varies. On one side, leaving: an exit stamp in the passport, the vehicle's export recorded in the carnet. Then, often after a stretch of no man's land, entering the next country: entry stamp, vehicle import permit (on the carnet, or as a temporary import issued at the border), a local vehicle insurance where required, and sometimes a vehicle inspection.</p>
+      <p>It sounds like a lot, but it is a process you can work through. What helps is a simple division of roles: one of you stays with the vehicle, the other collects the stamps. That way the vehicle is never left unattended and you do not lose each other in the crowd.</p>
+
+      <h2>The papers you need within reach</h2>
+      <p>Preparation decides almost everything here. You should have these documents to hand at every border, as originals and as copies:</p>
+      <p>Passport, driving licence and International Driving Permit, vehicle registration document, the Carnet de Passages, and copies of all of it. Plus two things many people underestimate: a stack of <strong>fiche copies</strong> and your <strong>yellow fever certificate</strong>.</p>
+      <p>The fiche is a standard form with your personal and vehicle details, asked for at many checkpoints. Carry twenty prepared copies and you simply hand one over instead of filling everything in by hand each time. Yellow fever vaccination is required for almost every country in West Africa, and without the yellow certificate many borders will not let you through.</p>
+      <p>Exactly which documents, in what quantity, and a ready fiche template to print are all in the guide.</p>
+
+      <h2>Helpers, fixers and a clear head</h2>
+      <p>At many borders self-appointed helpers will approach you. The good news: at most borders you do not need them and can politely ignore them. The exceptions on our route were Morocco and, above all, Mauritania. At the Mauritanian border we deliberately let a fixer walk us through the process. He made sure our passports were stamped faster, and at the end we gave him a small tip of our own accord. It was worth it. You can do it without a fixer, it usually just takes longer.</p>
+      <p>The rule that helped us everywhere: do not get distracted. Changing money and buying a SIM card wait until after the crossing. At the border you concentrate on the stamps and nothing else.</p>
 
     </div>
   </div>
@@ -571,8 +558,8 @@
 <!-- ============================== BILD 2 ============================== -->
 <div class="container">
   <div class="art-img-wrap reveal">
-    <image-slot id="westroute-2" shape="rect" align="45%" src="/images/02-reality-check/03_Reality_Autofestgefahren_Flussbett.webp" alt="Expedition vehicle stuck in the sand of a river bed in Namibia, sand ladders beside it." placeholder="Image slot 2"></image-slot>
-    <p class="art-img-caption">Stuck in a river bed in Namibia. With a shovel, sand ladders and some pushing you get out of almost anything.</p>
+    <image-slot id="grenzen-2" shape="rect" align="70%" src="/images/journal/visa-formular-ausfuellen.webp" alt="Visa application forms and documents on a table." placeholder="Checkpoint / documents / vehicle at a control"></image-slot>
+    <p class="art-img-caption">Documents within reach, one of you stays with the vehicle. With preparation, a border day stops being frightening.</p>
   </div>
 </div>
 
@@ -581,19 +568,13 @@
   <div class="container">
     <div class="art-body reveal">
 
-      <h2>Is the west route safe?</h2>
-      <p>The short answer is yes. The west route is in good shape at the moment. Every border is open, and the countries, or at least the regions you pass through on the classic line, are safe. What matters just as much is knowing which neighbouring countries and border regions to stay out of. That list includes Mali, Burkina Faso and Niger, northern Nigeria, the north of Ghana, Togo and Benin, and the east of DR Congo. Kidnapping, armed groups and continuing conflict are real there.</p>
-      <p>The classic route is a safe corridor. It only asks that you know where the corridor runs and where it ends.</p>
+      <h2>When a checkpoint gets difficult</h2>
+      <p>Between the borders there are checkpoints, and most of them are straightforward: hand over a fiche, a quick greeting, drive on. Sometimes it drags. A few principles carried us through every situation.</p>
+      <p>Sometimes the officer is simply right: you were speeding, or you missed a sign. Then calm and patience are what help. If a <a href="/en/journal/costs" class="art-body-link">fine is due</a>, you pay it, but only against a receipt. Asking for an official receipt alone resolves most situations, because it makes the unofficial ones lose their appeal fast.</p>
+      <p>If it really does get stubborn and runs on for hours, the most effective lever is mentioning your embassy. A passport is the property of the country that issued it, and saying you would like to contact the embassy clears many blockages on its own. Stay polite and calm while you do it. Raising your voice never helps, keeping your composure almost always does.</p>
 
-      <h2>When to go</h2>
-      <p>The best time is the European winter, roughly September to May. Many overlanders start in Morocco in September or November, we set off at the beginning of December. That avoids two things at once: the extreme summer heat in the Sahara, in Morocco and Mauritania, and the rainy season in West and Central Africa, which usually falls between May and November. Keep roughly to that window and you arrive in Namibia and South Africa in their autumn. A good time, with mild temperatures, little rain and fewer tourists.</p>
-
-      <h2>How long it takes</h2>
-      <p>We have met overlanders who take a whole year, and a couple who pushed the route through in two months. We were on the road for 140 days. That worked, but it was tight.</p>
-      <p>We would recommend six to seven months. That gives you enough time to get to know the countries properly, to take small detours, and to keep a buffer for the things you cannot plan: illness, a stay at a garage, a visa that takes longer than expected. And it has one very practical side effect. With more time you can take the cheaper standard option on the visas instead of paying for express processing, which usually costs around 30 per cent more.</p>
-
-      <h2>What this means for your planning</h2>
-      <p>Your rough route is already decided. What is left is whether you want to add Sierra Leone and Liberia, which border you take from Nigeria into Cameroon, and how you want to spend your time in southern Africa. Then the questions that have nothing to do with the route: which vehicle, which visas in which order, <a href="/en/journal/costs" class="art-body-link">how much budget</a>, <a href="/en/journal/borders" class="art-body-link">how the borders work</a>, where you sleep at night. That is exactly what we wrote down in our guide.</p>
+      <h2>A border day stops being frightening</h2>
+      <p>After the first few crossings you will notice it: the pattern repeats, your routine improves, and what felt intimidating at the start becomes a normal part of the travelling day. Respect, yes. Fear, no. That holds at the border just as it does on the road.</p>
 
     </div>
   </div>
@@ -603,19 +584,19 @@
 <section class="art-body-section" style="padding-top: 0; padding-bottom: clamp(40px, 5vw, 64px);">
   <div class="container">
     <div class="art-body reveal">
-      <h2>Common questions about the west route through Africa</h2>
+      <h2>Common questions about borders on a Trans Africa</h2>
       <div class="art-faq-accordion">
         <details class="acc-item">
-          <summary><span class="acc-title">How long does a Trans Africa on the west route take?</span><span class="acc-icon"></span></summary>
-          <div class="acc-body"><p>We recommend six to seven months. We were on the road for 140 days and would happily have had another month. Faster than three months and the trip turns into pure driving.</p></div>
+          <summary><span class="acc-title">Which is the hardest border on the west route?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>The one between Morocco and Mauritania, the only land crossing between the two countries, out in the desert. Allow three to six hours. It comes early on the trip, and it gets easier after that.</p></div>
         </details>
         <details class="acc-item">
-          <summary><span class="acc-title">When is the best time to go?</span><span class="acc-icon"></span></summary>
-          <div class="acc-body"><p>The European winter, ideally starting between September and December. That avoids the summer heat in the Sahara and the rainy season in West and Central Africa.</p></div>
+          <summary><span class="acc-title">Which documents do I need at every border?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>Passport, driving licence and International Driving Permit, vehicle registration document, Carnet de Passages, copies of everything, plus fiche copies and your yellow fever certificate. The full list and a fiche template are in the guide.</p></div>
         </details>
         <details class="acc-item">
-          <summary><span class="acc-title">Is the west route safe?</span><span class="acc-icon"></span></summary>
-          <div class="acc-body"><p>The classic line is in good shape at the moment and every border is open. There are neighbouring regions you should stay out of, such as Mali, Niger or northern Nigeria. Respect, yes. Fear, no.</p></div>
+          <summary><span class="acc-title">What do I do if an officer asks for money?</span><span class="acc-icon"></span></summary>
+          <div class="acc-body"><p>Stay calm and ask for an official receipt, which settles most cases. In stubborn situations, mentioning that you would like to contact your embassy helps. Always polite, never loud.</p></div>
         </details>
       </div>
     </div>
@@ -630,26 +611,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How long does a Trans Africa on the west route take?",
+      "name": "Which is the hardest border on the Trans Africa west route?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We recommend six to seven months. We were on the road for 140 days and would happily have had another month. Faster than three months and the trip turns into pure driving."
+        "text": "The one between Morocco and Mauritania, the only land crossing between the two countries, out in the desert. Allow three to six hours. It comes early on the trip, and it gets easier after that."
       }
     },
     {
       "@type": "Question",
-      "name": "When is the best time to travel the west route through Africa?",
+      "name": "Which documents do I need at borders in West Africa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The European winter, ideally starting between September and December. That avoids the summer heat in the Sahara and the rainy season in West and Central Africa."
+        "text": "Passport, driving licence and International Driving Permit, vehicle registration document, Carnet de Passages, copies of everything, plus fiche copies and your yellow fever certificate."
       }
     },
     {
       "@type": "Question",
-      "name": "Is the west route through Africa safe?",
+      "name": "What do I do if an officer at the border asks for money?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The classic line is in good shape at the moment and every border is open. There are neighbouring regions you should stay out of, such as Mali, Niger or northern Nigeria. Respect, yes. Fear, no."
+        "text": "Stay calm and ask for an official receipt, which settles most cases. In stubborn situations, mentioning that you would like to contact your embassy helps. Always polite, never loud."
       }
     }
   ]
@@ -662,13 +643,13 @@
     <div class="art-weiterlesen reveal">
       <span class="eyebrow no-rule">Read next</span>
       <div class="art-weiterlesen-links">
+        <a href="/en/journal/west-route" class="art-weiterlesen-item">
+          <span class="art-weiterlesen-cat eyebrow no-rule">Route</span>
+          <span class="art-weiterlesen-title">The west route through Africa: why only one way from Europe to Cape Town works right now</span>
+        </a>
         <a href="/en/journal/costs" class="art-weiterlesen-item">
           <span class="art-weiterlesen-cat eyebrow no-rule">Costs</span>
           <span class="art-weiterlesen-title">What a Trans Africa crossing by vehicle really costs</span>
-        </a>
-        <a href="/en/journal/borders" class="art-weiterlesen-item">
-          <span class="art-weiterlesen-cat eyebrow no-rule">Borders</span>
-          <span class="art-weiterlesen-title">Borders in West Africa: how a crossing by vehicle actually works</span>
         </a>
       </div>
     </div>
@@ -680,8 +661,8 @@
   <div class="container">
     <div class="art-cta reveal">
       <span class="eyebrow no-rule">If you are planning in earnest</span>
-      <h2 class="art-cta-headline">The whole west route, country by country.</h2>
-      <p class="art-cta-text">We wrote down everything we learned in 140 days of Trans Africa: all 16 country chapters, every border step by step, the visa overview with what we paid and where we applied, real costs and the best camp spots. The step by step preparation we could not find ourselves. And if you would rather talk it through with us, that is what the consulting is for.</p>
+      <h2 class="art-cta-headline">Every border, step by step.</h2>
+      <p class="art-cta-text">In the guide we document every border crossing on the west route the way we experienced it: which counters in which order, which papers, which costs. Plus the visa overview with what we paid and where we applied, and a fiche template to print. And if you want to talk a particular border through with us, that is what the consulting is for.</p>
       <div class="art-cta-btns">
         <a href="/en/guide" class="btn solid">To the guide <span class="arrow"></span></a>
         <a href="/en/consulting" class="btn ghost-dark">To consulting <span class="arrow"></span></a>
@@ -757,7 +738,7 @@ const io = new IntersectionObserver((entries) => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
   }
 }, { threshold: 0.10, rootMargin: '0px 0px -6% 0px' });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
 </script>
 
 </body>
