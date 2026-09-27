@@ -25,6 +25,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.susiandtheelephants.com/en/guide</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.susiandtheelephants.com/journal</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
